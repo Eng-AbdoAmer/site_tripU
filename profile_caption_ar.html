@@ -367,7 +367,7 @@
               تفاصيل
             </button>
             <button class="tablink designcolortab tablinks" onclick="openTaps(event, 'Paris')">
-              المستندات المطلوبة
+          المستندات
             </button>
             <!-- <button class="tablink designcolortab" onclick="openTaps(event, 'Tokyo')">
               Tokyo
@@ -393,46 +393,58 @@
                         <span class="fa fa-star"></span>
                       </div>
                       <p> تفاصيل الحساب </p>
-                      <form></form>
-                      <div class="input_box">
-                        <label for=""> الإسم </label>
-                        <input type="text" placeholder="Enter your name" required class="form-control-caption" />
-                      </div>
-                      <div class="input_box">
-                        <label for=""> البريد الإلكتروني </label>
-                        <input type="email" placeholder="Enter your email" required class="form-control-caption" />
-                      </div>
-                      <div class="input_box">
-                        <label for=""> رقم الهاتف </label>
-                        <input type="tel" placeholder="Enter your phone" required
-                          class="form-control-caption Accounttel" />
-                      </div>
-                      <div class="input_box">
-                        <label for=""> البلد </label>
-                        <input type="text" placeholder="Egypt" readonly class="form-control-caption" />
-                      </div>
-                      <div class="gender">
-                        <span>Select gander</span>
-                        <div class="custom-select w-200">
-                          <select class="js-example-responsive widthmyom" style="   
-                           border-radius: 5px;
-                          height: 48px;
-                          border: none;
-                          width: 60%;
-                      " id="gender" name="state">
-                            <option value="" disabled selected>
-                              -- إختار --
-                            </option>
-                            <option value="1"> ذكر </option>
-                            <option value="2"> أنثى </option>
-                          </select>
+                      <form>
+                        <div class="row">
+                          <div class="col-lg-6 col-md-4 col-sm-12">
+                            <div class="input_box">
+                              <label for=""> الإسم </label>
+                              <input type="text" placeholder="Enter your name" required class="form-control-caption" />
+                            </div>
+                            <div class="input_box">
+                              <label for=""> البريد الإلكتروني </label>
+                              <input type="email" placeholder="Enter your email" required class="form-control-caption" />
+                            </div>
+                            
+                          <div class="input_box">
+                            <label for=""> رقم الهاتف </label>
+                            <input type="tel" placeholder="Enter your phone" required
+                              class="form-control-caption Accounttel" />
+                          </div>
+                          </div>
+                          <div class="col-lg-6 col-md-4 col-sm-12">
+                            <div class="input_box">
+                              <label for=""> البلد </label>
+                              <input type="text" placeholder="Egypt" readonly class="form-control-caption" />
+                            </div>
+                            <div class="gender">
+                              <span>Select gander</span>
+                              <div class="custom-select w-200">
+                                <select class="js-example-responsive widthmyom" style="   
+                                 border-radius: 5px;
+                                height: 48px;
+                                border: none;
+                                width: 75%;
+                            " id="gender" name="state">
+                                  <option value="" disabled selected>
+                                    -- إختار --
+                                  </option>
+                                  <option value="1"> ذكر </option>
+                                  <option value="2"> أنثى </option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="input_box">
+                              <label for=""> كلمة المرور </label>
+                              <input type="password" placeholder="Enter your password" required
+                                class="form-control-caption" />
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="input_box">
-                        <label for=""> كلمة المرور </label>
-                        <input type="password" placeholder="Enter your password" required
-                          class="form-control-caption" />
-                      </div>
+                      
+                      </form>
+                     
+                     
+                   
                       <button type="submit" class="site-button" name="next">
                         التالي
                       </button>
@@ -462,8 +474,8 @@
                           <h2 class="title"> بطاقة الهوية من الأمام </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (3).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة بطاقة الهوية
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -474,8 +486,8 @@
                           <h2 class="title"> بطاقة الهوية من الخلف </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (2).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة بطاقة الهوية
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -492,8 +504,8 @@
                           <h2 class="title"> تسمية توضيحية للصورة الشخصية </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/image_driver.jpeg" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة صورة شخصية
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -505,8 +517,8 @@
                           <img style="height: 165px;"
                             src="finshWebsite/exomac/assets/images/document-images/criminal_newspaper.jpg" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة ورقة جنائية
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -522,8 +534,8 @@
                           <h2 class="title"> بطاقة رخصة السيارة الأمامية </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة رخصة السيارة
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -534,8 +546,8 @@
                           <h2 class="title"> بطاقة ترخيص السيارة مرة أخرى </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            إضافة رخصة السيارة
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -552,8 +564,8 @@
                           <h2 class="title"> تسمية توضيحية لبطاقة الترخيص الأمامية </h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(2).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            أضف تسمية توضيحية للترخيص
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                           <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>
@@ -564,8 +576,8 @@
                           <h2 class="title">Caption license card back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(1).png" alt="" />
                           <label for="uploadBtn">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            أضف تسمية توضيحية للترخيص
+                           <i class="fa-solid fa-file-arrow-up"></i>
+                              <span>تحميل</span>
                           </label>
                           <input type="file" id="uploadBtn">
                           </input>

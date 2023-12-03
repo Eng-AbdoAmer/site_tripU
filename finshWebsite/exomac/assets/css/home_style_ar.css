@@ -151,7 +151,7 @@
 }
 /* Style the tab content */
 .tabcontent {
-  background-color: #eee;
+  background-color: rgb(248, 250, 255);
   display: none;
   padding: 6px 12px;
   border-top: none;
