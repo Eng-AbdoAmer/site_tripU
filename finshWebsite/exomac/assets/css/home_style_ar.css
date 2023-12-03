@@ -62,7 +62,7 @@
   right: 0;
 }
 .content_card li::before {
-  content: "\f00c";
+  content: "\2606";
   width: 24px;
   height: 24px;
   font-family: "Font Awesome 5 Free";
