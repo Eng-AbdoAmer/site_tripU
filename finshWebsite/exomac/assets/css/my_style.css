@@ -653,6 +653,9 @@ div.content-service {
   padding: 1px 16px;
   height: 100%;
 }
+.content-service .title {
+  font-size: 26px;
+}
 div.content-personal {
   padding: 1px 16px;
   height: 100%;
