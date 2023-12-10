@@ -909,3 +909,37 @@ $(document).ready(
 // });
 // filterIndex = val;
 // console.log(filterIndex);
+function updateData(sectionId) {
+  // var urlParams = new URLSearchParams(window.location.search);
+  // var dataValue = urlParams.get('data');
+  // var newData = document.getElementById('dataInput').value;
+
+  // // Perform actions with the new data
+  // console.log('Old data:', dataValue);
+  // console.log('New data:', newData);
+
+  // // Redirect to a new URL with updated parameters
+  // window.location.href = 'profile_caption_new_en.html/?data=' + newData;
+  var urlParams = new URLSearchParams(window.location.search);
+  var numberValue = urlParams.get("number");
+  document.getElementById("myInput").value = numberValue;
+  if (numberValue != null) {
+    // numberValue = inputElement.value;
+  }
+
+  // const queryParamValue = getQueryParam('number');
+  //     if (queryParamValue) {
+  //       inputElement.placeholder = queryParamValue;
+  //     }
+
+  var section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+onSubmitCobone = function () {
+  window.location.href =
+    " https://play.google.com/store/apps/details?id=com.tripu.tripu&pli=1?number=" +
+    document.getElementById("myInput").value;
+};

@@ -343,7 +343,7 @@
     <!-- Slider/Intro Section End -->
 
     <div class="dashbordcaption row section section-padding-t110-b120">
-      <div class="sidebar col-lg-4 col-md-4 col-sm-12">
+      <div class="sidebar col-lg-4 col-md-4 col-sm-12" style="margin: 0 auto;">
         <div class="image_content">
           <img src="./finshWebsite/exomac/assets/images/team/team-1.jpg" alt="" />
         </div>
@@ -455,10 +455,10 @@
               <div id="documents" class="tabDoc">
                 <div class="container">
                   <div class="person-documents">
-                    <div class="row widthRow">
+                    <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Identification card front</h2>
+                          <h2 class="title"> ID card front</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (3).png" alt="" />
                           <label  for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -470,7 +470,7 @@
                       </div>
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Identification card back</h2>
+                          <h2 class="title">ID card back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (2).png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -488,8 +488,8 @@
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Caption Personal Image</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/image_driver.jpeg" alt="" />
+                          <h2 class="title">Personal Image</h2>
+                          <img src="finshWebsite/exomac/assets/images/document-images/user-profile-person.png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
                            <span>UpLoad</span>
@@ -500,7 +500,7 @@
                       </div>
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Caption Criminal newspaper</h2>
+                          <h2 class="title">Criminal newspaper</h2>
                           <img 
                             src="finshWebsite/exomac/assets/images/project/9.png" alt="" />
                           <label for="uploadBtn">
@@ -518,7 +518,7 @@
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Car license card front</h2>
+                          <h2 class="title">Car license Front</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -530,7 +530,7 @@
                       </div>
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Car license card back</h2>
+                          <h2 class="title">Car license Back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -548,7 +548,7 @@
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Caption license card front</h2>
+                          <h2 class="title">License card front</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(2).png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -560,7 +560,7 @@
                       </div>
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
-                          <h2 class="title">Caption license card back</h2>
+                          <h2 class="title">License card back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(1).png" alt="" />
                           <label for="uploadBtn">
                             <i class="fa-solid fa-file-arrow-up"></i>
@@ -582,72 +582,89 @@
                     <div class="car-information ">
                       <p>Car information</p>
                       <form>
-                        <div class="input_box mt-3">
-                          <label for="">plate number</label>
-                          <input type="text" placeholder="Enter your plate number" required
-                            class="form-control-caption" />
-                        </div>
-                        <div class="input_box mt-3">
-                          <label for="">Car Color</label>
-                          <input type="text" placeholder="Enter your Car Color" required class="form-control-caption" />
-                        </div>
-                        <div class="Car-brand mt-3">
-                          <span>Car brand</span>
-                          <div class="custom-select w-200">
-                            <select class="select-style widthmyom" style="width: 60%" id="carbrand" name="state">
-                              <option value="" disabled selected>
-                                -- Chooses --
-                              </option>
-                              <option value="1">CarBrand one</option>
-                              <option value="2">CarBrand one</option>
-                            </select>
+                        <div class="row">
+                          <div class="col-lg-6 col-md-4 col-sm-12">
+                            <div class="input_box mt-3">
+                              <label for="">plate number</label>
+                              <input type="text" placeholder="Enter your plate number" required
+                                class="form-control-caption" />
+                            </div>
+                            <div class="input_box mt-3">
+                              <label for="">Car Color</label>
+                              <input type="text" placeholder="Enter your Car Color" required class="form-control-caption" />
+                            </div>
+                            <div class="Car-brand mt-3">
+                              <span>Car brand</span>
+                              <div class="custom-select w-200">
+                                <select class="select-style widthmyom" style="width: 60%" id="carbrand" name="state">
+                                  <option value="" disabled selected>
+                                    -- Chooses --
+                                  </option>
+                                  <option value="1">BMW</option>
+                                  <option value="2">Bentley</option>
+                                  <option value="2">Mercedes-Benz</option>
+                                  <option value="2">Land Rover</option>
+                                  <option value="2">KIA</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-4 col-sm-12">
+                            <div class="Car-Model mt-3">
+                              <span>Car Model</span>
+                              <div class="custom-select w-200">
+                                <select class="select-style widthmyom" id="carModel" style="width: 60%" name="state">
+                                  <option value="" disabled selected>
+                                    -- Chooses --
+                                  </option>
+                                  <option value="1">2000</option>
+                                  <option value="2">2001</option>
+                                  <option value="2">2002</option>
+                                  <option value="2">2003</option>
+                                  <option value="2">2004</option>
+                                  <option value="2">2005</option>
+                                  <option value="2">2010</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="Type-of-Car mt-3">
+                              <span>Type of Car</span>
+                              <div class="custom-select w-200">
+                                <select class="select-style widthmyom" id="typeOfCar" style="width: 60%" name="state">
+                                  <option value="" disabled selected>
+                                    -- Chooses --
+                                  </option>
+                                  <option value="1">Type of Car one</option>
+                                  <option value="2">Type of Car two</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="theYearOfTheCar mt-3">
+                              <span>The Year of the Car</span>
+                              <div class="custom-select w-200">
+                                <select class="select-style widthmyom" id="theYearOfTheCar" style="width: 60%" name="state">
+                                  <option value="" disabled selected>
+                                    -- Chooses --
+                                  </option>
+                                  <option value="1">The Year of the Car one</option>
+                                  <option value="2">The Year of the Car two</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="Car-Model mt-3">
-                          <span>Car Model</span>
-                          <div class="custom-select w-200">
-                            <select class="select-style widthmyom" id="carModel" style="width: 60%" name="state">
-                              <option value="" disabled selected>
-                                -- Chooses --
-                              </option>
-                              <option value="1">Car Model one</option>
-                              <option value="2">Car Model Two</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="Type-of-Car mt-3">
-                          <span>Type of Car</span>
-                          <div class="custom-select w-200">
-                            <select class="select-style widthmyom" id="typeOfCar" style="width: 60%" name="state">
-                              <option value="" disabled selected>
-                                -- Chooses --
-                              </option>
-                              <option value="1">Type of Car one</option>
-                              <option value="2">Type of Car two</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="theYearOfTheCar mt-3">
-                          <span>The Year of the Car</span>
-                          <div class="custom-select w-200">
-                            <select class="select-style widthmyom" id="theYearOfTheCar" style="width: 60%" name="state">
-                              <option value="" disabled selected>
-                                -- Chooses --
-                              </option>
-                              <option value="1">The Year of the Car one</option>
-                              <option value="2">The Year of the Car two</option>
-                            </select>
-                          </div>
-                        </div>
+                   
+                    
                       </form>
                     </div>
                     <div class="car-images">
                       <p>Car Images</p>
                       <div class="row">
-                        <div class="col-lg-2">
+                        <!-- col-lg-6 col-md-4 col-sm-12 -->
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                           <div class="id-card">
-                            <h2>Front Car</h2>
-                            <img src="finshWebsite/exomac/assets/images/document-images/front_car.jpg" alt="" />
+                            <h2 class="">Front Car</h2>
+                            <img src="finshWebsite/exomac/assets/images/document-images/car_shap/front_car.jpg" alt="" />
                             <label for="uploadBtn">
                               <i class="fa-solid fa-upload"></i>
 
@@ -656,10 +673,10 @@
                             </input>
                           </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                           <div class="id-card">
                             <h2>Back Car</h2>
-                            <img src="finshWebsite/exomac/assets/images/document-images/back_car.jpg" alt="" />
+                            <img src="finshWebsite/exomac/assets/images/document-images/car_shap/back_car.jpg" alt="" />
                             <label for="uploadBtn">
                               <i class="fa-solid fa-upload"></i>
 
@@ -668,10 +685,10 @@
                             </input>
                           </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                           <div class="id-card">
                             <h2>Right Car</h2>
-                            <img src="finshWebsite/exomac/assets/images/document-images/right_car.jpg" alt="" />
+                            <img src="finshWebsite/exomac/assets/images/document-images/car_shap/right_car.jpg" alt="" />
                             <label for="uploadBtn">
                               <i class="fa-solid fa-upload"></i>
                             </label>
@@ -679,10 +696,10 @@
                             </input>
                           </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                           <div class="id-card">
                             <h2>Left car</h2>
-                            <img src="finshWebsite/exomac/assets/images/document-images/left_car.jpg" alt="" />
+                            <img src="finshWebsite/exomac/assets/images/document-images/car_shap/left_car.jpg" alt="" />
                             <label for="uploadBtn">
                               <i class="fa-solid fa-upload"></i>
                             </label>
@@ -690,10 +707,10 @@
                             </input>
                           </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                           <div class="id-card">
                             <h2>InSide Car</h2>
-                            <img src="finshWebsite/exomac/assets/images/document-images/inside_car.jpg" alt="" />
+                            <img src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
                             <label for="uploadBtn">
                               <i class="fa-solid fa-upload"></i>
                             </label>
@@ -705,7 +722,7 @@
                         <div class="container mt-3">
                           <div class="table-responsive">
                             <table class="table">
-                              <thead>
+                              <thead class="thead-style">
                                 <tr>
                                   <th>Plate Number</th>
                                   <th>Car Color</th>

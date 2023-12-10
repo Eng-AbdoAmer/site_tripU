@@ -62,6 +62,11 @@ function openTapsDocument(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+
+
+
+
+
 /* select 2*/
 $(document).ready(function () {
   $("#carbrand").select2({

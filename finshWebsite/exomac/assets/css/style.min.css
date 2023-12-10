@@ -4075,9 +4075,15 @@ progress {
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #748494;
+  color: #000;
   vertical-align: top;
   border-color: #dee2e6;
+}
+.thead-style {
+  background-color: #030f27;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
@@ -8983,7 +8989,7 @@ fieldset:disabled .btn {
   }
   button.tablinks,
   button.tablinkse {
-    width: 50%;
+    width: 91%;
     height: 40px;
     padding: 6px 16px !important;
   }
@@ -38315,25 +38321,61 @@ swiper-slide img {
   margin: 40px 0;
 }
 .accordion .item {
-  margin: 0 140px;
+  margin: 0 3px;
   border: none;
-  margin-bottom: 51px;
+  margin-bottom: 40px;
   background: none;
 }
 .t-p {
   padding: 40px 30px 0px 30px;
 }
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .accordion .item .item-header h2 button.btn.btn-link {
+    width: 345px !important;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .accordion .item {
-    margin: 0 75px;
+  .accordion .item .item-header h2 button.btn.btn-link {
+    width: 345px !important;
   }
 }
-@media only screen and (max-width: 767px) {
-  .accordion .item {
-    margin: 0 10px;
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+  .accordion .item .item-header h2 button.btn.btn-link {
+    width: 345px !important;
   }
 }
+@media only screen and (min-width: 359px) and (max-width: 479px) {
+  .section-title .title {
+    font-size: 22px;
+  }
+  .search_area {
+    width: 100% !important;
+  }
+  .accordion {
+    margin: 22px -35px;
+  }
+  .accordion .item .item-header h2 button.btn.btn-link {
+    width: 280px !important;
+  }
+}
+@media only screen and (min-width: 220px) and (max-width: 359px) {
+  .section-title .title {
+    font-size: 13px;
+  }
+  .search_area {
+    width: 100% !important;
+  }
+  .accordion {
+    margin: 22px -35px;
+  }
+  .accordion .item .item-header h2 button.btn.btn-link {
+    width: 168px !important;
+  }
+}
+
 .accordion .item .item-header h2 button.btn.btn-link {
+  width: 565px;
   background: #1292ee;
   color: white;
   border-radius: 0px;
@@ -38343,6 +38385,7 @@ swiper-slide img {
   text-decoration: none;
 }
 .accordion .item .item-header {
+  width: 100%;
   border-bottom: none;
   background: transparent;
   padding: 0px;
@@ -38370,17 +38413,24 @@ swiper-slide img {
   border-radius: 5px;
 }
 
-button.btn.btn-link.collapsed svg {
-  transform: rotate(0deg);
-}
-
-button.btn.btn-link svg {
+/* button.btn.btn-link.collapsed svg {
   transform: rotate(180deg);
+} */
+
+button.btn.btn-link.collapsed .plusetrans {
+  transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg) !important;
+  -moz-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  -o-transform: rotate(180deg) !important;
+}
+button.btn.btn-link svg {
+  transform: rotate(0deg) !important;
   transition: 0.5s;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  -ms-transform: rotate(0deg) !important;
+  -o-transform: rotate(0deg) !important;
 }
 /*pagenation*/
 .pagination li {
@@ -38464,7 +38514,7 @@ button.btn.btn-link svg {
   background-color: #007bff;
   color: white;
 }
-/*=====================*/
+/*=========accordionFAQs============*/
 .accordionFAQs {
   height: 450px;
   margin: 0;
@@ -38534,6 +38584,7 @@ button.btn.btn-link svg {
   align-items: center;
   border-radius: 5px;
 }
+/* accordionFAQs */
 div#forgot-password {
   width: 100%;
   height: 100%;
@@ -38924,7 +38975,7 @@ div#forgot-password {
   padding: 0 10px;
 }
 .search_area {
-  width: 25%;
+  width: 45%;
 }
 /* special Offer Box Style */
 
@@ -38971,4 +39022,296 @@ div#forgot-password {
   100% {
     background-position: 0 0;
   }
+}
+.id-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*=========accordionProfile============*/
+.accordionProfile {
+  height: auto;
+  margin: 0;
+}
+.accordionProfile .item {
+  margin: 0;
+  border: none;
+  margin-bottom: 10px;
+  background: none;
+}
+.t-p_Profile {
+  padding: 15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .accordionProfile {
+    height: auto;
+    margin: 40px 0;
+  }
+  .accordionProfile .item {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .accordionProfile .item {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+.accordionProfile .item .item-header h2 button.btn.btn-link {
+  background: #1292ee;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 0.2;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.accordionProfile .item .item-header {
+  border-bottom: none;
+  background: transparent;
+  padding: 0px;
+  margin: 2px;
+}
+
+.accordionProfile .item .item-header h2 button {
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordionProfile .item .item-header h2 svg {
+  float: right;
+  font-size: 30px;
+  color: #030f27;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/* accordionProfile */
+.accordionProfile .item .icon {
+  width: 25px;
+  height: 25px;
+  background: #f6e9f9;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.accordionProfile .item .icon svg {
+  max-width: 65%;
+  font-size: 15px !important;
+  color: #000 !important;
+}
+
+/* .accordionProfile .item .icon:before {
+  content: "";
+  background-color: #777;
+  position: relative;
+} */
+.frind-box_head h4 {
+  color: #1292ee;
+  font-weight: bold;
+  font-size: 30px;
+}
+.frind-box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+.frind-box .single-friend {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.frind-box .single-friend .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.frind-box .single-friend .left img {
+  width: 80px;
+  margin-right: 20px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.frind-box .single-friend .left .name_frind {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.frind-box .single-friend .left .content_frind .separator {
+  width: 2px;
+  height: 19px;
+  background: #777;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+.frind-box .single-friend .left .content_frind .location svg {
+  color: #007bff;
+}
+.frind-box .single-friend .right {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+.frind-box .single-friend .right .Accept {
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 20px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.frind-box .single-friend .right .Accept:hover {
+  background: #1292ee;
+  color: white;
+}
+.frind-box .single-friend .right .Ignore {
+  color: #777;
+  font-weight: 600;
+}
+.frind-box .single-friend .right .Ignore:hover {
+  color: #1292ee;
+}
+.page-title {
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  background: #fff;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.input-info-box {
+  border-radius: 10px;
+  width: auto;
+  background-color: #fff;
+
+  padding: 25px 30px 30px;
+}
+.verified_content .varify-box {
+  background: #faf9fc;
+  padding: 30px 30px 30px;
+}
+.verified_content .varify-box .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.verified_content .varify-box .sub_title {
+  color: #000;
+  font-size: 14px;
+}
+.verified_content .varify-box .list-verify {
+  list-style: none !important;
+}
+.input-info-box .header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.warning-p {
+  margin-top: 115px;
+}
+.input-info-box .select-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin-top: 30%;
+}
+.input-info-box .select-payment .option {
+  width: 90px;
+  height: 80px;
+  display: inline-block;
+  font-size: 12px;
+  color: #7e8eaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #a6a6cb;
+  border-radius: 10px;
+  margin: 10px 10px;
+  padding: 10px 0px 3px;
+  cursor: pointer;
+  position: relative;
+
+}
+.input-info-box .select-payment .option:active,
+.input-info-box .select-payment .option:hover {
+  border-color: #007bff;
+}
+.input-info-box .select-payment .option svg {
+  position: absolute;
+  color: #007bff;
+  font-size: 20px;
+  background: #fff;
+  top: -7px;
+  right: -7px;
+  visibility: hidden;
+}
+ .select-payment .option:active svg,
+ .select-payment .option:hover svg {
+  visibility: visible !important;
+}
+.content_close_acount{
+  margin-top: -8%;
+    margin-left: 21%;
+    margin-bottom: 8%;
+    padding: 1px 16px;
+    height: 100%;
 }

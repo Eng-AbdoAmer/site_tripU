@@ -596,12 +596,18 @@
   width: 20%;
   background-color: rgb(248, 250, 255);
   position: relative;
-  height: 370px;
+  height: auto;
   overflow: auto;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 /* Sidebar links */
 .sidebar a {
+  float: none !important;
   display: block;
   color: black;
   padding: 16px;
@@ -851,7 +857,7 @@ p {
 }
 .person-documents {
   margin: 10px;
-  padding: 50px 0;
+  padding: 51px 0;
 }
 .content-car-info {
   font-size: 18px;
@@ -859,9 +865,9 @@ p {
   margin: 10px;
   padding: 50px 0;
 }
-.person-documents .id-card {
+/* .person-documents .id-card {
   background-color: #eee;
-}
+} */
 .CaptionLicence-documents input[type="file"],
 .carLicence-documents input[type="file"],
 .caption-data input[type="file"],
@@ -881,8 +887,8 @@ p {
   color: #fff;
   background-color: #1292ee;
   text-align: center;
-  padding: 10px 35px;
-  font-size: 20px;
+  padding: 7px 3px;
+  font-size: 17px;
   user-select: none;
   cursor: pointer;
   border-radius: 10px;
@@ -937,8 +943,8 @@ p {
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  height: 40px;
-  width: 60%;
+  height: 50px;
+  width: 75%;
 }
 .car-images {
   margin: 5% 0;
@@ -1059,6 +1065,8 @@ p {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  border-radius: 10px;
+  margin-top: 5px;
 }
 
 /* Change background color of buttons on hover */
@@ -1164,6 +1172,32 @@ p {
   line-height: 20px;
   padding: 9px 12px !important;
 }
+@media only screen and (min-width: 991) and (max-width: 1200px) {
+  .form-control-caption {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .form-control-caption {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .form-control-caption {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 479px) {
+  .form-control-caption {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-width: 220px) and (max-width: 359px) {
+  .form-control-caption {
+    font-size: 9px;
+    width: 100% !important;
+  }
+}
 .color_reset {
   color: #f00 !important;
 }
@@ -1182,7 +1216,9 @@ p {
   opacity: 1;
 }
 .selected {
+  border-bottom: 5px solid #f00;
   color: #f00;
+  padding-bottom: 4px;
 }
 .regisrt_area h2 {
   cursor: pointer;
