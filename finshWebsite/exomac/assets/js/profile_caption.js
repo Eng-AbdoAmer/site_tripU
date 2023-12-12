@@ -62,11 +62,6 @@ function openTapsDocument(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-
-
-
-
-
 /* select 2*/
 $(document).ready(function () {
   $("#carbrand").select2({
@@ -136,3 +131,15 @@ function hideShow() {
     display = 1;
   }
 }
+
+const fetchData = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    if (!response.ok) throw new Error(response.message);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

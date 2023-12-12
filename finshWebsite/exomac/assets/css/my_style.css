@@ -70,25 +70,25 @@
 .name_offer::before {
   content: "";
   position: absolute;
-  bottom: -175px;
-  left: -50px;
-  height: 200px;
+  bottom: -315px;
+  left: -3px;
+  height: 520px;
   background: #fff;
-  width: 280px;
-  border-radius: 100px;
+  width: 520px;
+  border-radius: 50%;
   transform: rotate(-85deg);
 }
 .name_offer::after {
   position: absolute;
-  top: 150px;
+  top: 200px;
   left: auto;
   bottom: auto;
-  right: -70px;
-  width: 280px;
+  right: -3px;
+  width: 550px;
   content: "";
   background: #fff;
-  border-radius: 100px;
-  height: 200px;
+  border-radius: 50%;
+  height: 550px;
   transform: rotate(-50deg);
 }
 @media screen and (max-width: 1200px) and (min-width: 991px) {

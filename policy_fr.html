@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ar" dir="rtl">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Trip || LAGIN-AR</title>
+    <title>Trip || POLICY-FR</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -16,6 +16,11 @@
       type="image/x-icon"
       href="finshWebsite/images/التسليم/التسليم/موكاب/noBackground.png"
     />
+    <link rel="stylesheet" href="finshWebsite/exomac/assets/css/my_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link
       rel="stylesheet"
       href="finshWebsite/Documentation/assets/css/all.min.css"
@@ -26,11 +31,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
+    <!-- CSS============================================ -->
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <link
       rel="stylesheet"
       href="finshWebsite/exomac/assets/css/vendor/vendor.min.css"
@@ -43,10 +45,6 @@
       rel="stylesheet"
       href="finshWebsite/exomac/assets/css/style.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="finshWebsite/exomac/assets/css/home_style_ar.css"
-    />
   </head>
 
   <body>
@@ -57,9 +55,9 @@
           <div class="container position-relative">
             <div class="row justify-content-between align-items-center">
               <!-- Header Logo Start -->
-              <div class="col-xl-2 col-auto order-0">
+              <div class="col-xl-2 col-auto">
                 <div class="header-logo">
-                  <a href="home_ar.html">
+                  <a href="index.html">
                     <img
                       src="finshWebsite/images/التسليم/التسليم/موكاب/noBackground.png"
                       alt=""
@@ -77,23 +75,23 @@
                   <nav class="site-main-menu">
                     <ul>
                       <li>
-                        <a href="home_ar.html"
-                          ><span class="menu-text">الرئيسية</span></a
+                        <a href="index.html"
+                          ><span class="menu-text">Maison</span></a
                         >
                       </li>
                       <li>
-                        <a href="offer_ar.html"
-                          ><span class="menu-text">العروض</span></a
+                        <a href="offer_en.html"
+                          ><span class="menu-text">Offer</span></a
                         >
                       </li>
                       <li>
-                        <a href="services_ar.html"
-                          ><span class="menu-text">خدماتنا</span></a
+                        <a href="services_en.html"
+                          ><span class="menu-text">Services</span></a
                         >
                       </li>
                       <li>
-                        <a href="cars_ar.html"
-                          ><span class="menu-text">السيارات</span></a
+                        <a href="cars_en.html"
+                          ><span class="menu-text">Véhicules</span></a
                         >
                       </li>
                       <li class="has-children">
@@ -102,41 +100,53 @@
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          ><span class="menu-text">الحساب</span></a
+                          ><span class="menu-text">Profile</span></a
                         >
                         <span class="menu-toggle"
                           ><i class="far fa-angle-down"></i
                         ></span>
                         <ul class="sub-menu">
                           <li>
-                            <a href="profile_caption_ar.html"
+                            <a href="profile_caption_en.html"
                               ><span class="menu-text"
-                                >تعديل حساب الكابتن</span
+                                >Modifier la légende du profil</span
                               ></a
                             >
                           </li>
                           <li>
-                            <a href="profile_client_ar.html"
+                            <a href="profile_client_en.html"
                               ><span class="menu-text"
-                                >تعديل حساب العميل</span
+                                >Modifier le profil du client</span
                               ></a
                             >
                           </li>
                         </ul>
                       </li>
                       <!-- <li class="has-children">
-                      <a href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="menu-text">اللغة</span></a>
-                      <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="policy_ar.html"><span class="home_ar.html">العربي</span></a>
-                        </li>
-                        <li>
-                          <a href="policy_en.html"><span class="menu-text">English</span></a>
-                        </li>
-                      </ul>
-                    </li> -->
+                        <a
+                          href=""
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="menu-text">Language</span></a
+                        >
+                        <span class="menu-toggle"
+                          ><i class="far fa-angle-down"></i
+                        ></span>
+                        <ul class="sub-menu">
+                          <li>
+                            <a href="policy_en.html"
+                              ><span class="menu-text">English</span></a
+                            >
+                          </li>
+                          <li>
+                            <a href="policy_ar.html"
+                              ><span class="menu-text">Arabic</span></a
+                            >
+                          </li>
+                        </ul>
+                      </li> -->
                       <li class="has-children">
                         <a
                           href=""
@@ -144,33 +154,36 @@
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
                         >
-                          <span class="menu-text">الإشتراك</span></a
+                          <span class="menu-text">SignIn</span></a
                         >
                         <span class="menu-toggle"
                           ><i class="far fa-angle-down"></i
                         ></span>
                         <ul class="sub-menu">
                           <li>
-                            <a href="authentication_ar.html"
-                              ><span class="menu-text">الإشتراك كابتن</span></a
+                            <a href="authentication_en.html"
+                              ><span class="menu-text"
+                                >Légende de connexion</span
+                              ></a
                             >
                           </li>
                           <li>
-                            <a href="authentication_ar.html"
-                              ><span class="menu-text">الإشتراك عميل</span></a
+                            <a href="authentication_en.html"
+                              ><span class="menu-text"
+                                >Client de connexion</span
+                              ></a
                             >
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="aboutUs-ar.html"
-                          ><span class="menu-text">نبذة عنا</span></a
+                        <a href="aboutUs_en.html"
+                          ><span class="menu-text">À propos de nous</span></a
                         >
                       </li>
-
                       <li>
-                        <a href="contactUs_ar.html"
-                          ><span class="menu-text">تواصل معنا</span></a
+                        <a href="contactUs_en.html"
+                          ><span class="menu-text">Contactez-nous</span></a
                         >
                       </li>
                     </ul>
@@ -194,7 +207,7 @@
                 >
                   <i class="fa-solid fa-bell"></i>
                 </div>
-                <!-- language start-->
+                <!-- language -->
                 <div onclick="menuToggleLanguage();" class="">
                   <i class="fa-solid fa-language stylesvglang"></i>
                   <div class="profile_menu_Language">
@@ -206,7 +219,7 @@
                       </li>
                       <li>
                         <a href="policy_ar.html"
-                          ><span class="menu-text">العربيه</span></a
+                          ><span class="menu-text">Arabic</span></a
                         >
                       </li>
                       <li>
@@ -217,7 +230,7 @@
                     </ul>
                   </div>
                 </div>
-                <!-- language end-->
+                <!-- language -->
                 <div
                   class="notification-box animate__animated animate__flipInX"
                   style="display: none"
@@ -227,9 +240,9 @@
                       src="finshWebsite/exomac/assets/images/team/team-1.jpg"
                       alt=""
                     />
-                    <div class="notification-text marginrtl">
-                      <h4>احمد عادل</h4>
-                      <p>كيف يمكنني مساعدك</p>
+                    <div class="notification-text">
+                      <h4>Ahmed Adel</h4>
+                      <p>how can I help you</p>
                     </div>
                   </div>
                   <div class="notification-item">
@@ -237,9 +250,9 @@
                       src="finshWebsite/exomac/assets/images/team/team-2.jpg"
                       alt=""
                     />
-                    <div class="notification-text marginrtl">
-                      <h4>كمال علي</h4>
-                      <p>كم هذه الرحلة</p>
+                    <div class="notification-text">
+                      <h4>Kmale Ali</h4>
+                      <p>how much this trip</p>
                     </div>
                   </div>
                   <div class="notification-item">
@@ -247,9 +260,9 @@
                       src="finshWebsite/exomac/assets/images/team/team-3.jpg"
                       alt=""
                     />
-                    <div class="notification-text marginrtl">
-                      <h4>احمد عامر</h4>
-                      <p>آسف! إنها رحلة مكلفة للغاية</p>
+                    <div class="notification-text">
+                      <h4>Ahmed Amer</h4>
+                      <p>sorry! it's very expensive trip</p>
                     </div>
                   </div>
                   <div class="notification-item">
@@ -257,19 +270,18 @@
                       src="finshWebsite/exomac/assets/images/team/team-4.jpg"
                       alt=""
                     />
-                    <div class="notification-text marginrtl">
-                      <h4>عمر باسم</h4>
-                      <p>أنا في انتظارك يا سيدي</p>
+                    <div class="notification-text">
+                      <h4>Omer basem</h4>
+                      <p>I am waiting you sir</p>
                     </div>
                   </div>
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_ar.html"
-                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                        href="notification_en.html"
+                        class="btn btn-primary btn-hover-secondary"
+                        >Voir tout</a
                       >
-                        عرض الكل
-                      </a>
                       <!-- <a class="" href="#">View All</a> -->
                     </div>
                   </div>
@@ -303,68 +315,54 @@
                   <div class="profile_menu">
                     <ul class="sub-menu">
                       <li>
-                        <a href="profile_caption_ar.html"
-                          ><span class="menu-text"> تعديل ملف الكابتن</span></a
+                        <a href="profile_caption_en.html"
+                          ><span class="menu-text"
+                            >Modifier la légende du profil</span
+                          ></a
                         >
                       </li>
                       <li>
-                        <a href="profile_client_ar.html"
-                          ><span class="menu-text"> تعديل ملف العميل</span></a
+                        <a href="profile_client_en.html"
+                          ><span class="menu-text"
+                            >Modifier le profil du client</span
+                          ></a
                         >
                       </li>
                       <!-- <li>
-                        <a href="profile_caption_ar.html"><span class="menu-text"> الإعدادات </span></a>
-                      </li>-->
+                      <a href="#"><span class="menu-text">Setting</span></a>
+                    </li> -->
                       <li>
-                        <a href="forget_password_ar.html"
-                          ><span class="menu-text"> نسيت كلمة المرور </span></a
+                        <a href="forget_password_en.html"
+                          ><span class="menu-text">Mot de passe oublié</span></a
                         >
                       </li>
                       <li>
-                        <a href="reset_password_ar.html"
-                          ><span class="menu-text"> تعيين كلمة المرور </span></a
+                        <a href="reset_password_en.html"
+                          ><span class="menu-text"
+                            >réinitialiser le mot de passe</span
+                          ></a
                         >
                       </li>
                       <li>
-                        <a href="wallet_ar.html"
-                          ><span class="menu-text">المحفظة</span></a
+                        <a href="wallet_en.html"
+                          ><span class="menu-text">Portefeuille</span></a
                         >
                       </li>
                       <li>
-                        <a href="authentication_ar.html"
-                          ><span class="menu-text"> تسجيل خروج </span></a
+                        <a href="authentication_en.html"
+                          ><span class="menu-text">Se déconnecter</span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
+                <!-- profile_menu -->
+                <!-- Header Right End -->
               </div>
-              <!-- Header Mobile Menu Toggle Start -->
-              <!-- <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
-                  <button class="toggle">
-                    <i class="icon-top"></i>
-                    <i class="icon-middle"></i>
-                    <i class="icon-bottom"></i>
-                  </button>
-                </div> -->
-              <!-- Header Mobile Menu Toggle End -->
             </div>
-            <!-- Header Main Menu End -->
-
-            <!-- Header Right Start -->
-            <!-- <div
-                class="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2"
-              >
-                <a href="exomac/authentication_en.html" class="btn btn-light btn-hover-primary"
-                  >تسجيل الدخول
-                  <i class="fa-regular fa-user"></i>
-                </a>
-              </div> -->
-            <!-- Header Right End -->
           </div>
         </div>
       </div>
-
       <!-- Header Section End -->
 
       <!-- Main Search Start -->
@@ -387,7 +385,9 @@
               </button>
             </div>
           </form>
-          <p class="form-description">Hit enter to search or ESC to close</p>
+          <p class="form-description">
+            Appuyez sur Entrée pour rechercher ou ESC pour fermer
+          </p>
         </div>
       </div>
       <!-- Main Search End -->
@@ -404,23 +404,26 @@
               >
                 <div class="container">
                   <div class="row row-cols-lg-1 row-cols-1">
-                    <div class="col align-self-center slider_btn">
+                    <div class="col align-self-center">
                       <div
                         class="intro-content mt-xl-8 mt-lg-8 mt-md-8 mt-sm-8 mt-xs-8"
                       >
-                        <h2 class="title">لتستأجر سيارة أحلامك هنا</h2>
+                        <h2 class="title">
+                          Louons la voiture de vos rêves ici
+                        </h2>
                         <div class="desc">
                           <p>
-                            نحن وكالة تأجير سيارات سنساعدك في العثور على أفضل
-                            سيارة كنت تحلم بقيادتها، هيا لنجدها.
+                            Nous sommes la meilleure agence de location de
+                            voitures qui vous aidera à trouver la voiture dont
+                            vous rêvez, trouvons-la.
                           </p>
                         </div>
+                        <a
+                          href="aboutUs_en.html"
+                          class="btn btn-primary btn-hover-secondary"
+                          >Commencer</a
+                        >
                       </div>
-                      <a
-                        href="useApp_ar.html"
-                        class="btn btn-primary btn-hover-secondary"
-                        >ابدأ</a
-                      >
                     </div>
                   </div>
                 </div>
@@ -437,18 +440,20 @@
                     <!-- Intro One Content Start -->
                     <div class="col align-self-center">
                       <div class="intro-content mt-8">
-                        <h2 class="title">مشاوريك كثيرة ؟ نحن بخدمتك</h2>
+                        <h2 class="title">
+                          Do you consult a lot? We are at your service
+                        </h2>
                         <div class="desc">
                           <p>
-                            هل تود التنقل مع مجموعة كبيرة من الأشخاص؟ استقل
-                            رحلات تريب يو؛ حيث يمكننا نقل حتى ستة أشخاص لكل
-                            وجهة.
+                            Do you want to move around with a large group of
+                            people? Take TripU flights; We can transport up to
+                            six people per destination.
                           </p>
                         </div>
                         <a
-                          href="aboutUs-ar.html"
+                          href="aboutUs_en.html"
                           class="btn btn-primary btn-hover-secondary"
-                          >ابدأ</a
+                          >Commencer</a
                         >
                       </div>
                     </div>
@@ -468,17 +473,19 @@
                     <!-- Intro One Content Start -->
                     <div class="col align-self-center max-mb-30">
                       <div class="intro-content mt-8">
-                        <h2 class="title">أخيرًا، الرحلات التي تحتاج إليها</h2>
+                        <h2 class="title">
+                          Enfin les voyages dont vous avez besoin
+                        </h2>
                         <div class="desc">
                           <p>
-                            ابحث عن سائقٍ يقبل عرضك سعرك أو وافق على عرض السائق
-                            بدلاً من ذلك
+                            Trouvez un chauffeur qui acceptera votre devis ou
+                            acceptera plutôt l'offre du chauffeur
                           </p>
                         </div>
                         <a
-                          href="aboutUs-ar.html"
+                          href="aboutUs_en.html"
                           class="btn btn-primary btn-hover-secondary"
-                          >ابدأ</a
+                          >Commencer</a
                         >
                       </div>
                     </div>
@@ -516,9 +523,8 @@
                     href="#privacy-policy"
                     role="tab"
                     aria-selected="true"
+                    >politique de confidentialité</a
                   >
-                    سياسة الخصوصيه
-                  </a>
                 </li>
 
                 <li class="nav-item">
@@ -526,9 +532,8 @@
                     class="nav-link"
                     data-toggle="pill"
                     href="#Terms-Conditions"
+                    >Termes et conditions</a
                   >
-                    الشروط والأحكام
-                  </a>
                 </li>
               </ul>
             </div>
@@ -545,107 +550,139 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
                   <div class="pricing-plan-item">
                     <h3>
-                      بعض المكونات الرئيسية الموجودة عادةً في سياسة الخصوصية .
+                      certains éléments clés que l'on trouve généralement dans
+                      une politique de confidentialité
                     </h3>
 
                     <p class="plans-btn">
-                      فيما يلي شروط اتفاقية بينك وبين silver-triangle والبرمجه
+                      Cette section donne un aperçu de l'objectif et de la
+                      portée de la politique de confidentialité.
                     </p>
 
                     <blockquote>
                       <div class="privacy">
-                        <h5>نظرة عامة</h5>
+                        <h5>Aperçu</h5>
                         <p>
-                          فيما يلي شروط اتفاقية بينك وبين silver-triangle
-                          والبرمجه. من خلال الوصول إلى هذا الموقع أو استخدامه ،
-                          فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه
-                          الشروط والامتثال لجميع القوانين واللوائح المعمول بها ،
-                          بما في ذلك قوانين ولوائح مراقبة التصدير وإعادة
-                          التصدير. إذا كنت لا توافق على هذه الشروط ، يرجى عدم
-                          استخدام هذا الموقع. يجوز لشركةsilver-triangle ، دون
-                          إخطارك ، في أي وقت ، مراجعة شروط الاستخدام هذه وأي
-                          معلومات أخرى واردة في هذا الموقع. قد
-                          تقومsilver-triangle أيضًا بإجراء تحسينات أو تغييرات
-                          على المنتجات أو الخدمات أو البرامج الموضحة في هذا
-                          الموقع في أي وقت دون إشعار.
+                          Voici les termes d'un accord entre vous et
+                          silver-triangle. En accédant ou en utilisant ce site,
+                          vous reconnaissez avoir lu, compris et accepté d'être
+                          lié par ces conditions et de respecter toutes les lois
+                          et réglementations applicables, y compris les lois et
+                          réglementations de contrôle des exportations et
+                          réexportations. Si vous n'acceptez pas ces termes,
+                          veuillez ne pas utiliser ce site. silver-triangle
+                          peut, sans vous en aviser, à tout moment, réviser ces
+                          conditions d'utilisation et toute autre information
+                          contenue sur ce site. silver-triangle peut également
+                          apporter des améliorations ou des modifications aux
+                          produits, services ou programmes décrits sur ce site à
+                          tout moment et sans préavis.
                         </p>
-                        <h5>عام</h5>
+                        <h5>général</h5>
                         <p>
-                          يحتوي هذا الموقع على إشعارات الملكية ومعلومات حقوق
-                          النشر ، والتي يجب مراعاة شروطها واتباعها. يرجى الاطلاع
-                          على علامة التبويب بعنوان "معلومات حقوق النشر والعلامات
-                          التجارية" للحصول على معلومات ذات صلة.
-                          تمنحكsilver-triangle إذنًا محدودًا وغير حصري وغير قابل
-                          للتحويل للوصول إلى صفحات الويب وعرضها داخل هذا الموقع
-                          كعميل أو عميل محتمل لـsilver-triangle بشرط أن تلتزم
-                          بشروط الاستخدام هذه وجميع حقوق النشر والعلامات
-                          التجارية ، وإشعارات الملكية الأخرى كما هي. لا يجوز لك
-                          استخدام الزاحف إلا للزحف إلى موقع الويب هذا وفقًا لما
-                          يسمح به بروتوكول robots.txt الخاص بهذا الموقع ، ويجوز
-                          لـsilver-triangle حظر أي برامج زحف وفقًا لتقديرها
-                          الخاص. الاستخدام المصرح به بموجب هذه الاتفاقية غير
-                          تجاري بطبيعته (على سبيل المثال ، لا يجوز لك بيع
-                          المحتوى الذي تصل إليه على هذا الموقع أو من خلاله.)
-                          يُحظر أي استخدام آخر لهذا الموقع. باستثناء الإذن
-                          المحدود في الفقرة السابقة ، لا تمنحكsilver-triangle أي
-                          حقوق أو تراخيص صريحة أو ضمنية بموجب أي براءات اختراع
-                          أو علامات تجارية أو حقوق نشر أو حقوق ملكية أو ملكية
-                          فكرية أخرى. لا يجوز لك نسخ أي محتوى من هذا الموقع على
-                          موقع ويب آخر أو في أي وسائط أخرى. أي برامج ومواد أخرى
-                          يتم توفيرها للتنزيل أو الوصول أو أي استخدام آخر من هذا
-                          الموقع بشروط الترخيص الخاصة بها ستخضع لهذه الشروط
-                          والأحكام والإشعارات. سيؤدي عدم امتثالك لهذه الشروط أو
-                          أي من الشروط على هذا الموقع إلى الإنهاء التلقائي لأي
-                          حقوق ممنوحة لك ، دون إشعار مسبق ، ويجب عليك على الفور
-                          إتلاف جميع نسخ المواد التي تم تنزيلها في حوزتك أو
-                          وصايتك أو سيطرتك.
+                          Ce site contient des avis de propriété et des
+                          informations sur le droit d'auteur, dont les termes
+                          doivent être observés et suivis. Veuillez consulter
+                          l'onglet intitulé "Informations sur le droit d'auteur
+                          et les marques de commerce" pour des informations
+                          connexes. silver-triangle vous accorde une
+                          autorisation limitée, non exclusive et non
+                          transférable pour accéder et consulter les pages Web
+                          de ce site en tant que client ou client potentiel de
+                          silver-triangle à condition que vous respectiez ces
+                          conditions d'utilisation et tous les avis de droit
+                          d'auteur, de marque de commerce et autres avis de
+                          propriété. Vous ne pouvez utiliser un robot
+                          d'indexation que pour indexer ce site Web tel que
+                          permis par le protocole robots.txt de ce site Web, et
+                          silver-triangle peut bloquer tout robot d'indexation à
+                          sa seule discrétion. L'utilisation autorisée en vertu
+                          de cet accord est de nature non commerciale (par
+                          exemple, vous ne pouvez pas vendre le contenu auquel
+                          vous accédez sur ou via ce site). Toute autre
+                          utilisation de ce site est interdite. Sauf pour
+                          l'autorisation limitée dans le paragraphe précédent,
+                          silver-triangle ne vous accorde aucun droit ou licence
+                          explicite ou implicite en vertu de brevets, de marques
+                          de commerce, de droits d'auteur ou d'autres droits de
+                          propriété intellectuelle. Vous ne pouvez copier aucun
+                          contenu de ce site Web sur un autre site Web ou dans
+                          tout autre média. Tout logiciel et autres matériaux
+                          mis à disposition pour le téléchargement, l'accès ou
+                          tout autre usage à partir de ce site seront soumis à
+                          ces termes, conditions et avis. Votre défaut de
+                          respecter ces conditions ou l'une des conditions de ce
+                          site entraînera la résiliation automatique de tout
+                          droit qui vous est accordé, sans préavis, et vous
+                          devez immédiatement détruire toutes les copies des
+                          matériaux téléchargés en votre possession, garde ou
+                          contrôle.
                         </p>
-                        <h5>إخلاء المسؤولية</h5>
+                        <h5>Responsabilité d'évacuation</h5>
                         <p>
-                          من وقت لآخر ، قد يحتوي هذا الموقع على أخطاء فنية أو
-                          أخطاء مطبعية ، ولا نضمن دقة أي معلومات منشورة. يرجى
-                          تأكيد أنك تستخدم أحدث الصفحات على هذا الموقع ، وتأكد
-                          من دقة واكتمال المعلومات قبل استخدامها لاتخاذ القرارات
-                          المتعلقة بالخدمات أو المنتجات أو الأمور الأخرى الموضحة
-                          في هذا الموقع. إذا وجدت السلطة القضائية المختصة أن أي
-                          بند في شروط الاستخدام هذه غير قابل للتنفيذ بأي شكل من
-                          الأشكال ، فلن تتأثر صلاحية بقية شروط الاستخدام هذه ،
-                          بشرط ألا يؤثر عدم قابلية التنفيذ بشكل جوهري على حقوق
-                          الأطراف بموجب هذه الشروط. من الاستخدام.
+                          De temps en temps, ce site web peut contenir des
+                          inexactitudes techniques ou des erreurs
+                          typographiques, et nous ne garantissons pas
+                          l'exactitude de toutes les informations publiées.
+                          Veuillez confirmer que vous utilisez les pages les
+                          plus récentes sur ce site web et vérifier l'exactitude
+                          et l'exhaustivité des informations avant de les
+                          utiliser pour prendre des décisions concernant les
+                          services, les produits ou d'autres sujets décrits sur
+                          ce site web. Si une disposition de ces conditions
+                          d'utilisation est jugée inapplicable de quelque
+                          manière que ce soit par une autorité judiciaire
+                          compétente, la validité du reste de ces conditions
+                          d'utilisation ne sera pas affectée, à condition que
+                          l'inapplicabilité n'affecte pas matériellement les
+                          droits des parties en vertu de ces conditions
+                          d'utilisation. D'utilisation.
                         </p>
-                        <h5>بيانات تطلعية وتحذيرية</h5>
+                        <h5>Déclarations prospectives et prudentes</h5>
                         <p>
-                          باستثناء المعلومات والمناقشات التاريخية ، قد تشكل
-                          البيانات الواردة في هذا الموقع بيانات تطلعية بالمعنى
-                          المقصود في قانون إصلاح التقاضي الخاص بالأوراق المالية
-                          1995 أو غيرها من القوانين المعمول بها. تتضمن هذه
-                          البيانات عددًا من المخاطر والشكوك والعوامل الأخرى التي
-                          قد تؤدي إلى اختلاف النتائج الفعلية ماديًا ، كما تمت
-                          مناقشته في ملفات الشركة مع لجنة الأوراق المالية
-                          والبورصات الأمريكية. راجع علامة التبويب "إيداعات SEC"
-                          تحت عنوان "علاقات المستثمرين" على هذا الموقع للحصول
-                          على نسخ من هذه الإيداعات.
+                          Sauf pour les informations historiques et les
+                          discussions, les déclarations contenues dans ce site
+                          peuvent constituer des déclarations prospectives au
+                          sens de la loi sur la réforme de la responsabilité des
+                          litiges en matière de valeurs mobilières de 1995 ou
+                          d'autres lois applicables. Ces déclarations comportent
+                          un certain nombre de risques, d'incertitudes et
+                          d'autres facteurs qui pourraient entraîner des
+                          résultats réels différents, comme discuté dans les
+                          dépôts de la société auprès de la Commission des
+                          valeurs mobilières et des changes des États-Unis. Voir
+                          l'onglet "Dépôts de la SEC" sous "Relations avec les
+                          investisseurs" sur ce site pour obtenir des copies de
+                          ces dépôts.
                         </p>
-                        <h5>المعلومات السرية</h5>
+                        <h5>Informations confidentielles</h5>
                         <p>
-                          لا ترغب شركةsilver-triangle في تلقي معلومات سرية أو
-                          خاصة منك من خلال موقعنا على الويب. يرجى ملاحظة أن أي
-                          معلومات أو مواد يتم إرسالها إلى silver-triangle لن
-                          تعتبر سرية. بإرسالsilver-triangle أي معلومات أو مواد ،
-                          فإنك تمنحsilver-triangle ترخيصًا غير مقيد وغير قابل
-                          للإلغاء لنسخ وإعادة إنتاج ونشر وتحميل ونشر ونقل وتوزيع
-                          وعرض وأداء وتعديل وإنشاء أعمال مشتقة من ، وبكل حرية.
-                          استخدام تلك المواد أو المعلومات. أنت توافق أيضًا على
-                          أنsilver-triangle تتمتع بحرية استخدام أي أفكار أو
-                          مفاهيم أو معرفة أو تقنيات ترسلها إلينا لأي غرض. ومع
-                          ذلك ، لن نكشف عن اسمك أو ننشر بطريقة أخرى حقيقة أنك
-                          قدمت لنا مواد أو معلومات أخرى ما لم: (أ) حصلنا على إذن
-                          منك لاستخدام اسمك ؛ أو (ب) نخطرك أولاً بأن المواد أو
-                          المعلومات الأخرى التي ترسلها إلى جزء معين من هذا
-                          الموقع سيتم نشرها أو استخدامها بطريقة أخرى مع ذكر اسمك
-                          عليها ؛ أو (ج) نحن مطالبون بذلك بموجب القانون. معلومات
-                          التعريف الشخصية التي ترسلها إلىsilver-triangle بغرض
-                          تلقي المنتجات أو الخدمات.
+                          silver-triangle ne souhaite pas recevoir
+                          d'informations confidentielles ou exclusives de votre
+                          part via notre site web. Veuillez noter que toutes les
+                          informations ou les documents envoyés à
+                          silver-triangle ne seront pas considérés comme
+                          confidentiels. En soumettant des informations ou des
+                          documents à silver-triangle, vous accordez à
+                          silver-triangle une licence illimitée et irrévocable
+                          pour copier, reproduire, publier, télécharger, poster,
+                          transmettre, distribuer, afficher, exécuter, modifier
+                          et créer des œuvres dérivées à partir de ces matériaux
+                          ou informations, de quelque manière que ce soit. Vous
+                          acceptez également que silver-triangle soit libre
+                          d'utiliser toutes les idées, concepts, savoir-faire ou
+                          techniques que vous nous envoyez à des fins
+                          quelconques. Cependant, nous ne divulguerons pas votre
+                          nom ni ne rendrons public le fait que vous nous avez
+                          fourni des documents ou d'autres informations, sauf si
+                          : (a) nous obtenons votre autorisation d'utiliser
+                          votre nom ; ou (b) nous vous informons d'abord que les
+                          documents ou autres informations que vous soumettez à
+                          une partie particulière de ce site seront publiés ou
+                          utilisés avec votre nom ; ou (c) si la loi nous y
+                          oblige. Les informations personnellement identifiables
+                          que vous soumettez à silver-triangle dans le but de
+                          recevoir des produits ou des services.
                         </p>
                       </div>
                     </blockquote>
@@ -664,62 +701,75 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
                   <div class="pricing-plan-item">
                     <h3>
-                      يوضح هذا القسم أنه باستخدام الخدمة، يوافق المستخدمون على
-                      الالتزام بالشروط والأحكام .
+                      Cette section explique que en utilisant le service, les
+                      utilisateurs acceptent de se conformer aux termes et
+                      conditions.
                     </h3>
 
                     <p class="plans-btn">
-                      تحدد الشروط والأحكام مسؤوليات والتزامات المستخدمين.
+                      Les conditions générales définissent les responsabilités
+                      et obligations des utilisateurs.
                     </p>
 
                     <blockquote>
                       <div class="Conditions">
                         <p>
-                          استخدام الخدمة: تفاصيل حول كيفية استخدام الخدمة، بما
-                          في ذلك أي قيود أو الاستخدامات المحظورة.
+                          Utilisation du service : Détails sur la manière dont
+                          le service doit être utilisé, y compris les
+                          restrictions ou les utilisations interdites.
                         </p>
                         <p>
-                          الملكية الفكرية: توضح من يملك الملكية الفكرية (على
-                          سبيل المثال، حقوق الطبع والنشر، العلامات التجارية)
-                          المتعلقة بالخدمة وأي أذونات أو قيود على الاستخدام.
+                          Propriété intellectuelle: Explique qui détient la
+                          propriété intellectuelle (par exemple, les droits
+                          d'auteur, les marques de commerce) liée au service et
+                          toutes les autorisations ou restrictions
+                          d'utilisation.
                         </p>
                         <p>
-                          سياسة الخصوصية: عادةً ما تشير الشروط والأحكام إلى
-                          سياسة الخصوصية للمنظمة، والذي يوضح بالتفصيل كيفية جمع
-                          بيانات المستخدم واستخدامها وحمايتها.
+                          Politique de confidentialité : En général, les
+                          conditions d'utilisation font référence à la politique
+                          de confidentialité de l'organisation, qui détaille
+                          comment les données des utilisateurs sont collectées,
+                          utilisées et protégées.
                         </p>
                         <p>
-                          الدفع والفوترة (إن أمكن): إذا كانت الخدمة تتضمن
-                          مدفوعات، يغطي هذا القسم التسعير وشروط الفوترة وسياسات
-                          الإلغاء.
+                          Paiement et facturation (si applicable) : Si le
+                          service implique des paiements, cette section couvre
+                          les tarifs, les modalités de facturation et les
+                          politiques d'annulation.
                         </p>
                         <p>
-                          الإنهاء والتعليق: يوضح الظروف التي يتم فيها يمكن لمزود
-                          الخدمة إنهاء أو تعليق حساب المستخدم أو الوصول إلى
-                          الخدمة.
+                          Résiliation et suspension : Précise les circonstances
+                          dans lesquelles le fournisseur de services peut
+                          résilier ou suspendre le compte d'un utilisateur ou
+                          l'accès au service.
                         </p>
                         <p>
-                          حل النزاعات: معلومات حول كيفية حدوث النزاعات أو
-                          الصراعات حلها، والتي قد تشمل شروط التحكيم أو الوساطة.
+                          Résolution des conflits : Informations sur la manière
+                          dont les litiges ou les conflits seront résolus, ce
+                          qui peut inclure des clauses d'arbitrage ou de
+                          médiation.
                         </p>
                         <p>
-                          المسؤولية وإخلاء المسؤولية: يصف حدود الخدمة مسؤولية
-                          المزود وتشمل إخلاء المسؤولية التي تنص على أن الخدمة
-                          مقدمة "كما هي" وبدونها الضمانات.
+                          Responsabilité et clauses de non-responsabilité :
+                          décrit les limites de la responsabilité du prestataire
+                          de services et inclut des clauses de
+                          non-responsabilité indiquant que le service est fourni
+                          "tel quel" et sans garantie.
                         </p>
                         <p>
-                          القانون الحاكم: يحدد الاختصاص القضائي والقوانين التي
-                          تحكم اتفاق.
+                          Loi applicable : Spécifie la juridiction et les lois
+                          qui régissent l'accord.
                         </p>
                         <p>
-                          التغييرات في الشروط والأحكام: يوضح كيف ومتى يتم إجراء
-                          التغييرات على الشروط والأحكام الشروط والأحكام سوف يتم
-                          إبلاغها للمستخدمين.
+                          Changes to Terms and Conditions: Explains how and when
+                          changes to the terms and conditions will be
+                          communicated to users.
                         </p>
                         <p>
-                          معلومات الاتصال: توفر تفاصيل الاتصال للمستخدمين
-                          للتواصل معها مع الأسئلة والمخاوف، أو المشاكل المتعلقة
-                          بالخدمة.
+                          Contact Information: Provides contact details for
+                          users to reach out with questions, concerns, or issues
+                          related to the service.
                         </p>
                       </div>
                     </blockquote>
@@ -729,13 +779,13 @@
             </div>
           </div>
         </div>
+
         <!-- Section Title End -->
 
         <!-- About Wrapper Start -->
 
         <!-- About Wrapper End -->
       </div>
-      <!-- About Section end -->
       <div class="section">
         <div class="container">
           <div
@@ -1018,8 +1068,8 @@
           </div>
         </div>
       </div>
-      <!-- [footer] Information Section End -->
 
+      <!-- About Section End -->
       <div
         class="footer-section section"
         data-bg-color="#000"
@@ -1037,11 +1087,15 @@
                     alt=""
                   />
                 </div>
+
                 <div class="footer-widget-content">
                   <div class="content-footer">
                     <p><a href="tel:+0201111579400">(02) 01111579400</a></p>
                     <p><a href="mailto:info@tripu.net">info@tripu.net</a></p>
-                    <p>العنوان : 1 شارع محمد حسن المريوطيه فيصل- الهرم</p>
+                    <p>
+                      Address : 1 Mohamed Hassan Al Mariouteya Faisal Street -
+                      Al Haram
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1051,12 +1105,12 @@
             <!-- Footer Widget Start -->
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">الخدمات</h4>
+                <h4 class="footer-widget-title">Prestations de service</h4>
                 <div class="footer-widget-content">
                   <ul>
-                    <li><a href="services_ar.html">الإيجار بالساعة</a></li>
-                    <li><a href="services_ar.html">إيجار باليوم</a></li>
-                    <li><a href="services_ar.html">نظام المدرسة</a></li>
+                    <li><a href="services_en.html">Louer à l'heure</a></li>
+                    <li><a href="services_en.html">Location par jours</a></li>
+                    <li><a href="services_en.html">Système scolaire</a></li>
                   </ul>
                 </div>
               </div>
@@ -1066,7 +1120,7 @@
             <!-- Footer Widget Start -->
             <!-- <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">المنتجات</h4>
+                <h4 class="footer-widget-title">Products</h4>
                 <div class="footer-widget-content">
                   <ul>
                     <li><a href="#">Elementor Guru</a></li>
@@ -1084,15 +1138,15 @@
             <!-- Footer Widget Start -->
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">نبذة عنا</h4>
+                <h4 class="footer-widget-title">À propos</h4>
                 <div class="footer-widget-content">
                   <ul>
-                    <li><a href="featares_ar.html"> المزايا </a></li>
+                    <li><a href="featares_en.html">Caractéristiques</a></li>
                     <li>
-                      <a href="our_partners_ar.html">شركائنا</a>
+                      <a href="our_partners_en.html">Nos partenaires</a>
                     </li>
-                    <li><a href="policy_ar.html"> سياسة الخصوصيه </a></li>
-                    <li><a href="pricing_ar.html"> الأسعار </a></li>
+                    <li><a href="policy_en.html">Politique</a></li>
+                    <li><a href="pricing_en.html">Tarifs</a></li>
                   </ul>
                 </div>
               </div>
@@ -1102,13 +1156,15 @@
             <!-- Footer Widget Start -->
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">التواصل</h4>
+                <h4 class="footer-widget-title">Contact</h4>
                 <div class="footer-widget-content">
                   <ul>
-                    <li><a href="technical-support_ar.html">الدعم الفني</a></li>
-                    <!-- <li><a href="#">Help Desk</a></li> -->
-                    <!-- <li><a href="#">Live Chat</a></li> -->
-                    <li><a href="faqs_ar.html">FAQs</a></li>
+                    <li>
+                      <a href="technical-support_en.html">Soutien technique</a>
+                    </li>
+                    <!-- <li><a href=" # .html">Help Desk</a></li> -->
+                    <!-- <li><a href="  .html">Live Chat</a></li> -->
+                    <li><a href="faqs_en.html">FAQs</a></li>
                   </ul>
                 </div>
               </div>
@@ -1138,8 +1194,8 @@
           <div class="row">
             <div class="col">
               <p class="copyright">
-                <!-- © 2024 <strong>رحلتك</strong> بواسطة
-                <i class="fas fa-heart text-danger" aria-hidden="true"></i>المثلت الفضي
+                <!-- © 2024 <strong>TripU</strong> Made with
+                <i class="fas fa-heart text-danger" aria-hidden="true"></i> by
                 <a href="#"></a>. -->
                 <small>&copy; Copyright 2024 silver-triangle</small>
               </p>
@@ -1161,7 +1217,7 @@
       <div class="site-main-mobile-menu-inner">
         <div class="mobile-menu-header">
           <div class="mobile-menu-logo">
-            <a href="home_ar.html">
+            <a href="index.html">
               <img
                 src="finshWebsite/images/التسليم/التسليم/موكاب/noBackground.png"
                 alt="TripU"
@@ -1179,23 +1235,19 @@
           <nav class="site-mobile-menu">
             <ul>
               <li>
-                <a href="home_ar.html"
-                  ><span class="menu-text">الرئيسية</span></a
+                <a href="index.html"><span class="menu-text">Maison</span></a>
+              </li>
+              <li>
+                <a href="offer_en.html"><span class="menu-text">Offer</span></a>
+              </li>
+              <li>
+                <a href="services_en.html"
+                  ><span class="menu-text">Services</span></a
                 >
               </li>
               <li>
-                <a href="offer_ar.html"
-                  ><span class="menu-text">العروض</span></a
-                >
-              </li>
-              <li>
-                <a href="services_ar.html"
-                  ><span class="menu-text">خدماتنا</span></a
-                >
-              </li>
-              <li>
-                <a href="cars_ar.html"
-                  ><span class="menu-text">السيارات</span></a
+                <a href="cars_en.html"
+                  ><span class="menu-text">Véhicules</span></a
                 >
               </li>
               <li class="has-children">
@@ -1204,20 +1256,24 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  ><span class="menu-text">الحساب</span></a
+                  ><span class="menu-text">Profil</span></a
                 >
                 <span class="menu-toggle"
                   ><i class="fa-solid fa-caret-down"></i
                 ></span>
                 <ul class="sub-menu">
                   <li>
-                    <a href="profile_caption_ar.html"
-                      ><span class="menu-text">تعديل حساب الكابتن</span></a
+                    <a href="profile_caption_en.html"
+                      ><span class="menu-text"
+                        >Modifier la légende du profil</span
+                      ></a
                     >
                   </li>
                   <li>
-                    <a href="profile_client_ar.html"
-                      ><span class="menu-text">تعديل حساب العميل</span></a
+                    <a href="profile_client_en.html"
+                      ><span class="menu-text"
+                        >Modifier le profil du client</span
+                      ></a
                     >
                   </li>
                 </ul>
@@ -1229,22 +1285,27 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <span class="menu-text">اللغة</span></a
+                  <span class="menu-text">Language</span></a
                 >
                 <span class="menu-toggle"
                   ><i class="fa-solid fa-caret-down"></i
                 ></span>
                 <ul class="sub-menu">
-                  <li>
-                    <a href="policy_ar.html"
-                      ><span class="home_ar.html">العربي</span></a
-                    >
-                  </li>
                   <li>
                     <a href="policy_en.html"
                       ><span class="menu-text">English</span></a
                     >
                   </li>
+                  <li>
+                    <a href="policy_ar.html"
+                      ><span class="menu-text">Arabic</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="policy_fr.html"
+                      ><span class="menu-text">French</span></a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="has-children">
@@ -1254,33 +1315,32 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <span class="menu-text">الإشتراك</span></a
+                  <span class="menu-text">SignIn</span></a
                 >
                 <span class="menu-toggle"
                   ><i class="fa-solid fa-caret-down"></i
                 ></span>
                 <ul class="sub-menu">
                   <li>
-                    <a href="authentication_ar.html"
-                      ><span class="menu-text">الإشتراك كابتن</span></a
+                    <a href="authentication_en.html"
+                      ><span class="menu-text">Légende de connexion</span></a
                     >
                   </li>
                   <li>
-                    <a href="authentication_ar.html"
-                      ><span class="menu-text">الإشتراك عميل</span></a
+                    <a href="authentication_en.html"
+                      ><span class="menu-text">Client de connexion</span></a
                     >
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="aboutUs-ar.html"
-                  ><span class="menu-text">نبذة عنا</span></a
+                <a href="aboutUs_en.html"
+                  ><span class="menu-text">À propos de nous</span></a
                 >
               </li>
-
               <li>
-                <a href="contactUs_ar.html"
-                  ><span class="menu-text">تواصل معنا</span></a
+                <a href="contactUs_en.html"
+                  ><span class="menu-text">Contactez-nous</span></a
                 >
               </li>
             </ul>
@@ -1288,8 +1348,10 @@
         </div>
       </div>
     </div>
+
     <script src="finshWebsite/exomac/assets/js/vendor/vendor.min.js"></script>
     <script src="finshWebsite/exomac/assets/js/plugins/plugins.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="finshWebsite/Documentation/assets/js/all.min.js"></script>

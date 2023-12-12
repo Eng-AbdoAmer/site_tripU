@@ -33714,7 +33714,6 @@ textarea:focus {
   margin: 0 15px;
   font-size: 16px;
   content: "\f105";
-  font-family: "Font Awesome 5 Pro";
   color: #fff;
   margin-top: 2px;
 }
@@ -38332,7 +38331,7 @@ swiper-slide img {
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
   .accordion .item .item-header h2 button.btn.btn-link {
-    width: 345px !important;
+    width: 490px !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -38342,7 +38341,7 @@ swiper-slide img {
 }
 @media only screen and (min-width: 479px) and (max-width: 767px) {
   .accordion .item .item-header h2 button.btn.btn-link {
-    width: 345px !important;
+    width: 420px !important;
   }
 }
 @media only screen and (min-width: 359px) and (max-width: 479px) {
@@ -38358,8 +38357,64 @@ swiper-slide img {
   .accordion .item .item-header h2 button.btn.btn-link {
     width: 280px !important;
   }
+  .frind-box .single-friend {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+  .frind-box .single-friend .left {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .frind-box .single-friend .right {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media only screen and (min-width: 220px) and (max-width: 359px) {
+  .frind-box .single-friend {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+  .frind-box .single-friend .left {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .frind-box .single-friend .right {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .section-title .title {
     font-size: 13px;
   }
@@ -39289,7 +39344,6 @@ div#forgot-password {
   padding: 10px 0px 3px;
   cursor: pointer;
   position: relative;
-
 }
 .input-info-box .select-payment .option:active,
 .input-info-box .select-payment .option:hover {
@@ -39304,14 +39358,20 @@ div#forgot-password {
   right: -7px;
   visibility: hidden;
 }
- .select-payment .option:active svg,
- .select-payment .option:hover svg {
+.select-payment .option:active svg,
+.select-payment .option:hover svg {
   visibility: visible !important;
 }
-.content_close_acount{
+.content_close_acount {
   margin-top: -8%;
-    margin-left: 21%;
-    margin-bottom: 8%;
-    padding: 1px 16px;
-    height: 100%;
+  margin-left: 21%;
+  margin-bottom: 8%;
+  padding: 1px 16px;
+  height: 100%;
+}
+#forgot-password #myInput {
+  box-shadow: none;
+}
+#forgot-password #myInput:focus {
+  border: 1px solid #f5f5f5;
 }

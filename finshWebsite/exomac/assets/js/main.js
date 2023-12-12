@@ -943,3 +943,22 @@ onSubmitCobone = function () {
     " https://play.google.com/store/apps/details?id=com.tripu.tripu&pli=1?number=" +
     document.getElementById("myInput").value;
 };
+
+function redirectToSectionNotification() {
+  window.location.href = "technical-support_en.html#test";
+}
+window.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tabToOpen = urlParams.get("tab");
+
+  // Open the corresponding tab
+  if (tabToOpen) {
+    const tabContent = document.getElementById(tabToOpen);
+    if (tabContent) {
+      tabContent.style.display = "block";
+    }
+    // } else {
+    //   tabContent.style.display = "none";
+    // }
+  }
+});
