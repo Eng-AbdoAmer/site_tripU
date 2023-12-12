@@ -885,7 +885,7 @@ p {
   align-items: center;
   text-transform: capitalize;
   color: #fff;
-  background-color: #1292ee;
+  /* background-color: #1292ee; */
   text-align: center;
   padding: 7px 3px;
   font-size: 17px;
@@ -961,6 +961,7 @@ p {
   font-weight: 600;
 }
 .car-images label {
+  width: auto !important;
   padding: 11px;
   margin: auto;
 }

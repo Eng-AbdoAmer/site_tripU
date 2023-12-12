@@ -123,10 +123,10 @@
                 <div class="profile_menu_Language">
                   <ul class="sub-menu">
                     <li>
-                      <a href="profile_caption_en.html"><span class="menu-text">English</span></a>
+                      <a href="profile_caption_new_en.html"><span class="menu-text">English</span></a>
                     </li>
                     <li>
-                      <a href="profile_caption_ar.html"><span class="menu-text">العربيه</span></a>
+                      <a href="profile_caption_new_ar.html"><span class="menu-text">العربيه</span></a>
                     </li>
                   </ul>
                 </div>
@@ -438,6 +438,11 @@
                   >معلومات الحاساب</a
                 >
                 <a
+                class="tablinks"
+                onclick="openCity(event, 'trip_details')"
+                >تفاصيل الرحلات</a
+              >
+                <a
                   class="tablinks"
                   onclick="openCity(event, 'change_password')"
                   >تغيير الرقم السري</a
@@ -632,8 +637,11 @@
                         <h2 class="">امام السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/car_shap/front_car.jpg" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-upload"></i>
-
+                          <!-- <i class="fa-solid fa-upload"></i> -->
+                          <span class="Btn">
+                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="text">تحميل</div>
+                          </span>
                         </label>
                         <input type="file" id="uploadBtn">
                         </input>
@@ -644,8 +652,11 @@
                         <h2>خلف السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/car_shap/back_car.jpg" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-upload"></i>
-
+                          <!-- <i class="fa-solid fa-upload"></i> -->
+                          <span class="Btn">
+                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="text">تحميل</div>
+                          </span>
                         </label>
                         <input type="file" id="uploadBtn">
                         </input>
@@ -655,8 +666,12 @@
                       <div class="id-card">
                         <h2>يمين السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/car_shap/right_car.jpg" alt="" />
-                        <label for="uploadBtn">
-                          <i class="fa-solid fa-upload"></i>
+                          <label for="uploadBtn">
+                          <!-- <i class="fa-solid fa-upload"></i> -->
+                          <span class="Btn">
+                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="text">تحميل</div>
+                          </span>
                         </label>
                         <input type="file" id="uploadBtn">
                         </input>
@@ -666,8 +681,12 @@
                       <div class="id-card">
                         <h2>يسار السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/car_shap/left_car.jpg" alt="" />
-                        <label for="uploadBtn">
-                          <i class="fa-solid fa-upload"></i>
+                          <label for="uploadBtn">
+                          <!-- <i class="fa-solid fa-upload"></i> -->
+                          <span class="Btn">
+                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="text">تحميل</div>
+                          </span>
                         </label>
                         <input type="file" id="uploadBtn">
                         </input>
@@ -677,8 +696,12 @@
                       <div class="id-card">
                         <h2>داخل السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
-                        <label for="uploadBtn">
-                          <i class="fa-solid fa-upload"></i>
+                          <label for="uploadBtn">
+                          <!-- <i class="fa-solid fa-upload"></i> -->
+                          <span class="Btn">
+                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="text">تحميل</div>
+                          </span>
                         </label>
                         <input type="file" id="uploadBtn">
                         </input>
@@ -744,9 +767,11 @@
                         <h2 class="title">الهوية من الوجه</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (3).png" alt="" />
                         <label  for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                          <span>تحميل</span>
-                        </label>
+                          
+                             <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -756,9 +781,11 @@
                         <h2 class="title">الهوية من الخلف</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (2).png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                              <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -774,9 +801,11 @@
                         <h2 class="title">صورة شخصية</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/user-profile-person.png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                           <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -787,9 +816,11 @@
                         <img 
                           src="finshWebsite/exomac/assets/images/project/9.png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                            <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -804,9 +835,11 @@
                         <h2 class="title">وجه رخصة السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                                <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -816,9 +849,11 @@
                         <h2 class="title">ظهر رخصة السيارة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                              <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -834,9 +869,11 @@
                         <h2 class="title">وجه رخصة القيادة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/caption_license(2).png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                              <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -846,9 +883,11 @@
                         <h2 class="title">ظهر رخصة القيادة</h2>
                         <img src="finshWebsite/exomac/assets/images/document-images/caption_license(1).png" alt="" />
                         <label for="uploadBtn">
-                          <i class="fa-solid fa-file-arrow-up"></i>
-                         <span>تحميل</span>
-                        </label>
+                          
+                          <span class="Btn">
+                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="text"> تحميل</div>
+                            </span>                        </label>
                         <input type="file" id="uploadBtn">
                         </input>
                       </div>
@@ -1039,19 +1078,101 @@
           </div>
         </div>
         <!-- End change_password Content -->
-        <!-- Start privacy-Settings Content  -->
-        <!-- <div
-          id="privacy-Settings"
-          class="news_content tabcontent content-tip_details"
-          style="border: none"
-        >
-          <div class="container">
-            <div class="page-title">
-              Congratulations, you have earned your welcome discount
-            </div>  
-          </div>
-        </div> -->
-        <!-- End privacy-Settings Content  -->
+       <!-- Start trip_details Content  -->
+       <div
+       id="trip_details"
+       class="news_content tabcontent content-tip_details"
+       style="border: none"
+     >
+       <div class="container">
+         <div class="page-title">
+           تفاصيل الرحلات
+         </div> 
+           <div class="trip-table-details mt-6">
+             <div class="table-responsive">
+               <table class="table">
+                 <thead>
+                   <tr>
+                     <th>رقم</th>
+                     <th>بداية الموقع</th>
+                     <th>نهاية الموقع</th>
+                     <th>السعر</th>
+                     <th>كل التفاصيل</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>1</td>
+                     <td>Cairo</td>
+                     <td>Alexandria</td>
+                     <td>120</td>
+                     <td>
+                      <a style="--clr: #1292ee" class="button" href="more_details-ar.html">
+                        <span class="button__icon-wrapper">
+                            <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                            
+                            <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                        </span>
+                        عرض التفاصيل
+                    </a> 
+                      <!-- <a class="site-button  moreDetails" href="more_details_en.html">التفاصيل</a> -->
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>2</td>
+                     <td>Giza</td>
+                     <td>Mit Ghamr</td>
+                     <td>130</td>
+                     <td>
+                      <a style="--clr: #1292ee" class="button" href="more_details-ar.html">
+                        <span class="button__icon-wrapper">
+                            <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                            
+                            <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                        </span>
+                        عرض التفاصيل
+                    </a>
+                       <!-- <a class="site-button moreDetails" href="more_details_en.html">التفاصيل</a> -->
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>3</td>
+                     <td>Tanta</td>
+                     <td>Damietta</td>
+                     <td>140</td>
+                     <td>
+                      <a style="--clr: #1292ee" class="button" href="more_details-ar.html">
+                        <span class="button__icon-wrapper">
+                            <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                            
+                            <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                            </svg>
+                        </span>
+                        عرض التفاصيل
+                    </a>
+                       <!-- <a class=" site-button moreDetails" href="more_details_en.html">التفاصيل</a> -->
+                     </td>
+                   </tr>
+
+                 </tbody>
+               </table>
+             </div>
+           </div>
+        
+       </div>
+     </div>
+     <!-- End trip_details Content  -->
         <!-- Start verified-account Content -->
         <div
           id="verified-account"
