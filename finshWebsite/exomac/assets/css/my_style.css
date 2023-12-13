@@ -555,8 +555,8 @@
   right: 49%;
 }
 .user_image {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1263,6 +1263,8 @@ label.error,
 }
 /*===== notification Style ==========*/
 .bell-notificatin {
+  margin: 0 4px;
+
   color: #fff;
   position: relative;
 }

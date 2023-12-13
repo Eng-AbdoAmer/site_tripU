@@ -6,6 +6,7 @@ function openCity(evt, cityName) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+
     // tabcontent[1].style.display = "block";
   }
 
@@ -17,6 +18,7 @@ function openCity(evt, cityName) {
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
+  console.log(cityName);
   evt.currentTarget.className += " active";
 }
 // ==============Taps javaScript=================
