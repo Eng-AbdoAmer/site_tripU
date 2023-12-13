@@ -447,11 +447,11 @@
                   onclick="openCity(event, 'change_password')"
                   >تغيير الرقم السري</a
                 >
-                <!-- <a
+                <a
                   class="tablinks"
-                  onclick="openCity(event, 'privacy-Settings')"
-                  >Cobone</a
-                > -->
+                  onclick="openCity(event, 'forget_password')"
+                  >تذكر الرقم السري</a
+                >
                 <a
                   class="tablinks"
                   onclick="openCity(event, 'verified-account')"
@@ -499,11 +499,11 @@
                   onclick="openCity(event, 'billing_Payout')"
                   >الفواتير والدفع</a
                 >
-                <!-- <a
+                <a
                   class="tablinks"
-                  onclick="openCity(event, 'upgrade_Membership_Plan')"
-                  >Upgrade Membership Plan</a
-                > -->
+                  onclick="openCity(event, 'wallet')"
+                  >المحفظة</a
+                >
                 <!-- <a
                   class="tablinks"
                   onclick="openCity(event, 'view_Purchase_History')"
@@ -1078,6 +1078,100 @@
           </div>
         </div>
         <!-- End change_password Content -->
+
+
+          <!-- Start change_password Content -->
+          <div
+          id="forget_password"
+          class="news_content tabcontent content-tip_details"
+          style="border: none"
+        >
+          <div class="container">
+            <!-- ResetPassword Section Start -->
+            <div class="section section-padding">
+              <div class="container">
+                <!-- Section Title Start -->
+                <div class="section-title text-center" data-aos="fade-up">
+                  <h2 class="title">أدخل عنوان البريد الإلكتروني المرتبط بحسابك</h2>
+                  <!-- <p class="sub-title">
+                  Our team of designers, developers and creatives are perfectionists
+                  who love what they do and love
+                </p> -->
+                </div>
+                <!-- Section Title End -->
+      
+                <!-- About Wrapper Start -->
+                <div class="row">
+                  <!-- About Image Area Start -->
+                  <div
+                    class="col-xl-7 col-lg-6 col-12"
+                    style="display: flex; justify-content: center"
+                    data-aos="fade-up"
+                  >
+                    <div class="about-image-area colflex">
+                      <div class="about-image img_stack js-tilt">
+                        <img
+                          src="finshWebsite/exomac/assets/images/project/forgetPassword.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- About Image Area Start -->
+      
+                  <!-- About Start -->
+                  <div
+                    class="col-xl-5 col-lg-6 col-12"
+                    style="margin-top: 20px"
+                    data-aos="fade-up"
+                  >
+                    <div id="forgot-password" class="tab-pane">
+                      <form class="p-a30 dez-form m-t100 text-center">
+                        <h3 class="form-title m-t0">نسيت كلمة المرور؟</h3>
+                        <div class="dez-separator-outer m-b5">
+                          <div class="dez-separator bg-primary style-liner"></div>
+                        </div>
+                        <p>
+                          أدخل عنوان بريدك الإلكتروني أدناه لإعادة تعيين كلمة المرور
+                          الخاصة بك.
+                        </p>
+                        <div class="form-group">
+                          <input
+                            name="dzName"
+                            required=""
+                            class="form-control"
+                            placeholder="الإميل"
+                            type="text"
+                          />
+                        </div>
+                        <div class="form-group text-left p-l100">
+                          <!-- <a
+                          class="site-button outline gray"
+                          data-toggle="tab"
+                          href="#login"
+                          >Back</a
+                        > -->
+                          <button class="site-button pull-right">إرسال</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- About Start -->
+                </div>
+                <!-- About Wrapper End -->
+              </div>
+            </div>
+            <!--ResetPassword  Section End -->
+          </div>
+        </div>
+        <!-- End change_password Content -->
+
+
+
+
+
+
+
        <!-- Start trip_details Content  -->
        <div
        id="trip_details"
@@ -2288,15 +2382,109 @@
         </div>
         <!-- End billing_Payout Content -->
         <!-- Start upgrade_Membership_Plan Content -->
-        <!-- <div
-          id="upgrade_Membership_Plan"
+        <div
+          id="wallet"
           class="news_content tabcontent content-tip_details"
           style="border: none"
         >
           <div class="container">
-            <h2>upgrade_Membership_Plan Details</h2>
+                 <!--Section wallet method Start -->
+      <div id="services" class="section section-padding-t110-b120">
+        <div class="container">
+          <div class="section-title text-center mb-12" data-aos="fade-up">
+            <h2 class="title">محفظتك، استراتيجية الادخار الخاصة بك</h2>
           </div>
-        </div> -->
+          <div
+            class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6"
+          >
+            <div class="col mb-6" data-aos="fade-up">
+              <div class="icon-box card_A text-center" data-vivus-hover>
+                <div class="icon_svg">
+                  <i class="fa-solid fa-money-bill fa-2xl"></i>
+                </div>
+                <div class="content-service text-center">
+                  <h3 class="title">التوازن</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-6" data-aos="fade-up">
+              <div class="icon-box card_B text-center" data-vivus-hover>
+                <div class="icon_svg">
+                  <i class="fa-regular fa-credit-card fa-2xl"></i>
+                </div>
+                <div class="content-service">
+                  <h3 class="title">إدفع الفواتير</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Icon Box Start -->
+            <div class="col mb-6" data-aos="fade-up">
+              <div class="icon-box card_C text-center" data-vivus-hover>
+                <div class="icon_svg">
+                  <i class="fa-solid fa-wallet fa-2xl"></i>
+                </div>
+                <div class="content-service">
+                  <h3 class="title">التحويل</h3>
+                  <!-- <div class="desc">
+                <p>
+                  You can rent your dream car any day and anywhere we have
+                  good offers.
+                </p>
+              </div> -->
+                  <!-- <a href="#" class="link">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+            <!-- Icon Box End -->
+          </div>
+        </div>
+      </div>
+      <!--Section wallet method End -->
+      <!--Section wallet details Start -->
+      <div id="services" class="section mt-5 mb-12">
+        <div class="container">
+          <div class="table-responsive">
+            <table class="table table-striped" style="color: black">
+              <thead>
+                <tr class="table-dark">
+                  <th>الرقم</th>
+                  <th>السعر</th>
+                  <th>المرسل</th>
+                  <th>المرسل إليه</th>
+                  <th>الوقت</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>1000</td>
+                  <td>Ahmed</td>
+                  <td>Ali</td>
+                  <td>11/1/2023</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2000</td>
+                  <td>omer</td>
+                  <td>Kaream</td>
+                  <td>11/5/2023</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1100</td>
+                  <td>Mostafa</td>
+                  <td>khalad</td>
+                  <td>11/11/2023</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--Section wallet details End -->
+          </div>
+        </div>
         <!-- End upgrade_Membership_Plan Content -->
         <!--Start view_Purchase_History content -->
         <!-- <div
