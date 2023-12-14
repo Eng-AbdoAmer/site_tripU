@@ -920,11 +920,20 @@ function updateData(sectionId) {
 
   // // Redirect to a new URL with updated parameters
   // window.location.href = 'profile_caption_new_en.html/?data=' + newData;
+  // var urlParams = new URLSearchParams(window.location.search);
+  // var numberValue = urlParams.get("number");
+  // document.getElementById("myInput").value = numberValue;
+  // if (numberValue != null && numberValue !== "") {
+  //   // numberValue = inputElement.value;
+  //   alert("error");
+  // }
   var urlParams = new URLSearchParams(window.location.search);
   var numberValue = urlParams.get("number");
   document.getElementById("myInput").value = numberValue;
-  if (numberValue != null) {
-    // numberValue = inputElement.value;
+
+  if (numberValue == null || numberValue === "") {
+    alert("Error: Number is empty or null");
+    window.location.href = "coupon_failed_en.html";
   }
 
   // const queryParamValue = getQueryParam('number');

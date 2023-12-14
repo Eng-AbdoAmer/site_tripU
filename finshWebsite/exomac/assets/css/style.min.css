@@ -24635,7 +24635,7 @@ button.tablinks {
   .d-xl-none {
     display: none !important;
   }
-  .row{
+  .header-section .header-inner .row{
     flex-wrap: nowrap !important;
   }
 }
