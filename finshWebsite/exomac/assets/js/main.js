@@ -428,28 +428,121 @@
 
 // menu_toggel
 
+// function menuToggle() {
+//   // const toggleMenu = document.querySelector(".profile_menu");
+//   // toggleMenu.classList.toggle("active");
+//   const toggleMenu = document.querySelector(".profile_menu");
+//   const toggleNotification = document.querySelector(".notification-box");
+//   const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+//   // إزالة الصفة "active" من العناصر الأخرى
+//   toggleNotification.classList.remove("active");
+//   toggleMenuLang.classList.remove("active");
+
+//   // تبديل حالة العنصر الحالي
+//   toggleMenu.classList.toggle("active");
+// }
+// function menuToggleNotification() {
+//   // const toggleNotification = document.querySelector(".notification-box");
+//   // toggleNotification.classList.toggle("active");
+//   const toggleMenu = document.querySelector(".profile_menu");
+//   const toggleNotification = document.querySelector(".notification-box");
+//   const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+//   // إزالة الصفة "active" من العناصر الأخرى
+//   toggleNotification.classList.remove("active");
+//   toggleMenuLang.classList.remove("active");
+
+//   // تبديل حالة العنصر الحالي
+//   toggleMenu.classList.toggle("active");
+// }
+// function menuToggleLanguage() {
+//   // const toggleMenuLang = document.querySelector(".profile_menu_Language");
+//   // toggleMenuLang.classList.toggle("active");
+//   const toggleMenu = document.querySelector(".profile_menu");
+//   const toggleNotification = document.querySelector(".notification-box");
+//   const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+//   // إزالة الصفة "active" من العناصر الأخرى
+//   toggleNotification.classList.remove("active");
+//   toggleMenuLang.classList.remove("active");
+
+//   // تبديل حالة العنصر الحالي
+//   toggleMenu.classList.toggle("active");
+// }
+
+// function menuToggle() {
+//   const toggleMenu = document.querySelector(".profile_menu");
+//   const toggleNotification = document.querySelector(".notification-box");
+//   const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+//   // إزالة الصفة "active" من العناصر الأخرى
+//   toggleNotification.classList.remove("active");
+//   toggleMenuLang.classList.remove("active");
+
+//   // تبديل حالة العنصر الحالي
+//   toggleMenu.classList.toggle("active");
+// }
+
 function menuToggle() {
   const toggleMenu = document.querySelector(".profile_menu");
+  const toggleNotification = document.querySelector(".profile_menu_notification");
+  const toggleMenuLang = document.querySelector(".profile_menu_Language");
+  // تبديل حالة العنصر الحالي
+  // إغلاق النوافذ الأخرى
+  toggleNotification.classList.remove("active");
+  toggleMenuLang.classList.remove("active");
   toggleMenu.classList.toggle("active");
 }
+
 function menuToggleNotification() {
-  const toggleNotification = document.querySelector(".notification-box");
+  const toggleMenu = document.querySelector(".profile_menu");
+  const toggleNotification = document.querySelector(".profile_menu_notification");
+  const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+  // إغلاق النوافذ الأخرى
+  toggleMenu.classList.remove("active");
+  toggleMenuLang.classList.remove("active");
+
+  // تبديل حالة العنصر الحالي
   toggleNotification.classList.toggle("active");
 }
+
 function menuToggleLanguage() {
+  const toggleMenu = document.querySelector(".profile_menu");
+  const toggleNotification = document.querySelector(".profile_menu_notification");
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
+
+  // إغلاق النوافذ الأخرى
+  toggleMenu.classList.remove("active");
+  toggleNotification.classList.remove("active");
+
+  // تبديل حالة العنصر الحالي
   toggleMenuLang.classList.toggle("active");
 }
-
+// function menuToggle(menuName) {
+//   const menus = document.querySelectorAll(".menu");
+//   console.log(menus);
+//   // Loop through all menus
+//   menus.forEach((menu) => {
+//     if (menu.id === menuName) {
+//       // Toggle the current menu
+//       menu.classList.toggle("active");
+//     } else {
+//       // Close other menus
+//       menu.classList.remove("active");
+//     }
+//   });
+// }
 //////
 var d = new Date();
 page.currentYear = d.getFullYear();
 
 function showHide() {
-  const toggleNotification = document.querySelector(".notification-box");
-  if (toggleNotification.style.display == "none") {
-    toggleNotification.style.display = "block";
-  } else toggleNotification.style.display = "none";
+  // const toggleNotification = document.querySelector(".notification-box");
+  // if (toggleNotification.style.display == "none") {
+  //   toggleNotification.style.display = "block";
+  // } else toggleNotification.style.display = "none";
 }
 /*=========== pagination ================ */
 function getPageList(totalPages, page, maxLength) {
@@ -971,3 +1064,5 @@ window.addEventListener("DOMContentLoaded", function () {
     // }
   }
 });
+
+//code to validations for the email address javascript

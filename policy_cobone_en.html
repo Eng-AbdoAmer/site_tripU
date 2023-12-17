@@ -199,77 +199,137 @@
                 <div
                   class="bell-notificatin"
                   current-count="8"
-                  onclick="showHide()"
+                  onclick="menuToggleNotification()"
                 >
                   <i class="fa-solid fa-bell"></i>
+                  <!-- animate__animated animate__flipInX -->
+                </div>
+                <div class="profile_menu_notification">
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عادل</h4>
+                      <p>كيف يمكنني مساعدك</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>كمال علي</h4>
+                      <p>كم هذه الرحلة</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عامر</h4>
+                      <p>آسف! إنها رحلة مكلفة للغاية</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>عمر باسم</h4>
+                      <p>أنا في انتظارك يا سيدي</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <div class="notification-text flexcenter">
+                      <a
+                        href="profile_caption_new_en.html"
+                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                      >
+                        عرض الكل
+                      </a>
+                      <!-- <a class="" href="#">View All</a> -->
+                    </div>
+                  </div>
                 </div>
                 <div class="user_image has-children" onclick="menuToggle();">
                   <img
                     src="finshWebsite/exomac/assets/images/author/blog-author.png"
                     alt=""
                   />
-                  <span class="menu-toggle"
-                    ><i class="far fa-angle-down"></i
-                  ></span>
+                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
                   <div class="profile_menu">
                     <ul class="sub-menu">
                       <li>
-                        <a href="profile_caption_new_en.html"
+                        <a href="profile_caption_new_ar.html"
                           ><span class="menu-text"
                             >Edit Profile Caption</span
                           ></a
                         >
                       </li>
                       <li>
-                        <a href="profile_client_en.html"
-                          ><span class="menu-text">Edit Profile Client</span></a
+                        <a href="profile_client_ar.html"
+                          ><span class="menu-text">
+                            Edit Profile client</span
+                          ></a
                         >
                       </li>
                       <!-- <li>
-                      <a href="#"><span class="menu-text">Setting</span></a>
-                    </li> -->
+                          <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                        </li>-->
                       <li>
-                        <a href="forget_password_en.html"
-                          ><span class="menu-text">Forget Password</span></a
+                        <a href="forget_password_ar.html"
+                          ><span class="menu-text">ForgetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="reset_password_en.html"
-                          ><span class="menu-text">Reset Password</span></a
+                        <a href="reset_password_ar.html"
+                          ><span class="menu-text">ResetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="wallet_en.html"
+                        <a href="wallet_ar.html"
                           ><span class="menu-text">Wallet</span></a
                         >
                       </li>
                       <li>
-                        <a href="authentication_en.html"
-                          ><span class="menu-text">Logout</span></a
+                        <a href="authentication_ar.html"
+                          ><span class="menu-text">Logout </span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language start-->
                 <div onclick="menuToggleLanguage();" class="">
                   <i class="fa-solid fa-earth-americas stylesvglang"></i>
                   <div class="profile_menu_Language">
                     <ul class="sub-menu">
                       <li>
-                        <a href="policy_en.html"
+                        <a href="policy_cobone_en.html"
                           ><span class="menu-text">English</span></a
                         >
                       </li>
                       <li>
-                        <a href="policy_ar.html"
-                          ><span class="menu-text">Arabic</span></a
+                        <a href="policy_cobone_en.html"
+                          ><span class="menu-text">العربيه</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="policy_cobone_en.html"
+                          ><span class="menu-text">French</span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language end-->
+                <!-- language end-->
                 <div
                   class="notification-box animate__animated animate__flipInX"
                   style="display: none"
@@ -317,7 +377,8 @@
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_en.html"
+                        href="sidebar.html?section=section2"
+                        onclick="redirectToSectionNotification()"
                         class="btn btn-primary btn-hover-secondary"
                         >View All</a
                       >
@@ -339,13 +400,13 @@
 
               <!-- Header Right Start -->
               <!-- <div class="col-xl-1 col d-none d-sm-flex order-1"> -->
-                <!-- <a href="#" class="btn btn-light btn-hover-primary"
+              <!-- <a href="#" class="btn btn-light btn-hover-primary"
                   >Login
                   <i class="fa-regular fa-user"></i>
                 </a> -->
-              
-                <!-- profile_menu -->
-                <!-- Header Right End -->
+
+              <!-- profile_menu -->
+              <!-- Header Right End -->
               <!-- </div> -->
             </div>
           </div>
@@ -493,7 +554,7 @@
           <!-- Section Title Start -->
           <div class="row align-items-center justify-content-between">
             <div class="col-auto">
-             <h5>Terms of use</h5>
+              <h5>Terms of use</h5>
             </div>
           </div>
 
@@ -507,9 +568,38 @@
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
                   <div class="pricing-plan-item">
-                 
-                    <div class="rule_content Arabic-text">1-  هذا العرض متاح حتى 21/7/2023. <br><br>2- يُفترض أن يكون الراكب الحالي قد وجّه الدعوة بنجاح إلى راكب جديد حتى يتمكن من الحصول على المكافأة، وذلك بما يتفق مع شروط العروض الترويجية أدناه.<br><br>3- تُعتبر الدعوة الناجحة مؤهلة لهذا العرض عندما يقوم متلقي الدعوة بالتسجيل باستخدام رمز الدعوة الفريد الخاص بمرسل الدعوة ويُكمل مشوارًا واحدًا خلال أربعة عشر (14) يومًا من 1) التسجيل وفقًا للعرض المعني أو 2) بدء دي دي عملياتها في المنطقة الجغرافية المعنية.<br><br>4- سيتلقى مرسل الدعوة خصمين بقيمة 50% بحد أقصي 20ج.م في صورة قسائم مشاوير بينما سيحصل متلقي الدعوة على مبلغ 250 ج.م. في صورة قسائم خصومات كمستخدم جديد، حيث يمكن استخدام أي من هذه المبالغ لتخفيض الأجرة الإجمالية للمشوار (باستثناء رسوم المرور والضرائب والرسوم الأخرى التابعة لجهات خارجية).<br><br>5- ما لم توضح القسيمة خلاف ذلك، تنتهي صلاحية القسائم خلال أسبوعين من تاريخ إصدارها.<br><br>6- يخضع استخدام القسيمة لشروط وأحكام دي دي الخاصة بعروض الركاب، والتي يمكن الاطلاع عليها من خلال الانتقال إلى "الحساب &gt; الإعدادات &gt; أحكام وشروط" في تطبيق دي دي للركاب.<br><br>7-تحتفظ دي دي بالحق في تغيير هذه الشروط والأحكام في أي وقت وفقًا للأحكام والشروط العامة الخاصة بعروض الركاب.<br><br>8- القرار الذي تتخذه دي دي بهذا الشأن هو قرار نهائي.<br><br>9- تخضع هذه الشروط والأحكام لقوانين جمهورية مصر العربية.<br><br>10- هذا العرض غير متوفر للعملاء الذين يستخدمون خاصية التجوال.<br><br>11- يجب قراءة هذه الشروط والأحكام مع شروط وأحكام دي دي الخاصة بعروض دعوة الأصدقاء وبما يتفق مع الشروط والأحكام العامة الخاصة بعروض الركاب، والتي يمكن الاطلاع عليها من خلال الانتقال إلى "الحساب &gt; الإعدادات &gt; أحكام وشروط" في تطبيق دي دي للركاب. في حالة تعارض هذه الشروط والأحكام مع الشروط والأحكام العامة الخاصة بعروض الركاب، تسري هذه الشروط والأحكام.</div>
-                   
+                    <div class="rule_content Arabic-text">
+                      1- هذا العرض متاح حتى 21/7/2023. <br /><br />2- يُفترض أن
+                      يكون الراكب الحالي قد وجّه الدعوة بنجاح إلى راكب جديد حتى
+                      يتمكن من الحصول على المكافأة، وذلك بما يتفق مع شروط العروض
+                      الترويجية أدناه.<br /><br />3- تُعتبر الدعوة الناجحة مؤهلة
+                      لهذا العرض عندما يقوم متلقي الدعوة بالتسجيل باستخدام رمز
+                      الدعوة الفريد الخاص بمرسل الدعوة ويُكمل مشوارًا واحدًا
+                      خلال أربعة عشر (14) يومًا من 1) التسجيل وفقًا للعرض المعني
+                      أو 2) بدء دي دي عملياتها في المنطقة الجغرافية المعنية.<br /><br />4-
+                      سيتلقى مرسل الدعوة خصمين بقيمة 50% بحد أقصي 20ج.م في صورة
+                      قسائم مشاوير بينما سيحصل متلقي الدعوة على مبلغ 250 ج.م. في
+                      صورة قسائم خصومات كمستخدم جديد، حيث يمكن استخدام أي من هذه
+                      المبالغ لتخفيض الأجرة الإجمالية للمشوار (باستثناء رسوم
+                      المرور والضرائب والرسوم الأخرى التابعة لجهات خارجية).<br /><br />5-
+                      ما لم توضح القسيمة خلاف ذلك، تنتهي صلاحية القسائم خلال
+                      أسبوعين من تاريخ إصدارها.<br /><br />6- يخضع استخدام
+                      القسيمة لشروط وأحكام دي دي الخاصة بعروض الركاب، والتي يمكن
+                      الاطلاع عليها من خلال الانتقال إلى "الحساب &gt; الإعدادات
+                      &gt; أحكام وشروط" في تطبيق دي دي للركاب.<br /><br />7-تحتفظ
+                      دي دي بالحق في تغيير هذه الشروط والأحكام في أي وقت وفقًا
+                      للأحكام والشروط العامة الخاصة بعروض الركاب.<br /><br />8-
+                      القرار الذي تتخذه دي دي بهذا الشأن هو قرار نهائي.<br /><br />9-
+                      تخضع هذه الشروط والأحكام لقوانين جمهورية مصر العربية.<br /><br />10-
+                      هذا العرض غير متوفر للعملاء الذين يستخدمون خاصية
+                      التجوال.<br /><br />11- يجب قراءة هذه الشروط والأحكام مع
+                      شروط وأحكام دي دي الخاصة بعروض دعوة الأصدقاء وبما يتفق مع
+                      الشروط والأحكام العامة الخاصة بعروض الركاب، والتي يمكن
+                      الاطلاع عليها من خلال الانتقال إلى "الحساب &gt; الإعدادات
+                      &gt; أحكام وشروط" في تطبيق دي دي للركاب. في حالة تعارض هذه
+                      الشروط والأحكام مع الشروط والأحكام العامة الخاصة بعروض
+                      الركاب، تسري هذه الشروط والأحكام.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -603,7 +693,6 @@
 
         <!-- About Wrapper End -->
       </div>
-    
 
       <!-- About Section End -->
       <div

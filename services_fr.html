@@ -87,7 +87,9 @@
                       </li>
                       <li>
                         <a href="services_en.html"
-                          ><span class="menu-text">Prestations de service</span></a
+                          ><span class="menu-text"
+                            >Prestations de service</span
+                          ></a
                         >
                       </li>
                       <li>
@@ -153,12 +155,16 @@
                         <ul class="sub-menu">
                           <li>
                             <a href="authentication_en.html"
-                              ><span class="menu-text">Légende de connexion</span></a
+                              ><span class="menu-text"
+                                >Légende de connexion</span
+                              ></a
                             >
                           </li>
                           <li>
                             <a href="authentication_en.html"
-                              ><span class="menu-text">Client de connexion</span></a
+                              ><span class="menu-text"
+                                >Client de connexion</span
+                              ></a
                             >
                           </li>
                         </ul>
@@ -190,59 +196,113 @@
                 <div
                   class="bell-notificatin"
                   current-count="8"
-                  onclick="showHide()"
+                  onclick="menuToggleNotification()"
                 >
                   <i class="fa-solid fa-bell"></i>
+                  <!-- animate__animated animate__flipInX -->
+                </div>
+                <div class="profile_menu_notification">
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عادل</h4>
+                      <p>كيف يمكنني مساعدك</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>كمال علي</h4>
+                      <p>كم هذه الرحلة</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عامر</h4>
+                      <p>آسف! إنها رحلة مكلفة للغاية</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>عمر باسم</h4>
+                      <p>أنا في انتظارك يا سيدي</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <div class="notification-text flexcenter">
+                      <a
+                        href="profile_caption_new_en.html"
+                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                      >
+                        عرض الكل
+                      </a>
+                      <!-- <a class="" href="#">View All</a> -->
+                    </div>
+                  </div>
                 </div>
                 <div class="user_image has-children" onclick="menuToggle();">
                   <img
                     src="finshWebsite/exomac/assets/images/author/blog-author.png"
                     alt=""
                   />
-                  <span class="menu-toggle"
-                    ><i class="fa-solid fa-caret-down"></i
-                  ></span>
+                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
                   <div class="profile_menu">
                     <ul class="sub-menu">
                       <li>
-                        <a href="profile_caption_new_en.html"
+                        <a href="profile_caption_new_ar.html"
                           ><span class="menu-text"
-                            >Modifier la légende du profil</span
+                            >Edit Profile Caption</span
                           ></a
                         >
                       </li>
                       <li>
-                        <a href="profile_client_en.html"
-                          ><span class="menu-text">Modifier le profil du client</span></a
+                        <a href="profile_client_ar.html"
+                          ><span class="menu-text">
+                            Edit Profile client</span
+                          ></a
                         >
                       </li>
                       <!-- <li>
-                      <a href="#"><span class="menu-text">Setting</span></a>
-                    </li> -->
+                        <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                      </li>-->
                       <li>
-                        <a href="forget_password_en.html"
-                          ><span class="menu-text">Forget Password</span></a
+                        <a href="forget_password_ar.html"
+                          ><span class="menu-text">ForgetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="reset_password_en.html"
-                          ><span class="menu-text">Mot de passe oublié</span></a
+                        <a href="reset_password_ar.html"
+                          ><span class="menu-text">ResetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="wallet_en.html"
-                          ><span class="menu-text">Portefeuille</span></a
+                        <a href="wallet_ar.html"
+                          ><span class="menu-text">Wallet</span></a
                         >
                       </li>
                       <li>
-                        <a href="authentication_en.html"
-                          ><span class="menu-text">Se déconnecter</span></a
+                        <a href="authentication_ar.html"
+                          ><span class="menu-text">Logout </span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language start-->
                 <div onclick="menuToggleLanguage();" class="">
                   <i class="fa-solid fa-earth-americas stylesvglang"></i>
                   <div class="profile_menu_Language">
@@ -254,13 +314,19 @@
                       </li>
                       <li>
                         <a href="services_ar.html"
-                          ><span class="menu-text">Arabic</span></a
+                          ><span class="menu-text">العربيه</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="services_fr.html"
+                          ><span class="menu-text">French</span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language end-->
+                <!-- language end-->
                 <div
                   class="notification-box animate__animated animate__flipInX"
                   style="display: none"
@@ -308,11 +374,12 @@
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_en.html"
+                        href="sidebar.html?section=section2"
+                        onclick="redirectToSectionNotification()"
                         class="btn btn-primary btn-hover-secondary"
-                        >Voir tout</a
+                        >View All</a
                       >
-                      <!-- <a class="" href="#">Voir tout</a> -->
+                      <!-- <a class="" href="#">View All</a> -->
                     </div>
                   </div>
                 </div>
@@ -330,11 +397,11 @@
 
               <!-- Header Right Start -->
               <!-- <div class="col-xl-1 col d-none d-sm-flex order-1"> -->
-                <!-- <a href="#" class="btn btn-light btn-hover-primary"
+              <!-- <a href="#" class="btn btn-light btn-hover-primary"
                     >Login
                     <i class="fa-regular fa-user"></i>
                   </a> -->
-                
+
               <!-- </div> -->
               <!-- profile_menu -->
 
@@ -366,7 +433,9 @@
               </button>
             </div>
           </form>
-          <p class="form-description">Appuyez sur Entrée pour rechercher ou ESC pour fermer</p>
+          <p class="form-description">
+            Appuyez sur Entrée pour rechercher ou ESC pour fermer
+          </p>
         </div>
       </div>
       <!-- Main Search End -->
@@ -387,12 +456,14 @@
                       <div
                         class="intro-content mt-xl-8 mt-lg-8 mt-md-8 mt-sm-8 mt-xs-8"
                       >
-                        <h2 class="title">Louons la voiture de vos rêves ici</h2>
+                        <h2 class="title">
+                          Louons la voiture de vos rêves ici
+                        </h2>
                         <div class="desc">
                           <p>
-                           Nous sommes la meilleure agence de location de voitures qui vous aidera
-                             trouvez la voiture dont vous rêvez, trouvons
-                             il.
+                            Nous sommes la meilleure agence de location de
+                            voitures qui vous aidera trouvez la voiture dont
+                            vous rêvez, trouvons il.
                           </p>
                         </div>
                         <a
@@ -450,7 +521,9 @@
                     <!-- Intro One Content Start -->
                     <div class="col align-self-center max-mb-30">
                       <div class="intro-content mt-8">
-                        <h2 class="title">Enfin les voyages dont vous avez besoin</h2>
+                        <h2 class="title">
+                          Enfin les voyages dont vous avez besoin
+                        </h2>
                         <div class="desc">
                           <p>
                             Find a driver who will accept your quote or accept
@@ -514,8 +587,8 @@
                   <h3 class="title">Louer à l'heure</h3>
                   <div class="desc">
                     <p>
-                      Vous pouvez louer la voiture de vos rêves n'importe quand et n'importe où
-                       bonnes offres.
+                      Vous pouvez louer la voiture de vos rêves n'importe quand
+                      et n'importe où bonnes offres.
                     </p>
                   </div>
                   <!-- <a href="#" class="link">Learn More</a> -->
@@ -538,8 +611,8 @@
                   <h3 class="title">Location par jours</h3>
                   <div class="desc">
                     <p>
-                      Vous pouvez louer la voiture de vos rêves n'importe quand et n'importe où
-                       bonnes offres.
+                      Vous pouvez louer la voiture de vos rêves n'importe quand
+                      et n'importe où bonnes offres.
                     </p>
                   </div>
                   <!-- <a href="#" class="link">Learn More</a> -->
@@ -562,8 +635,8 @@
                   <h3 class="title">Système scolaire</h3>
                   <div class="desc">
                     <p>
-                      Vous pouvez louer la voiture de vos rêves n'importe quand et n'importe où
-                       bonnes offres.
+                      Vous pouvez louer la voiture de vos rêves n'importe quand
+                      et n'importe où bonnes offres.
                     </p>
                   </div>
                   <!-- <a href="#" class="link">Learn More</a> -->
@@ -591,8 +664,8 @@
                 <div class="description">
                   <h4>Conduisez avec TripU</h4>
                   <p>
-                    Profitez au maximum de votre temps sur la route sur la plateforme avec
-                    le plus grand réseau de coureurs actifs.
+                    Profitez au maximum de votre temps sur la route sur la
+                    plateforme avec le plus grand réseau de coureurs actifs.
                   </p>
                 </div>
               </div>
@@ -607,10 +680,11 @@
                 <div class="description">
                   <h4>Conduisez avec TripU</h4>
                   <p>
-                    L'argent que vous gagnez en conduisant avec l'application Uber dépend de
-                     quand, où et à quelle fréquence vous conduisez. Découvrez comment votre
-                     les tarifs sont calculés et se renseigner sur les promotions, qui peuvent
-                     vous aider à augmenter vos revenus.
+                    L'argent que vous gagnez en conduisant avec l'application
+                    Uber dépend de quand, où et à quelle fréquence vous
+                    conduisez. Découvrez comment votre les tarifs sont calculés
+                    et se renseigner sur les promotions, qui peuvent vous aider
+                    à augmenter vos revenus.
                   </p>
                   <!-- <p>
                   يتوقف مقدار الدخل الذي تحققه عند القيادة مع أوبر عبر التطبيق
@@ -644,10 +718,11 @@
                 <div class="description">
                   <h4>TripU pour le business</h4>
                   <p>
-                    Qu'il s'agisse de déplacements d'employés ou de déplacements de clients, TripU pour
-                    Les affaires vous offrent un moyen simple de gérer votre terrain
-                    besoins de transport. Conçu pour le travail, il offre une vue dégagée
-                    dans les déplacements des employés avec une facturation automatisée,
+                    Qu'il s'agisse de déplacements d'employés ou de déplacements
+                    de clients, TripU pour Les affaires vous offrent un moyen
+                    simple de gérer votre terrain besoins de transport. Conçu
+                    pour le travail, il offre une vue dégagée dans les
+                    déplacements des employés avec une facturation automatisée,
                     comptabilisation des dépenses et reporting.
                   </p>
                 </div>
@@ -663,11 +738,11 @@
                 <div class="description">
                   <h4>TripU avec toi en vacances et en études</h4>
                   <p>
-                    Qu'il s'agisse de voyages étudiants ou d'excursions, nos services
-                    vous offre un moyen simple de gérer vos besoins. C'était
-                    conçu spécifiquement pour les entreprises, car il permet de voler
-                    réservations par jours à partir de la date de départ jusqu'au
-                    date précisée.
+                    Qu'il s'agisse de voyages étudiants ou d'excursions, nos
+                    services vous offre un moyen simple de gérer vos besoins.
+                    C'était conçu spécifiquement pour les entreprises, car il
+                    permet de voler réservations par jours à partir de la date
+                    de départ jusqu'au date précisée.
                   </p>
                   <!-- <p>
               سواءً كان الأمر يتعلق بسفر الطلاب أوالرحلات، فإن خدماتنا  توفر لك طريقة سهلة لإدارة احتياجات  الخاصة بك. تم تصميمه خصيصًا للعمل، فهو يوفر حجز رحلة بالايام بداية من تاريخ الانطلاق الى الموعد المحدد 
@@ -698,9 +773,11 @@
                 <div class="description">
                   <h4>Sécurité du conducteur</h4>
                   <p>
-                    Comptez sur une assistance 24h/24 et 7j/7 pour répondre à toutes vos questions ou concernant la sécurité
-                    préoccupations. Partagez votre voyage avec vos proches. Notre focus est sur
-                    votre sécurité, afin que vous puissiez aller là où l'occasion se présente.
+                    Comptez sur une assistance 24h/24 et 7j/7 pour répondre à
+                    toutes vos questions ou concernant la sécurité
+                    préoccupations. Partagez votre voyage avec vos proches.
+                    Notre focus est sur votre sécurité, afin que vous puissiez
+                    aller là où l'occasion se présente.
                   </p>
                 </div>
               </div>
@@ -715,9 +792,10 @@
                 <div class="description">
                   <h4>Sécurité du conducteur</h4>
                   <p>
-                    Des millions de trajets sont demandés chaque jour. Chaque cavalier a
-                     accès aux fonctionnalités de sécurité intégrées à l'application. Et chaque trajet
-                     dispose d'une équipe d'assistance si vous en avez besoin.
+                    Des millions de trajets sont demandés chaque jour. Chaque
+                    cavalier a accès aux fonctionnalités de sécurité intégrées à
+                    l'application. Et chaque trajet dispose d'une équipe
+                    d'assistance si vous en avez besoin.
                   </p>
                   <!-- <p>
                               سواءً كان الأمر يتعلق بسفر الطلاب أوالرحلات، فإن خدماتنا  توفر لك طريقة سهلة لإدارة احتياجات  الخاصة بك. تم تصميمه خصيصًا للعمل، فهو يوفر حجز رحلة بالايام بداية من تاريخ الانطلاق الى الموعد المحدد 
@@ -729,7 +807,6 @@
         </div>
       </div>
       <!-- businesses end -->
-    
 
       <!-- footer section start-->
       <div
@@ -840,9 +917,13 @@
                     src="finshWebsite/exomac/assets/images/project/AppStore.png"
                   />
                 </a>
-                  <a href="https://play.google.com/store/apps/details?id=com.tripu.tripu&pli=1">
-                <img src="finshWebsite/exomac/assets/images/project/googlePlay.png">
-              </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.tripu.tripu&pli=1"
+                >
+                  <img
+                    src="finshWebsite/exomac/assets/images/project/googlePlay.png"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -922,12 +1003,16 @@
                 <ul class="sub-menu">
                   <li>
                     <a href="profile_caption_new_en.html"
-                      ><span class="menu-text">Modifier la légende du profil</span></a
+                      ><span class="menu-text"
+                        >Modifier la légende du profil</span
+                      ></a
                     >
                   </li>
                   <li>
                     <a href="profile_client_en.html"
-                      ><span class="menu-text">Modifier le profil du client</span></a
+                      ><span class="menu-text"
+                        >Modifier le profil du client</span
+                      ></a
                     >
                   </li>
                 </ul>

@@ -204,63 +204,113 @@
                 <div
                   class="bell-notificatin"
                   current-count="8"
-                  onclick="showHide()"
+                  onclick="menuToggleNotification()"
                 >
                   <i class="fa-solid fa-bell"></i>
+                  <!-- animate__animated animate__flipInX -->
+                </div>
+                <div class="profile_menu_notification">
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عادل</h4>
+                      <p>كيف يمكنني مساعدك</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>كمال علي</h4>
+                      <p>كم هذه الرحلة</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عامر</h4>
+                      <p>آسف! إنها رحلة مكلفة للغاية</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>عمر باسم</h4>
+                      <p>أنا في انتظارك يا سيدي</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <div class="notification-text flexcenter">
+                      <a
+                        href="profile_caption_new_en.html"
+                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                      >
+                        عرض الكل
+                      </a>
+                      <!-- <a class="" href="#">View All</a> -->
+                    </div>
+                  </div>
                 </div>
                 <div class="user_image has-children" onclick="menuToggle();">
                   <img
                     src="finshWebsite/exomac/assets/images/author/blog-author.png"
                     alt=""
                   />
-                  <span class="menu-toggle"
-                    ><i class="far fa-angle-down"></i
-                  ></span>
+                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
                   <div class="profile_menu">
                     <ul class="sub-menu">
                       <li>
-                        <a href="profile_caption_new_en.html"
+                        <a href="profile_caption_new_ar.html"
                           ><span class="menu-text"
-                            >Modifier la légende du profil</span
+                            >Edit Profile Caption</span
                           ></a
                         >
                       </li>
                       <li>
-                        <a href="profile_client_en.html"
-                          ><span class="menu-text"
-                            >Modifier le profil du client</span
+                        <a href="profile_client_ar.html"
+                          ><span class="menu-text">
+                            Edit Profile client</span
                           ></a
                         >
                       </li>
                       <!-- <li>
-                      <a href="#"><span class="menu-text">Setting</span></a>
-                    </li> -->
+                        <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                      </li>-->
                       <li>
-                        <a href="forget_password_en.html"
-                          ><span class="menu-text">Mot de passe oublié</span></a
+                        <a href="forget_password_ar.html"
+                          ><span class="menu-text">ForgetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="reset_password_en.html"
-                          ><span class="menu-text"
-                            >réinitialiser le mot de passe</span
-                          ></a
+                        <a href="reset_password_ar.html"
+                          ><span class="menu-text">ResetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="wallet_en.html"
-                          ><span class="menu-text">Portefeuille</span></a
+                        <a href="wallet_ar.html"
+                          ><span class="menu-text">Wallet</span></a
                         >
                       </li>
                       <li>
-                        <a href="authentication_en.html"
-                          ><span class="menu-text">Se déconnecter</span></a
+                        <a href="authentication_ar.html"
+                          ><span class="menu-text">Logout </span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language start-->
                 <div onclick="menuToggleLanguage();" class="">
                   <i class="fa-solid fa-earth-americas stylesvglang"></i>
                   <div class="profile_menu_Language">
@@ -272,7 +322,7 @@
                       </li>
                       <li>
                         <a href="cars_ar.html"
-                          ><span class="menu-text">Arabic</span></a
+                          ><span class="menu-text">العربيه</span></a
                         >
                       </li>
                       <li>
@@ -283,7 +333,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language end-->
+                <!-- language end-->
                 <div
                   class="notification-box animate__animated animate__flipInX"
                   style="display: none"
@@ -331,7 +382,8 @@
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_en.html"
+                        href="sidebar.html?section=section2"
+                        onclick="redirectToSectionNotification()"
                         class="btn btn-primary btn-hover-secondary"
                         >View All</a
                       >
@@ -443,9 +495,9 @@
                         </h2>
                         <div class="desc">
                           <p>
-                          Vous souhaitez vous déplacer avec un grand groupe de
-                             personnes? Prendre des vols TripU ; Nous pouvons transporter jusqu'à
-                             six personnes par destination.
+                            Vous souhaitez vous déplacer avec un grand groupe de
+                            personnes? Prendre des vols TripU ; Nous pouvons
+                            transporter jusqu'à six personnes par destination.
                           </p>
                         </div>
                         <a
@@ -471,11 +523,13 @@
                     <!-- Intro One Content Start -->
                     <div class="col align-self-center max-mb-30">
                       <div class="intro-content mt-8">
-                        <h2 class="title">Enfin les voyages dont vous avez besoin</h2>
+                        <h2 class="title">
+                          Enfin les voyages dont vous avez besoin
+                        </h2>
                         <div class="desc">
                           <p>
-                           Trouvez un chauffeur qui acceptera votre devis ou acceptera
-                             l'offre du chauffeur à la place
+                            Trouvez un chauffeur qui acceptera votre devis ou
+                            acceptera l'offre du chauffeur à la place
                           </p>
                         </div>
                         <a
@@ -509,10 +563,10 @@
             <h2 class="title">choisissez vos véhicules</h2>
             <p class="sub-title">
               Nous avons la capacité de transformer l'expérience passager en un
-               distinctif et confortable en faisant attention aux petits
-               des détails tels que la propreté de la voiture, la convivialité
-               passagers, à l'écoute de leurs besoins et en essayant de répondre à leurs
-               demandes de la meilleure façon possible.
+              distinctif et confortable en faisant attention aux petits des
+              détails tels que la propreté de la voiture, la convivialité
+              passagers, à l'écoute de leurs besoins et en essayant de répondre
+              à leurs demandes de la meilleure façon possible.
             </p>
           </div>
           <!-- Section Title End -->
@@ -745,8 +799,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -778,8 +832,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -811,8 +865,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -844,8 +898,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -877,8 +931,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -910,8 +964,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>
@@ -944,8 +998,8 @@
                           <div class="client-comment">
                             <h3>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                                élite, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. conséquent
+                              élite, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. conséquent
                             </h3>
                             <span><i class="fa fa-quote-left"></i></span>
                           </div>

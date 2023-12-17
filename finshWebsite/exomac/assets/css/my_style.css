@@ -464,6 +464,7 @@
   margin-right: 15px;
   cursor: pointer;
 }
+.profile_menu_notification,
 .profile_menu,
 .profile_menu_Language {
   position: absolute;
@@ -483,12 +484,16 @@
   opacity: 0;
 }
 .profile_menu {
-  right: -3%;
+  right: 4%;
   width: 16% !important;
 }
 .profile_menu_Language {
   right: 0%;
-  width: 22% !important;
+  width: 20% !important;
+}
+.profile_menu_notification {
+  right: 3%;
+  width: 20% !important;
 }
 @media screen and (max-width: 1199px) and (min-width: 991px) {
   .profile_menu {
@@ -499,6 +504,10 @@
   .profile_menu_Language {
     right: 0%;
   }
+  .profile_menu_notification {
+    right: -1%;
+    width: 200px !important;
+  }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
   .profile_menu {
@@ -506,7 +515,11 @@
     width: 30% !important;
   }
   .profile_menu_Language {
-    right: 2%;
+    right: 6%;
+  }
+  .profile_menu_notification {
+    right: 12%;
+    width: 200px !important;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
@@ -516,7 +529,11 @@
     width: 35% !important;
   }
   .profile_menu_Language {
-    right: 3%;
+    right: 10%;
+  }
+  .profile_menu_notification {
+    right: 14%;
+    width: 200px !important;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 405px) {
@@ -526,8 +543,12 @@
     width: 40% !important;
   }
   .profile_menu_Language {
-    right: 10%;
+    right: 3%;
     width: 30% !important;
+  }
+  .profile_menu_notification {
+    right: 13%;
+    width: 200px !important;
   }
 }
 @media screen and (max-width: 405px) and (min-width: 300px) {
@@ -540,6 +561,10 @@
     right: 10%;
     width: 30% !important;
   }
+  .profile_menu_notification {
+    right: 14%;
+    width: 157px !important;
+  }
 }
 @media screen and (max-width: 300px) and (min-width: 220px) {
   .profile_menu {
@@ -551,12 +576,18 @@
     right: 14%;
     width: 35% !important;
   }
+  .profile_menu_notification {
+    right: 12%;
+    width: 126px !important;
+  }
 }
+.profile_menu_notification.active,
 .profile_menu.active,
 .profile_menu_Language.active {
   visibility: visible;
   opacity: 1;
 }
+.profile_menu_notification::before,
 .profile_menu::before,
 .profile_menu_Language::before {
   content: "";
@@ -569,12 +600,16 @@
   border-style: solid;
   border-color: transparent transparent #fff transparent;
 }
-.profile_menu::before {
-  top: -7%;
+.profile_menu_notification::before {
+  top: -5%;
   right: 46%;
 }
+.profile_menu::before {
+  top: -8%;
+  right: 47%;
+}
 .profile_menu_Language::before {
-  top: -28%;
+  top: -21%;
   right: 49%;
 }
 .user_image {

@@ -9,35 +9,61 @@
   right: auto;
 }
 .profile_menu_Language {
-  left: 7%;
+  left: 6%;
   right: auto !important;
-  width: 22% !important;
+  width: 18% !important;
+}
+.profile_menu_notification {
+  right: 77%;
+  width: 20% !important;
 }
 @media screen and (max-width: 1199px) and (min-width: 991px) {
   .profile_menu {
-    right: 73%;
+    right: 82%;
     left: auto !important;
-    width: 25% !important;
+    width: 21% !important;
   }
   .profile_menu_Language {
-    left: 0%;
+    left: -6%;
+  }
+  .profile_menu_notification {
+    right: 82%;
+    width: 20% !important;
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
+  .profile_menu_Language {
+    left: -6%;
+  }
   .profile_menu {
     right: 66%;
     left: auto !important;
-    width: 30% !important;
+    width: 27% !important;
+  }
+  .profile_menu_notification {
+    right: 62%;
+    width: 26% !important;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
+  .profile_menu_Language {
+    width: 23% !important;
+    left: 10%;
+  }
   .profile_menu {
     right: 54%;
     left: auto !important;
-    width: 40% !important;
+    width: 33% !important;
+  }
+  .profile_menu_notification {
+    right: 49%;
+    width: 35% !important;
   }
 }
 @media screen and (max-width: 576px) and (min-width: 405px) {
+  .profile_menu_Language {
+    left: 6%;
+  }
   .profile_menu {
     font-size: 12px;
     left: 9%;
@@ -47,25 +73,43 @@
     right: 10%;
     width: 30% !important;
   }
+  .profile_menu_notification {
+    right: 42%;
+    width: 40% !important;
+  }
 }
 @media screen and (max-width: 405px) and (min-width: 300px) {
+  .profile_menu_Language {
+    left: 8%;
+  }
   .profile_menu {
     font-size: 11px;
-    left: 6%;
+    left: 16%;
     width: 30% !important;
   }
   .profile_menu_Language {
     right: 10%;
     width: 30% !important;
   }
+  .profile_menu_notification {
+    right: 37%;
+    width: 44% !important;
+  }
 }
 @media screen and (max-width: 300px) and (min-width: 220px) {
+  .profile_menu_Language {
+    left: -6%;
+  }
   .profile_menu {
     visibility: hidden !important;
   }
   .profile_menu_Language {
     right: 14%;
     width: 35% !important;
+  }
+  .profile_menu_notification {
+    right: 77%;
+    width: 20% !important;
   }
 }
 

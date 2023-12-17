@@ -189,79 +189,12 @@
                 <div
                   class="bell-notificatin"
                   current-count="8"
-                  onclick="showHide()"
+                  onclick="menuToggleNotification()"
                 >
                   <i class="fa-solid fa-bell"></i>
+                  <!-- animate__animated animate__flipInX -->
                 </div>
-                <div class="user_image has-children" onclick="menuToggle();">
-                  <img
-                    src="finshWebsite/exomac/assets/images/author/blog-author.png"
-                    alt=""
-                  />
-                  <span class="menu-toggle"
-                    ><i class="far fa-angle-down"></i
-                  ></span>
-                  <div class="profile_menu">
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="profile_caption_new_ar.html"
-                          ><span class="menu-text"> تعديل ملف الكابتن</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="profile_client_ar.html"
-                          ><span class="menu-text"> تعديل ملف العميل</span></a
-                        >
-                      </li>
-                      <!-- <li>
-                      <a href="profile_caption_ar.html"><span class="menu-text"> الإعدادات </span></a>
-                    </li>-->
-                      <li>
-                        <a href="forget_password_ar.html"
-                          ><span class="menu-text"> نسيت كلمة المرور </span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="reset_password_ar.html"
-                          ><span class="menu-text"> تعيين كلمة المرور </span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="wallet_ar.html"
-                          ><span class="menu-text">المحفظة</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="authentication_ar.html"
-                          ><span class="menu-text"> تسجيل خروج </span></a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- language start-->
-                <div onclick="menuToggleLanguage();" class="">
-                  <i class="fa-solid fa-earth-americas stylesvglang"></i>
-                  <div class="profile_menu_Language">
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="aboutUs_en.html"
-                          ><span class="menu-text">English</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="aboutUs-ar.html"
-                          ><span class="menu-text">العربيه</span></a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- language end-->
-                <div
-                  class="notification-box animate__animated animate__flipInX"
-                  style="display: none"
-                >
+                <div class="profile_menu_notification">
                   <div class="notification-item">
                     <img
                       src="finshWebsite/exomac/assets/images/team/team-1.jpg"
@@ -305,11 +238,136 @@
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_ar.html"
+                        href="profile_caption_new_en.html"
                         class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
                       >
                         عرض الكل
                       </a>
+                      <!-- <a class="" href="#">View All</a> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="user_image has-children" onclick="menuToggle();">
+                  <img
+                    src="finshWebsite/exomac/assets/images/author/blog-author.png"
+                    alt=""
+                  />
+                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
+                  <div class="profile_menu">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="profile_caption_new_ar.html"
+                          ><span class="menu-text">تعديل ملف الكابتن</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="profile_client_ar.html"
+                          ><span class="menu-text"> تعديل ملف العميل</span></a
+                        >
+                      </li>
+                      <!-- <li>
+                        <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                      </li>-->
+                      <li>
+                        <a href="forget_password_ar.html"
+                          ><span class="menu-text">نسيت الرقم السري </span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="reset_password_ar.html"
+                          ><span class="menu-text">تعديل الرقم السري </span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="wallet_ar.html"
+                          ><span class="menu-text">المحفظة</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="authentication_ar.html"
+                          ><span class="menu-text">تسجيل خروخ </span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- language start-->
+                <div onclick="menuToggleLanguage();" class="">
+                  <i class="fa-solid fa-earth-americas stylesvglang"></i>
+                  <div class="profile_menu_Language">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="aboutUs_en.html"
+                          ><span class="menu-text">English</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="aboutUs-ar.html"
+                          ><span class="menu-text">العربيه</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="aboutUs_fr.html"
+                          ><span class="menu-text">French</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- language end-->
+                <!-- language end-->
+                <div
+                  class="notification-box animate__animated animate__flipInX"
+                  style="display: none"
+                >
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text">
+                      <h4>Ahmed Adel</h4>
+                      <p>how can I help you</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text">
+                      <h4>Kmale Ali</h4>
+                      <p>how much this trip</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text">
+                      <h4>Ahmed Amer</h4>
+                      <p>sorry! it's very expensive trip</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text">
+                      <h4>Omer basem</h4>
+                      <p>I am waiting you sir</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <div class="notification-text flexcenter">
+                      <a
+                        href="sidebar.html?section=section2"
+                        onclick="redirectToSectionNotification()"
+                        class="btn btn-primary btn-hover-secondary"
+                        >عرض الكل</a
+                      >
                       <!-- <a class="" href="#">View All</a> -->
                     </div>
                   </div>
@@ -328,7 +386,7 @@
               <!-- Header Main Menu End -->
 
               <!-- Header Right Start -->
-             <!-- <div class="col-xl-1 col d-none d-sm-flex order-1">
+              <!-- <div class="col-xl-1 col d-none d-sm-flex order-1">
                  <a href="#" class="btn btn-light btn-hover-primary"
                   >Login
                   <i class="fa-regular fa-user"></i>
@@ -1100,9 +1158,7 @@
           <nav class="site-mobile-menu">
             <ul>
               <li>
-                <a href="index.html"
-                  ><span class="menu-text">الرئيسية</span></a
-                >
+                <a href="index.html"><span class="menu-text">الرئيسية</span></a>
               </li>
               <li>
                 <a href="offer_ar.html"

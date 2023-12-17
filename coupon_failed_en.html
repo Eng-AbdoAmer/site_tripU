@@ -183,59 +183,113 @@
                 <div
                   class="bell-notificatin"
                   current-count="8"
-                  onclick="showHide()"
+                  onclick="menuToggleNotification()"
                 >
                   <i class="fa-solid fa-bell"></i>
+                  <!-- animate__animated animate__flipInX -->
+                </div>
+                <div class="profile_menu_notification">
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عادل</h4>
+                      <p>كيف يمكنني مساعدك</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>كمال علي</h4>
+                      <p>كم هذه الرحلة</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>احمد عامر</h4>
+                      <p>آسف! إنها رحلة مكلفة للغاية</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <img
+                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                      alt=""
+                    />
+                    <div class="notification-text marginrtl">
+                      <h4>عمر باسم</h4>
+                      <p>أنا في انتظارك يا سيدي</p>
+                    </div>
+                  </div>
+                  <div class="notification-item">
+                    <div class="notification-text flexcenter">
+                      <a
+                        href="profile_caption_new_en.html"
+                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                      >
+                        عرض الكل
+                      </a>
+                      <!-- <a class="" href="#">View All</a> -->
+                    </div>
+                  </div>
                 </div>
                 <div class="user_image has-children" onclick="menuToggle();">
                   <img
                     src="finshWebsite/exomac/assets/images/author/blog-author.png"
                     alt=""
                   />
-                  <span class="menu-toggle"
-                    ><i class="fa-solid fa-caret-down"></i
-                  ></span>
+                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
                   <div class="profile_menu">
                     <ul class="sub-menu">
                       <li>
-                        <a href="profile_caption_new_en.html"
+                        <a href="profile_caption_new_ar.html"
                           ><span class="menu-text"
                             >Edit Profile Caption</span
                           ></a
                         >
                       </li>
                       <li>
-                        <a href="profile_client_en.html"
-                          ><span class="menu-text">Edit Profile Client</span></a
+                        <a href="profile_client_ar.html"
+                          ><span class="menu-text">
+                            Edit Profile client</span
+                          ></a
                         >
                       </li>
                       <!-- <li>
-                      <a href="#"><span class="menu-text">Setting</span></a>
-                    </li> -->
+                        <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                      </li>-->
                       <li>
-                        <a href="forget_password_en.html"
-                          ><span class="menu-text">Forget Password</span></a
+                        <a href="forget_password_ar.html"
+                          ><span class="menu-text">ForgetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="reset_password_en.html"
-                          ><span class="menu-text">Reset Password</span></a
+                        <a href="reset_password_ar.html"
+                          ><span class="menu-text">ResetPassword </span></a
                         >
                       </li>
                       <li>
-                        <a href="wallet_en.html"
+                        <a href="wallet_ar.html"
                           ><span class="menu-text">Wallet</span></a
                         >
                       </li>
                       <li>
-                        <a href="authentication_en.html"
-                          ><span class="menu-text">Logout</span></a
+                        <a href="authentication_ar.html"
+                          ><span class="menu-text">Logout </span></a
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language start-->
                 <div onclick="menuToggleLanguage();" class="">
                   <i class="fa-solid fa-earth-americas stylesvglang"></i>
                   <div class="profile_menu_Language">
@@ -247,7 +301,7 @@
                       </li>
                       <li>
                         <a href="coupon_failed_ar.html"
-                          ><span class="menu-text">Arabic</span></a
+                          ><span class="menu-text">العربيه</span></a
                         >
                       </li>
                       <li>
@@ -258,7 +312,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- language -->
+                <!-- language end-->
+                <!-- language end-->
                 <div
                   class="notification-box animate__animated animate__flipInX"
                   style="display: none"
@@ -306,7 +361,8 @@
                   <div class="notification-item">
                     <div class="notification-text flexcenter">
                       <a
-                        href="notification_en.html"
+                        href="sidebar.html?section=section2"
+                        onclick="redirectToSectionNotification()"
                         class="btn btn-primary btn-hover-secondary"
                         >View All</a
                       >
