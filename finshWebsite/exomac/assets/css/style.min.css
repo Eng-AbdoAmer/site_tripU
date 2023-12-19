@@ -24628,14 +24628,14 @@ button.tablinks {
     text-align: center !important;
   }
 }
-@media screen and (max-width: 2000px) and (min-width: 992px){
+@media screen and (max-width: 2000px) and (min-width: 992px) {
   .d-xl-block {
     display: block !important;
   }
   .d-xl-none {
     display: none !important;
   }
-  .header-section .header-inner .row{
+  .header-section .header-inner .row {
     flex-wrap: nowrap !important;
   }
 }
@@ -33825,12 +33825,24 @@ textarea:focus {
   .icon-box .icon_svg {
     margin: 0;
   }
+  .icon-box-xl .icon svg {
+    padding: auto;
+    max-width: 40%;
+    width: 200px;
+    height: 200px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .icon-box .icon {
     max-width: 40%;
     margin: auto;
     padding-bottom: 15px;
+  }
+  .icon-box-xl .icon svg {
+    padding: auto;
+
+    width: 200px;
+    height: 200px;
   }
 }
 .icon-box .icon svg {
@@ -33845,6 +33857,12 @@ textarea:focus {
   max-width: 100%;
   width: 50px;
   height: 50px;
+}
+.icon-box-xl .icon svg {
+  padding: auto;
+  max-width: 40%;
+  width: 200px;
+  height: 200px;
 }
 
 .icon-box .icon svg path {
