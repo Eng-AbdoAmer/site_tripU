@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Trip || CAPTION-PO-FR</title>
+    <title>Trip || CAPTION-PO-EN</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -62,10 +62,6 @@
       rel="stylesheet"
       href="finshWebsite/exomac/assets/css/style.min.css"
     />
-    <link
-    rel="stylesheet"
-    href="finshWebsite/exomac/assets/css/main_style_fr.css"
-  />
   </head>
 
   <body onload="initializeMap()">
@@ -74,7 +70,7 @@
       <div class="header-section header-transparent sticky-header section">
         <div class="header-inner">
           <div class="container position-relative">
-            <div class="mynav">
+            <div class="row justify-content-between align-items-center">
               <!-- Header Logo Start -->
               <div class="col-xl-2 col-auto">
                 <div class="header-logo">
@@ -97,22 +93,22 @@
                     <ul>
                       <li>
                         <a href="home_ar.html"
-                          ><span class="menu-text">Maison</span></a
+                          ><span class="menu-text">Home</span></a
                         >
                       </li>
                       <li>
                         <a href="offer_en.html"
-                          ><span class="menu-text">Offre</span></a
+                          ><span class="menu-text">Offer</span></a
                         >
                       </li>
                       <li>
                         <a href="services_en.html"
-                          ><span class="menu-text">Prestations de service</span></a
+                          ><span class="menu-text">Services</span></a
                         >
                       </li>
                       <li>
                         <a href="cars_en.html"
-                          ><span class="menu-text">Véhicules</span></a
+                          ><span class="menu-text">Vehicles</span></a
                         >
                       </li>
                       <li class="has-children">
@@ -121,7 +117,7 @@
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          ><span class="menu-text">Profil</span></a
+                          ><span class="menu-text">Profile</span></a
                         >
                         <span class="menu-toggle"
                           ><i class="far fa-angle-down"></i
@@ -130,14 +126,14 @@
                           <li>
                             <a href="profile_caption_en.html"
                               ><span class="menu-text"
-                                >Modifier la légende du profil</span
+                                >Edit Profile Caption</span
                               ></a
                             >
                           </li>
                           <li>
-                            <a href="profile_client_en.html"
+                            <a href="profile_client_new_en.html"
                               ><span class="menu-text"
-                                >Modifier le profil du client</span
+                                >Edit Profile Client</span
                               ></a
                             >
                           </li>
@@ -206,195 +202,195 @@
                 </div>
                 <!-- Header Search End -->
                 <div
-                  class="bell-notificatin"
-                  current-count="8"
-                  onclick="menuToggleNotification()"
-                >
-                  <i class="fa-solid fa-bell"></i>
-                  <!-- animate__animated animate__flipInX -->
-                </div>
-                <div class="profile_menu_notification">
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text marginrtl">
-                      <h4>احمد عادل</h4>
-                      <p>كيف يمكنني مساعدك</p>
-                    </div>
-                  </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text marginrtl">
-                      <h4>كمال علي</h4>
-                      <p>كم هذه الرحلة</p>
-                    </div>
-                  </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text marginrtl">
-                      <h4>احمد عامر</h4>
-                      <p>آسف! إنها رحلة مكلفة للغاية</p>
-                    </div>
-                  </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text marginrtl">
-                      <h4>عمر باسم</h4>
-                      <p>أنا في انتظارك يا سيدي</p>
-                    </div>
-                  </div>
-                  <div class="notification-item">
-                    <div class="notification-text flexcenter">
-                      <a
-                        href="profile_caption_new_fr.html"
-                        class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
-                      >
-                        Voir tout
-                      </a>
-                      <!-- <a class="" href="#">View All</a> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="user_image has-children" onclick="menuToggle();">
+                class="bell-notificatin"
+                current-count="8"
+                onclick="menuToggleNotification()"
+              >
+                <i class="fa-solid fa-bell"></i>
+                <!-- animate__animated animate__flipInX -->
+              </div>
+              <div class="profile_menu_notification">
+                <div class="notification-item">
                   <img
-                    src="finshWebsite/exomac/assets/images/author/blog-author.png"
+                    src="finshWebsite/exomac/assets/images/team/team-1.jpg"
                     alt=""
                   />
-                  <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
-                  <div class="profile_menu">
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="profile_caption_new_ar.html"
-                          ><span class="menu-text"
-                            >Edit Profile Caption</span
-                          ></a
-                        >
-                      </li>
-                      <li>
-                        <a href="profile_client_ar.html"
-                          ><span class="menu-text">
-                            Edit Profile client</span
-                          ></a
-                        >
-                      </li>
-                      <!-- <li>
-                          <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
-                        </li>-->
-                      <li>
-                        <a href="forget_password_ar.html"
-                          ><span class="menu-text">ForgetPassword </span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="reset_password_ar.html"
-                          ><span class="menu-text">ResetPassword </span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="wallet_ar.html"
-                          ><span class="menu-text">Wallet</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="authentication_ar.html"
-                          ><span class="menu-text">Logout </span></a
-                        >
-                      </li>
-                    </ul>
+                  <div class="notification-text marginrtl">
+                    <h4>احمد عادل</h4>
+                    <p>كيف يمكنني مساعدك</p>
                   </div>
                 </div>
-                <!-- language start-->
-                <div onclick="menuToggleLanguage();" class="">
-                  <i class="fa-solid fa-earth-americas stylesvglang"></i>
-                  <div class="profile_menu_Language">
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="profile_caption_new_en.html"
-                          ><span class="menu-text">English</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="profile_caption_new_ar.html"
-                          ><span class="menu-text">العربيه</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="profile_caption_new_fr.html"
-                          ><span class="menu-text">French</span></a
-                        >
-                      </li>
-                    </ul>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text marginrtl">
+                    <h4>كمال علي</h4>
+                    <p>كم هذه الرحلة</p>
                   </div>
                 </div>
-                <!-- language end-->
-                <!-- language end-->
-                <div
-                  class="notification-box animate__animated animate__flipInX"
-                  style="display: none"
-                >
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-1.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text">
-                      <h4>Ahmed Adel</h4>
-                      <p>how can I help you</p>
-                    </div>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text marginrtl">
+                    <h4>احمد عامر</h4>
+                    <p>آسف! إنها رحلة مكلفة للغاية</p>
                   </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-2.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text">
-                      <h4>Kmale Ali</h4>
-                      <p>how much this trip</p>
-                    </div>
+                </div>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text marginrtl">
+                    <h4>عمر باسم</h4>
+                    <p>أنا في انتظارك يا سيدي</p>
                   </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-3.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text">
-                      <h4>Ahmed Amer</h4>
-                      <p>sorry! it's very expensive trip</p>
-                    </div>
+                </div>
+                <div class="notification-item">
+                  <div class="notification-text flexcenter">
+                    <a
+                      href="profile_caption_new_en.html"
+                      class="btn_notification btn-primary btn-hover-secondary paddingsbtn"
+                    >
+                      عرض الكل
+                    </a>
+                    <!-- <a class="" href="#">View All</a> -->
                   </div>
-                  <div class="notification-item">
-                    <img
-                      src="finshWebsite/exomac/assets/images/team/team-4.jpg"
-                      alt=""
-                    />
-                    <div class="notification-text">
-                      <h4>Omer basem</h4>
-                      <p>I am waiting you sir</p>
-                    </div>
-                  </div>
-                  <div class="notification-item">
-                    <div class="notification-text flexcenter">
-                      <a
-                        href="sidebar.html?section=section2"
-                        onclick="redirectToSectionNotification()"
-                        class="btn btn-primary btn-hover-secondary"
-                        >View All</a
+                </div>
+              </div>
+              <div class="user_image has-children" onclick="menuToggle();">
+                <img
+                  src="finshWebsite/exomac/assets/images/author/blog-author.png"
+                  alt=""
+                />
+                <!-- <span class="menu-toggle"><i class="far fa-angle-down"></i></span> -->
+                <div class="profile_menu">
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="profile_caption_new_ar.html"
+                        ><span class="menu-text"
+                          >Edit Profile Caption</span
+                        ></a
                       >
-                      <!-- <a class="" href="#">View All</a> -->
-                    </div>
+                    </li>
+                    <li>
+                      <a href="profile_client_ar.html"
+                        ><span class="menu-text">
+                          Edit Profile client</span
+                        ></a
+                      >
+                    </li>
+                    <!-- <li>
+                        <a href="profile_caption_new_ar.html"><span class="menu-text"> الإعدادات </span></a>
+                      </li>-->
+                    <li>
+                      <a href="forget_password_ar.html"
+                        ><span class="menu-text">ForgetPassword </span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="reset_password_ar.html"
+                        ><span class="menu-text">ResetPassword </span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="wallet_ar.html"
+                        ><span class="menu-text">Wallet</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="authentication_ar.html"
+                        ><span class="menu-text">Logout </span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- language start-->
+              <div onclick="menuToggleLanguage();" class="">
+                <i class="fa-solid fa-earth-americas stylesvglang"></i>
+                <div class="profile_menu_Language">
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="profile_caption_new_en.html"
+                        ><span class="menu-text">English</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="profile_caption_new_ar.html"
+                        ><span class="menu-text">العربيه</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="profile_caption_new_fr.html"
+                        ><span class="menu-text">French</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- language end-->
+              <!-- language end-->
+              <div
+                class="notification-box animate__animated animate__flipInX"
+                style="display: none"
+              >
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-1.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text">
+                    <h4>Ahmed Adel</h4>
+                    <p>how can I help you</p>
                   </div>
                 </div>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-2.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text">
+                    <h4>Kmale Ali</h4>
+                    <p>how much this trip</p>
+                  </div>
+                </div>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-3.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text">
+                    <h4>Ahmed Amer</h4>
+                    <p>sorry! it's very expensive trip</p>
+                  </div>
+                </div>
+                <div class="notification-item">
+                  <img
+                    src="finshWebsite/exomac/assets/images/team/team-4.jpg"
+                    alt=""
+                  />
+                  <div class="notification-text">
+                    <h4>Omer basem</h4>
+                    <p>I am waiting you sir</p>
+                  </div>
+                </div>
+                <div class="notification-item">
+                  <div class="notification-text flexcenter">
+                    <a
+                      href="sidebar.html?section=section2"
+                      onclick="redirectToSectionNotification()"
+                      class="btn btn-primary btn-hover-secondary"
+                      >View All</a
+                    >
+                    <!-- <a class="" href="#">View All</a> -->
+                  </div>
+                </div>
+              </div>
                 <!-- Header Mobile Menu Toggle Start -->
                 <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
                   <button class="toggle">
@@ -443,7 +439,7 @@
               </button>
             </div>
           </form>
-          <p class="form-description">Appuyez sur Entrée pour rechercher ou ESC pour fermer</p>
+          <p class="form-description">Hit enter to search or ESC to close</p>
         </div>
       </div>
       <!-- Main Search End -->
@@ -464,16 +460,18 @@
                       <div
                         class="intro-content mt-xl-8 mt-lg-8 mt-md-8 mt-sm-8 mt-xs-8"
                       >
-                        <h2 class="title">Louons la voiture de vos rêves ici</h2>
+                        <h2 class="title">Let’s Rent Your Dream Car Here</h2>
                         <div class="desc">
                           <p>
-                            nous sommes une agence de location de voitures qui vous aidera à trouver la meilleure voiture que vous rêvez de conduire, trouvons-la.
+                            we are a rent a car agency that will help you fins
+                            the best car you have been dream to ride, lets find
+                            it.
                           </p>
                         </div>
                         <a
                           href="aboutUs_en.html"
                           class="btn btn-primary btn-hover-secondary"
-                          >Commencer</a
+                          >Get Started</a
                         >
                       </div>
                     </div>
@@ -505,7 +503,7 @@
                         <a
                           href="aboutUs_en.html"
                           class="btn btn-primary btn-hover-secondary"
-                          >Commencer</a
+                          >Get Started</a
                         >
                       </div>
                     </div>
@@ -526,19 +524,19 @@
                     <div class="col align-self-center max-mb-30">
                       <div class="intro-content mt-8">
                         <h2 class="title">
-                          Concevoir des marques et des expériences géniales
+                          Designing awesome brands & experiences
                         </h2>
                         <div class="desc">
                           <p>
-                            Nous sommes une agence située à New York. Nous pensons
-                             stratégie, artisanat de conception, développement du numérique et création
-                             mouvement. Pour transmettre votre marque et votre entreprise.
+                            We are an agency located in New York. We think
+                            strategy, craft design, develop digital and create
+                            motion. To forward your brand and business.
                           </p>
                         </div>
                         <a
                           href="aboutUs_en.html"
                           class="btn btn-primary btn-hover-secondary"
-                          >Commencer</a
+                          >Get Started</a
                         >
                       </div>
                     </div>
@@ -584,7 +582,7 @@
                     <div class="icon">
                       <i class="fa-solid fa-user"></i>
                     </div>
-                    <span>Mon profil </span>
+                    <span>My Profile </span>
                     <div class="t-icon">
                       <i class="fas fa-plus plusetrans"></i>
                       <!-- <i class="fas fa-minus"></i> -->
@@ -601,7 +599,7 @@
               >
                 <div class="t-p_accordionProfile">
                   <a class="tablinks active" onclick="openCity(event, 'home')"
-                    >Informations sur le profil</a
+                    >Profile Info</a
                   >
                   <a class="tablinks" onclick="openCity(event, 'notifications')"
                     >Notification</a
@@ -609,7 +607,7 @@
                   <a
                     class="tablinks"
                     onclick="openCity(event, 'friend-request')"
-                    >Demande d'ami</a
+                    >Friend Request</a
                   >
                 </div>
               </div>
@@ -628,7 +626,7 @@
                     <div class="icon">
                       <i class="fa-solid fa-gears"></i>
                     </div>
-                    <span>Compte </span>
+                    <span>Account </span>
                     <div class="t-icon">
                       <i class="fas fa-plus"></i>
                       <!-- <i class="fas fa-minus"></i> -->
@@ -647,31 +645,31 @@
                   <a
                     class="tablinks active"
                     onclick="openCity(event, 'account_Info')"
-                    >Informations de compte</a
+                    >Account Info</a
                   >
                   <a
                   class="tablinks"
                   onclick="openCity(event, 'trip_details')"
-                  >Détails du voyage</a
+                  >Trip Details</a
                 >
                   <a
                     class="tablinks"
                     onclick="openCity(event, 'change_password')"
-                    >Changer le mot de passe</a
+                    >Change Password</a
                   >
                   <a
                   class="tablinks"
                   onclick="openCity(event, 'forget_password')"
-                  >Mot de passe oublié</a
+                  >Forget Password</a
                 >
                 
                   <a
                     class="tablinks"
                     onclick="openCity(event, 'verified-account')"
-                    >Compte vérifié</a
+                    >Verified account</a
                   >
                   <a class="tablinks" onclick="openCity(event, 'close-Account')"
-                    >Fermer le compte</a
+                    >Close Account</a
                   >
                 </div>
               </div>
@@ -691,7 +689,7 @@
                     
                       <i class="fa-solid fa-money-check-dollar"></i>
                     </div>
-                    <span>Abonnement et paiement</span>
+                    <span>Subscription&payment</span>
                     <div class="t-icon">
                       <i class="fas fa-plus"></i>
                       <!-- <i class="fas fa-minus"></i> -->
@@ -710,12 +708,12 @@
                   <a
                     class="tablinks active"
                     onclick="openCity(event, 'billing_Payout')"
-                    >Facturation et paiement</a
+                    >Billing & Payout</a
                   >
                   <a
                     class="tablinks"
                     onclick="openCity(event, 'wallet')"
-                    >Détails du portefeuille</a
+                    >Wallet Details</a
                   >
                   <!-- <a
                     class="tablinks"
@@ -737,391 +735,22 @@
             class="Home_content tabcontent active"
           >
             <div class="tab willwidth">
-              <button
+              <!-- <button
                 class="tablink designcolortab visibilityBlock tablinkse"
                 onclick="openTaps(event, 'London')"
               >
-              Détails
-              </button>
-              <button
-                class="tablink designcolortab tablinkse"
-                onclick="openTaps(event, 'documents')"
-              >
-                Documents
-              </button>
-              <button
-              class="tablink designcolortab tablinkse"
-              onclick="openTaps(event, 'car-info')"
-            >
-            Voiture
-            </button>
+                Details
+              </button> -->
+             
+            
               <!-- <button class="tablink designcolortab" onclick="openTaps(event, 'Tokyo')">
                   Tokyo
                 </button> -->
             </div>
             <!-- Tab links -->
-            <div id="car-info" class="tabBody" style="display: none">
-              <div class="container">
-                <div class="content-car-info">
-                  <div class="car-information ">
-                    <p>Informations sur la voiture</p>
-                    <form>
-                      <div class="row">
-                        <div class="col-lg-6 col-md-4 col-sm-12">
-                          <div class="input_box mt-3">
-                            <label for="">numéro de la plaque</label>
-                            <input type="text" placeholder="Enter your plate number" required
-                              class="form-control-caption" />
-                          </div>
-                          <div class="input_box mt-3">
-                            <label for="">Couleur de la voiture</label>
-                            <input type="text" placeholder="Enter your Car Color" required class="form-control-caption" />
-                          </div>
-                          <div class="Car-brand mt-3">
-                            <span>Marque de voiture</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" style="width: 60%" id="carbrand" name="state">
-                                <option value="" disabled selected>
-                                  -- Choisit --
-                                </option>
-                                <option value="1">BMW</option>
-                                <option value="2">Bentley</option>
-                                <option value="2">Mercedes-Benz</option>
-                                <option value="2">Land Rover</option>
-                                <option value="2">KIA</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-12">
-                          <div class="Car-Model mt-3">
-                            <span>Modèle de voiture</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="carModel" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Choisit --
-                                </option>
-                                <option value="1">2000</option>
-                                <option value="2">2001</option>
-                                <option value="2">2002</option>
-                                <option value="2">2003</option>
-                                <option value="2">2004</option>
-                                <option value="2">2005</option>
-                                <option value="2">2010</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="Type-of-Car mt-3">
-                            <span>Type de voiture</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="typeOfCar" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Choisit --
-                                </option>
-                                <option value="1">Type of Car one</option>
-                                <option value="2">Type of Car two</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="theYearOfTheCar mt-3">
-                            <span>L'année de la voiture</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="theYearOfTheCar" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Choisit --
-                                </option>
-                                <option value="1">The Year of the Car one</option>
-                                <option value="2">The Year of the Car two</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                 
-                  
-                    </form>
-                  </div>
-                  <div class="car-images">
-                    <p>Images de voitures</p>
-                    <div class="row">
-                      <!-- col-lg-6 col-md-4 col-sm-12 -->
-                      <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="">Voiture avant</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/car_shap/front_car.jpg" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-upload"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="id-card">
-                          <h2>Back Car</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/car_shap/back_car.jpg" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-upload"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="id-card">
-                          <h2>Bonne voiture</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/car_shap/right_car.jpg" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-upload"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="id-card">
-                          <h2>Voiture gauche</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/car_shap/left_car.jpg" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-upload"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="id-card">
-                          <h2>À l'intérieur de la voiture</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-upload"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <p class="mt-5">Toutes les voitures</p>
-                      <div class="container mt-3">
-                        <div class="table-responsive">
-                          <table class="table">
-                            <thead class="thead-style">
-                              <tr>
-                                <th>Numéro de la plaque</th>
-                                <th>Couleur de la voiture</th>
-                                <th>Marque de voiture</th>
-                                <th>Type de voiture</th>
-                                <th>L'année de la voiture</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>Doe</td>
-                                <td>Doe</td>
-                                <td>john@example.com</td>
-                              </tr>
-                              <tr>
-                                <td>Mary</td>
-                                <td>Moe</td>
-                                <td>Moe</td>
-                                <td>Moe</td>
-                                <td>mary@example.com</td>
-                              </tr>
-                              <tr>
-                                <td>July</td>
-                                <td>Dooley</td>
-                                <td>Dooley</td>
-                                <td>Dooley</td>
-                                <td>july@example.com</td>
-                              </tr>
-  
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-  
-                    </div>
-                    <button type="submit" class="site-button save" name="save">
-                      Sauvegarder
-                    </button>
-                  </div>
-  
-                </div>
-              </div>
-            </div>
+           
               <!-- All documents content -->
-              <div id="documents" class="tabBody" style="display: none">
-                <div class="container">
-                  <div class="person-documents">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title"> Recto de la carte d'identité</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (3).png" alt="" />
-                          <label  for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                          <!-- <button class="Btn"id="uploadBtn" >
-                            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">UpLoad</div>
-                          </button> -->
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Dos de la carte d'identité</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (2).png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-  
-                  </div>
-                  <hr>
-                  <div class="caption-data">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Image personnelle</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/user-profile-person.png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Journal criminel</h2>
-                          <img 
-                            src="finshWebsite/exomac/assets/images/project/9.png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="carLicence-documents">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Permis de voiture Avant</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Permis de voiture Retour</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-  
-                  </div>
-                  <hr>
-                  <div class="CaptionLicence-documents">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Recto de la carte de licence</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/caption_license(2).png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Dos de la carte de permis</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/caption_license(1).png" alt="" />
-                          <label for="uploadBtn">
-                            <!-- <i class="fa-solid fa-file-arrow-up"></i> -->
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">Télécharger</div>
-                            </span>
-                          </label>
-                          <input type="file" id="uploadBtn">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
+             
               <!-- content car information -->
             <div id="London" class="tabBody" style="display: block">
               <div class="personal_info">
@@ -1131,7 +760,7 @@
                       <div class="information">
                         <h2>Ahmed Adel morsy</h2>
                         <h4>New york</h4>
-                        <h5>Notation</h5>
+                        <h5>Rating</h5>
                         <div class="rating">
                           8.5
                           <span class="fa fa-star checked"></span>
@@ -1140,31 +769,31 @@
                           <span class="fa fa-star"></span>
                           <span class="fa fa-star"></span>
                         </div>
-                        <p>Détails du compte</p>
+                        <p>Account Details</p>
                         <form>
                           <div class="row">
                             <div class="col-lg-6 col-md-4 col-sm-12">
                               <div class="input_box">
-                                <label for="">Nom</label>
-                                <input type="text" placeholder="Nom" required class="form-control-caption" />
+                                <label for="">Name</label>
+                                <input type="text" placeholder="Enter your name" required class="form-control-caption" />
                               </div>
                               <div class="input_box">
                                 <label for="">Email</label>
-                                <input type="email" placeholder=" email" required class="form-control-caption" />
+                                <input type="email" placeholder="Enter your email" required class="form-control-caption" />
                               </div>
                               <div class="input_box">
-                                <label for="">téléphone</label>
-                                <input type="tel" placeholder="téléphone" required
+                                <label for="">phone</label>
+                                <input type="tel" placeholder="Enter your phone" required
                                   class="form-control-caption Accounttel" />
                               </div>
                             </div>
                             <div class="col-lg-6 col-md-4 col-sm-12">
                               <div class="input_box">
-                                <label for="">pays</label>
-                                <input type="text" placeholder="Egypte" readonly class="form-control-caption" />
+                                <label for="">country</label>
+                                <input type="text" placeholder="Egypt" readonly class="form-control-caption" />
                               </div>
                               <div class="gender">
-                                <span>Sélectionnez jars</span>
+                                <span>Select gander</span>
                                 <div class="custom-select w-200">
                                   <select class="js-example-responsive widthmyom" style="   
                                      border-radius: 5px;
@@ -1173,23 +802,23 @@
                                     width: 75%;
                                 " id="gender" name="state">
                                     <option value="" disabled selected>
-                                      -- Choisit --
+                                      -- Chooses --
                                     </option>
-                                    <option value="1">Mâle</option>
-                                    <option value="2">Femelle</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
                                   </select>
                                 </div>
                               </div>
                               <div class="input_box">
-                                <label for="">mot de passe</label>
-                                <input type="password" placeholder="mot de passe" required
+                                <label for="">password</label>
+                                <input type="password" placeholder="Enter your password" required
                                   class="form-control-caption" />
                               </div>
                             </div>
                           </div>                        
                         </form>
                       <button type="submit" class="site-button" name="next">
-                        Suivant
+                            Next
                           </button>
                       </div>
                     </div>
@@ -1211,7 +840,7 @@
                 <div class="container">
                   <!-- Section Title Start -->
                   <div class="section-title text-center" data-aos="fade-up">
-                    <h2 class="title">Changez votre mot de passe</h2>
+                    <h2 class="title">Change your Password</h2>
                     <!-- <p class="sub-title">
               Our team of designers, developers and creatives are perfectionists
               who love what they do and love
@@ -1246,36 +875,36 @@
                     >
                       <div id="forgot-password" class="tab-pane">
                         <form class="p-a30 dez-form m-t100 text-center">
-                          <h3 class="form-title m-t0">réinitialiser le mot de passe</h3>
+                          <h3 class="form-title m-t0">Reset Password</h3>
                           <div class="dez-separator-outer m-b5">
                             <div
                               class="dez-separator bg-primary style-liner"
                             ></div>
                           </div>
                           <p>
-                            Entrez votre ancien mot de passe ci-dessous pour réinitialiser votre
-                             mot de passe.
+                            Enter your old password below to reset your
+                            password.
                           </p>
                           <div class="form-group">
                             <input
                               name="dzName"
                               required=""
                               class="form-control"
-                              placeholder="ancien mot de passe"
+                              placeholder="old Password"
                               type="text"
                             />
                             <input
                               name="dzName"
                               required=""
                               class="form-control"
-                              placeholder="nouveau mot de passe"
+                              placeholder="new password"
                               type="text"
                             />
                             <input
                               name="dzName"
                               required=""
                               class="form-control"
-                              placeholder="Confirmez le mot de passe"
+                              placeholder="confirm password"
                               type="text"
                             />
                           </div>
@@ -1288,7 +917,7 @@
                       >Back</a
                     > -->
                             <button class="site-button pull-right">
-                              Mot de passe
+                              Ste Password
                             </button>
                           </div>
                         </form>
@@ -1317,7 +946,7 @@
                 <!-- Section Title Start -->
                 <div class="section-title text-center" data-aos="fade-up">
                   <h2 class="title">
-                    Entrez l'adresse e-mail associée à votre compte
+                    Enter The Email address Associated With your Account
                   </h2>
                   <!-- <p class="sub-title">
                     Our team of designers, developers and creatives are perfectionists
@@ -1353,11 +982,11 @@
                   >
                     <div id="forgot-password" class="tab-pane">
                       <form class="p-a30 dez-form m-t100 text-center">
-                        <h3 class="form-title m-t0">Mot de passe oublié ?</h3>
+                        <h3 class="form-title m-t0">Forget Password ?</h3>
                         <div class="dez-separator-outer m-b5">
                           <div class="dez-separator bg-primary style-liner"></div>
                         </div>
-                        <p>Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.</p>
+                        <p>Enter your e-mail address below to reset your password.</p>
                         <div class="form-group">
                           <input
                             name="dzName"
@@ -1374,7 +1003,7 @@
                             href="#login"
                             >Back</a
                           > -->
-                          <button class="site-button pull-right">Soumettre</button>
+                          <button class="site-button pull-right">Submit</button>
                         </div>
                       </form>
                     </div>
@@ -1396,7 +1025,7 @@
           >
             <div class="container">
               <div class="page-title">
-                Détails du voyage
+                Trip Details
               </div> 
                 <div class="trip-table-details mt-6">
                   <div class="table-responsive">
@@ -1404,10 +1033,10 @@
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>Emplacement de la source</th>
-                          <th>Lieu de destination</th>
-                          <th>Prix</th>
-                          <th>Tous les détails</th>
+                          <th>Source Location</th>
+                          <th>Destination Location</th>
+                          <th>Price</th>
+                          <th>All Details</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1417,7 +1046,7 @@
                           <td>Alexandria</td>
                           <td>120</td>
                           <td>
-                            <!-- <a class="site-button  moreDetails" href="more_details_en.html">Plus de détails</a> -->
+                            <!-- <a class="site-button  moreDetails" href="more_details_en.html">more details</a> -->
                             <a style="--clr: #1292ee" class="button" href="more_details_en.html">
                               <span class="button__icon-wrapper">
                                   <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
@@ -1428,7 +1057,7 @@
                                       <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
                                   </svg>
                               </span>
-                              Plus de détails
+                              More Details
                           </a>
                           </td>
                         </tr>
@@ -1438,7 +1067,7 @@
                           <td>Mit Ghamr</td>
                           <td>130</td>
                           <td>
-                            <!-- <a class="site-button moreDetails" href="more_details_en.html">Plus de détails</a> -->
+                            <!-- <a class="site-button moreDetails" href="more_details_en.html">more details</a> -->
                             <a style="--clr: #1292ee" class="button" href="more_details_en.html">
                               <span class="button__icon-wrapper">
                                   <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
@@ -1449,7 +1078,7 @@
                                       <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
                                   </svg>
                               </span>
-                              Plus de détails
+                              More Details
                           </a>
                           </td>
                         </tr>
@@ -1459,7 +1088,7 @@
                           <td>Damietta</td>
                           <td>140</td>
                           <td>
-                            <!-- <a class=" site-button moreDetails" href="more_details_en.html">Plus de détails</a> -->
+                            <!-- <a class=" site-button moreDetails" href="more_details_en.html">more details</a> -->
                             <a style="--clr: #1292ee" class="button" href="more_details_en.html">
                               <span class="button__icon-wrapper">
                                   <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
@@ -1470,7 +1099,7 @@
                                       <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
                                   </svg>
                               </span>
-                              Plus de détails
+                              More Details
                           </a>
                           </td>
                         </tr>
@@ -1490,73 +1119,73 @@
             style="border: none"
           >
             <div class="container">
-              <div class="page-title">Compte vérifié</div>
+              <div class="page-title">Verified Account</div>
               <div class="input-info-box mt-4">
-                <div class="verified_name">FAQ sur la vérification</div>
+                <div class="verified_name">Verification FAQ</div>
                 <div class="verified_content">
                   <div class="row">
                     <div class="col-md-12">
                         <div class="varify-box">
                             <h4 class="title">
-                              Que signifie la vérification ?
+                                What does verification mean?
                             </h4>
                             <p class="sub_title">
-                              Le badge vérifié <i class="fas fa-certificate"></i> sur peyamba fait savoir qu'un compte public
-                              l’intérêt est authentique.
+                                The verified badge <i class="fas fa-certificate"></i> on peyamba lets people know that an account of public
+                                interest is authentic.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-12 mt-6">
                         <div class="varify-box">
                             <h4 class="title">
-                              Comment puis-je savoir si je suis vérifié ?
+                                How do I know if I am verified?
                             </h4>
                             <p class="sub_title">
-                              Cherchez le     <i class="fas fa-certificate"></i>     badge vérifié sur votre profil. Tous les comptes vérifiés ont
-                              le badge à côté de leur nom d’affichage.
+                                Look for the     <i class="fas fa-certificate"></i>     verified badge on your profile. All verified accounts have
+                                the badge next to their display name.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-12 mt-6">
                         <div class="varify-box">
                             <h4 class="title">
-                              Un badge vérifié peut-il être automatiquement supprimé d'un compte ?
+                                Can a verified badge be automatically removed from an account?
                             </h4>
                             <p class="sub_title">
-                              Oui, dans le cadre de notre politique, les badges vérifiés peuvent être automatiquement supprimés de
-                              comptes inactifs et incomplets.
+                                Yes, as part of our policy, verified badges may be automatically removed from
+                                inactive and incomplete accounts.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-12 mt-6">
                         <div class="varify-box">
                             <h4 class="title">
-                              Quels sont les meilleurs aspects de l'obtention d'un badge vérifié sur peyamba ?
+                                What are the best parts about getting verified badge on peyamba?
                             </h4>
                             <ul class="list-verify">
                                 <li>
                                     <p class="title">
-                                      1. Il n'y a pas de nombre minimum de connectés pour votre compte
+                                      1. There is no minimum number of connected for your account
                                     </p>
                                     <span class="sub_title">
-                                      La bonne nouvelle est que vous n’avez pas besoin d’avoir un énorme public pour être
-                                      vérifié sur peyamba
+                                        The good news is that you don’t need to have a huge following to be
+                                        verified on peyamba
                                     </span>
                                 </li>
                                 <li>
                                     <p class="title">
-                                      2. La demande est gratuite
+                                      2. It is free to request
                                     </p>
                                     <span class="sub_title">
-                                      Vous n’avez pas besoin de payer pour être vérifié sur peyamba, ce qui ne rapportera rien
-                                         regrettez si vous n'avez pas pu obtenir le badge.
+                                        You don’t need to pay for being verified on peyamba, which won’t make any
+                                        regret if you couldn’t get the badge.
                                     </span>
                                 </li>
                                 <li>
                                     <p class="title">
-                                      3. Il est intégré à Peyamba</p>
+                                      3. It is built into Peyamba</p>
                                     <span class="sub_title">
-                                      Il est facile d’accès et vous n’aurez besoin d’aucune autre application.
+                                        It is easy to access, and you won’t need any other apps.
                                     </span>
                                 </li>
                             </ul>
@@ -1565,26 +1194,26 @@
                     <div class="col-md-12 mt-6">
                         <div class="varify-box">
                             <h4 class="title">
-                              Comment puis-je augmenter les chances d’être vérifié sur Peyamba ?
+                                How can I increase the chance of getting verified on Peyamba?
                             </h4>
                             <ul class="list-verify">
                                 <li>
-                                    <i class="fas fa-check"></i>Publier du contenu unique
+                                    <i class="fas fa-check"></i>Post unique content
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i>Avoir un compte public
+                                    <i class="fas fa-check"></i>Have a public account
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i>Terminez votre travail
+                                    <i class="fas fa-check"></i>Complete your job
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i>Postez fréquemment
+                                    <i class="fas fa-check"></i>Post frequently
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i>Être réel
+                                    <i class="fas fa-check"></i>Be real
                                 </li>
                                 <li>
-                                    <i class="fas fa-check"></i>Soyez remarquable
+                                    <i class="fas fa-check"></i>Be notable
                                 </li>
                             </ul>
                         </div>
@@ -1604,22 +1233,22 @@
             <div class="container">
               <div class="col-md-12">
                 <div class="page-title">
-                  Fermer le compte
+                    Close Account
                 </div>
                 
                 <div class="input-info-box mt-5">
                     <div class="header">
-                      Avertissement:
+                        Warning:
                     </div>
                     <div class="content_close_acount">
                         <div class="row">
                             <div class="col-md-12">
                                 <p class="warning-p">
-                                  Si vous fermez votre compte, vous serez désabonné de tous vos abonnés et amis,
-                                  et perdra l'accès pour toujours.
+                                    If you close your account, you will be unsubscribed from all your followers and friends,
+                                    and will lose access forever.
                                 </p>
                                 <div class="my-input-box">
-                                    <input type="password" placeholder="Tapez votre mot de passe">
+                                    <input type="password" placeholder="Enter Your Password">
                                 </div>
                             </div>
                         </div>
@@ -1627,7 +1256,7 @@
                 </div>
                 <div class="buttons">
                   
-                    <button type="submit" class="btn btn-primary btn-hover-secondary">Supprimer le compte</button>
+                    <button type="submit" class="btn btn-primary btn-hover-secondary">Delete Account</button>
                 </div>
             </div>
             </div>
@@ -1654,7 +1283,7 @@
                     data-aos="fade-up"
                   >
                     <h2 class="title">
-                      Toute Notification
+                      All Notification
                       <i class="fa-solid fa-bell"></i>
                     </h2>
                   </div>
@@ -1664,7 +1293,7 @@
                         type="text"
                         id="myInput"
                         onkeyup="search()"
-                        placeholder="Rechercher des noms.."
+                        placeholder="Search for names.."
                       />
                     </div>
                     <div
@@ -2301,7 +1930,7 @@
           >
             <div class="container">
               <div class="frind-box_head text-center">
-                <h4>Demande d'ami</h4>
+                <h4>Friend Request</h4>
               </div>
               <div class="frind-box">
                 <div class="single-friend">
@@ -2317,8 +1946,8 @@
                     </div>
                   </div>
                   <div class="right">
-                    <a href="#" class="Accept">Accepter</a>
-                    <a href="#" class="Ignore">Ignorerr</a>
+                    <a href="#" class="Accept">Accept</a>
+                    <a href="#" class="Ignore">Ignore</a>
                   </div>
                 </div>
                 <div class="single-friend mt-5">
@@ -2334,8 +1963,8 @@
                     </div>
                   </div>
                   <div class="right">
-                    <a href="#" class="Accept">Accepter</a>
-                    <a href="#" class="Ignore">Ignorerr</a>
+                    <a href="#" class="Accept">Accept</a>
+                    <a href="#" class="Ignore">Ignore</a>
                   </div>
                 </div>
                 <div class="single-friend mt-5">
@@ -2351,8 +1980,8 @@
                     </div>
                   </div>
                   <div class="right">
-                    <a href="#" class="Accept">Accepterer</a>
-                    <a href="#" class="Ignore">Ignorerr</a>
+                    <a href="#" class="Accept">Accept</a>
+                    <a href="#" class="Ignore">Ignore</a>
                   </div>
                 </div>
                 <div class="single-friend mt-5">
@@ -2368,8 +1997,8 @@
                     </div>
                   </div>
                   <div class="right">
-                    <a href="#" class="Accept">Accepterer</a>
-                    <a href="#" class="Ignore">Ignorerr</a>
+                    <a href="#" class="Accept">Accept</a>
+                    <a href="#" class="Ignore">Ignore</a>
                   </div>
                 </div>
                 <div class="single-friend mt-5">
@@ -2385,8 +2014,8 @@
                     </div>
                   </div>
                   <div class="right">
-                    <a href="#" class="Accept">Accepterer</a>
-                    <a href="#" class="Ignore">Ignorerr</a>
+                    <a href="#" class="Accept">Accept</a>
+                    <a href="#" class="Ignore">Ignore</a>
                   </div>
                 </div>
               </div>
@@ -2400,7 +2029,7 @@
             style="border: none"
           >
             <div class="container">
-              <h2>Détails des informations sur le compte</h2>
+              <h2>Account Info Details</h2>
               <div class="personal_info">
                 <div class="container">
                   <div class="row align-items-center card_info">
@@ -2408,7 +2037,7 @@
                       <div class="information">
                         <h2>Ahmed Adel morsy</h2>
                         <h4>New york</h4>
-                        <h5>Notation</h5>
+                        <h5>Rating</h5>
                         <div class="rating">
                           8.5
                           <span class="fa fa-star checked"></span>
@@ -2417,31 +2046,31 @@
                           <span class="fa fa-star"></span>
                           <span class="fa fa-star"></span>
                         </div>
-                        <p>Détails du compte</p>
+                        <p>Account Details</p>
                         <form>
                           <div class="row">
                             <div class="col-lg-6 col-md-4 col-sm-12">
                               <div class="input_box">
-                                <label for="">Nom</label>
-                                <input type="text" placeholder="Nom" required class="form-control-caption" />
+                                <label for="">Name</label>
+                                <input type="text" placeholder="Enter your name" required class="form-control-caption" />
                               </div>
                               <div class="input_box">
                                 <label for="">Email</label>
-                                <input type="email" placeholder="email" required class="form-control-caption" />
+                                <input type="email" placeholder="Enter your email" required class="form-control-caption" />
                               </div>
                               <div class="input_box">
-                                <label for="">téléphone</label>
-                                <input type="tel" placeholder="téléphone" required
+                                <label for="">phone</label>
+                                <input type="tel" placeholder="Enter your phone" required
                                   class="form-control-caption Accounttel" />
                               </div>
                             </div>
                             <div class="col-lg-6 col-md-4 col-sm-12">
                               <div class="input_box">
-                                <label for="">pays</label>
+                                <label for="">country</label>
                                 <input type="text" placeholder="Egypt" readonly class="form-control-caption" />
                               </div>
                               <div class="gender">
-                                <span>Sélectionnez jars</span>
+                                <span>Select gander</span>
                                 <div class="custom-select w-200">
                                   <select class="js-example-responsive widthmyom" style="   
                                      border-radius: 5px;
@@ -2450,23 +2079,23 @@
                                     width: 75%;
                                 " id="gender" name="state">
                                     <option value="" disabled selected>
-                                      -- Choisit --
+                                      -- Chooses --
                                     </option>
-                                    <option value="1">Mâle</option>
-                                    <option value="2">Femelle</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
                                   </select>
                                 </div>
                               </div>
                               <div class="input_box">
-                                <label for="">mot de passe</label>
-                                <input type="password" placeholder="mot de passe" required
+                                <label for="">password</label>
+                                <input type="password" placeholder="Enter your password" required
                                   class="form-control-caption" />
                               </div>
                             </div>
                           </div>                        
                         </form>
                       <button type="submit" class="site-button" name="next">
-                        Suivante
+                            Next
                           </button>
                       </div>
                     </div>
@@ -2483,38 +2112,38 @@
             style="border: none"
           >
             <div class="container">
-              <div class="page-title">Facturation et paiement</div>
+              <div class="page-title">Billing & Payout</div>
               <div class="mt-3">
-                <h3>Fournissez vos informations de paiement</h3>
+                <h3>Provide your payment info</h3>
                 <form>
                   <div class="row">
                     <div class="col-lg-6 col-md-4 col-sm-12">
                       <div class="input_box">
-                        <label for="">Prénom</label>
-                        <input type="text" placeholder="Entrez votre prénom" required class="form-control-caption" />
+                        <label for="">First Name</label>
+                        <input type="text" placeholder="Enter your First name" required class="form-control-caption" />
                       </div>
                       <div class="input_box">
                         <label for="">Email</label>
-                        <input type="email" placeholder="Enterz ton email" required class="form-control-caption" />
+                        <input type="email" placeholder="Enter your email" required class="form-control-caption" />
                       </div>
                       <div class="input_box">
-                        <label for="">téléphone</label>
-                        <input type="tel" placeholder="téléphone" required
+                        <label for="">phone</label>
+                        <input type="tel" placeholder="Enter your phone" required
                           class="form-control-caption Accounttel" />
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-4 col-sm-12">
                       <div class="input_box">
-                        <label for="">Nom de famille</label>
-                        <input type="text" placeholder="Entrez votre nom de famille" required
+                        <label for="">Last Name</label>
+                        <input type="text" placeholder="Enter your Last Name" required
                           class="form-control-caption" />
                       </div>
                       <div class="input_box">
-                        <label for="">pays</label>
+                        <label for="">country</label>
                         <input type="text" placeholder="Egypt" readonly class="form-control-caption" />
                       </div>
                       <div class="gender">
-                        <span>ville</span>
+                        <span>city</span>
                         <div class="custom-select w-200">
                           <select class="js-example-responsive widthmyom" style="   
                              border-radius: 5px;
@@ -2523,7 +2152,7 @@
                             width: 75%;
                         " id="gender" name="state">
                             <option value="" disabled selected>
-                              -- Choisit --
+                              -- Chooses --
                             </option>
                             <option value="1">NetWork</option>
                             <option value="2">Paris</option>
@@ -2536,19 +2165,19 @@
                 </form>
               </div>
               <div class="input-info-box mt-5 ">
-                  <div class="header mb-10">Options de paiement
+                  <div class="header mb-10">Payment Options
               </div>
               <div class="content">
                 <div class="select-payment">
                     <div class="option">
                         <i class="fas fa-check-circle"></i>
                         <img src="finshWebsite/exomac/assets/images/card/card1.png" alt="">
-                        Carte de crédit
+                        Credit Card
                     </div>
                     <div class="option">
                         <i class="fas fa-check-circle"></i>
                         <img src="finshWebsite/exomac/assets/images/card/card1.png" alt="">
-                        Carte de débit
+                        Debit Card
                     </div>
                     <div class="option">
                         <i class="fas fa-check-circle"></i>
@@ -2557,18 +2186,18 @@
                     </div>
                 </div>
                 <div class="header">
-                  Entrez les détails de votre carte
+                    Enter your Card Details
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="my-input-box">
-                            <label for="">Numéro de carte</label>
+                            <label for="">Card Number</label>
                             <input type="email" placeholder="0000 0000 0000 0000">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="my-input-box">
-                            <label for="">Nom</label>
+                            <label for="">Name</label>
                             <input type="text" placeholder="Name">
                         </div>
                     </div>
@@ -2587,7 +2216,7 @@
                 </div>
                 <div class="buttons">
                   
-                  <button type="submit" class="btn btn-primary btn-hover-secondary">Soumettre</button>
+                  <button type="submit" class="btn btn-primary btn-hover-secondary">Submit</button>
               </div>
             </div>
               </div>
@@ -2607,7 +2236,7 @@
       <div id="services" class="section section-padding-t110-b120">
         <div class="container">
           <div class="section-title text-center mb-12" data-aos="fade-up">
-            <h2 class="title">Votre portefeuille, votre stratégie d'épargne.</h2>
+            <h2 class="title">Your Wallet, Your Savings Strategy.</h2>
           </div>
           <div
             class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6"
@@ -2618,7 +2247,7 @@
                   <i class="fa-solid fa-money-bill fa-2xl"></i>
                 </div>
                 <div class="content-service text-center">
-                  <h3 class="title">Équilibre</h3>
+                  <h3 class="title">Balance</h3>
                 </div>
               </div>
             </div>
@@ -2628,7 +2257,7 @@
                   <i class="fa-regular fa-credit-card fa-2xl"></i>
                 </div>
                 <div class="content-service">
-                  <h3 class="title">Factures</h3>
+                  <h3 class="title">PayBills</h3>
                 </div>
               </div>
             </div>
@@ -2640,7 +2269,7 @@
                   <i class="fa-solid fa-wallet fa-2xl"></i>
                 </div>
                 <div class="content-service">
-                  <h3 class="title">Transformer</h3>
+                  <h3 class="title">Transform</h3>
                   <!-- <div class="desc">
               <p>
                 You can rent your dream car any day and anywhere we have
@@ -2663,11 +2292,11 @@
             <table class="table table-striped" style="color: black">
               <thead>
                 <tr class="table-dark">
-                  <th>Nombre</th>
-                  <th>Prix</th>
-                  <th>Expéditrice</th>
-                  <th>Reçue</th>
-                  <th>temps</th>
+                  <th>Number</th>
+                  <th>Price</th>
+                  <th>Sender</th>
+                  <th>Received</th>
+                  <th>time</th>
                 </tr>
               </thead>
               <tbody>
@@ -2766,12 +2395,12 @@
             <!-- Footer Widget Start -->
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">Prestations de service</h4>
+                <h4 class="footer-widget-title">Services</h4>
                 <div class="footer-widget-content">
                   <ul>
-                    <li><a href="services_en.html">Louer à l'heure</a></li>
-                    <li><a href="services_en.html">Location par jours</a></li>
-                    <li><a href="services_en.html">Système scolaire</a></li>
+                    <li><a href="services_en.html">Rent by hours</a></li>
+                    <li><a href="services_en.html">Rent by Days</a></li>
+                    <li><a href="services_en.html">School System</a></li>
                   </ul>
                 </div>
               </div>
@@ -2799,13 +2428,13 @@
             <!-- Footer Widget Start -->
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
               <div class="footer-widget">
-                <h4 class="footer-widget-title">À propos</h4>
+                <h4 class="footer-widget-title">About</h4>
                 <div class="footer-widget-content">
                   <ul>
-                    <li><a href="featares_en.html">Caractéristiques</a></li>
-                    <li><a href="our_partners_en.html">Nos partenaires</a></li>
-                    <li><a href="policy_en.html">Politique</a></li>
-                    <li><a href="pricing_en.html">Tarifs</a></li>
+                    <li><a href="featares_en.html">Features</a></li>
+                    <li><a href="our_partners_en.html">Our Partners</a></li>
+                    <li><a href="policy_en.html">Policy</a></li>
+                    <li><a href="pricing_en.html">Pricing</a></li>
                   </ul>
                 </div>
               </div>
@@ -2819,7 +2448,7 @@
                 <div class="footer-widget-content">
                   <ul>
                     <li>
-                      <a href="technical-support_en.html">Soutien technique</a>
+                      <a href="technical-support_en.html">Technical Support</a>
                     </li>
                     <!-- <li><a href=" # .html">Help Desk</a></li> -->
                     <!-- <li><a href="  .html">Live Chat</a></li> -->
@@ -2892,10 +2521,10 @@
           <nav class="site-mobile-menu">
             <ul>
               <li>
-                <a href="home_ar.html"><span class="menu-text">Maison</span></a>
+                <a href="home_ar.html"><span class="menu-text">Home</span></a>
               </li>
               <li>
-                <a href="offer_en.html"><span class="menu-text">Offre</span></a>
+                <a href="offer_en.html"><span class="menu-text">Offer</span></a>
               </li>
               <li>
                 <a href="services_en.html"
@@ -2904,7 +2533,7 @@
               </li>
               <li>
                 <a href="cars_en.html"
-                  ><span class="menu-text">Véhicules</span></a
+                  ><span class="menu-text">Vehicles</span></a
                 >
               </li>
               <li class="has-children">
@@ -2913,7 +2542,7 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  ><span class="menu-text">Profil</span></a
+                  ><span class="menu-text">Profile</span></a
                 >
                 <span class="menu-toggle"
                   ><i class="fa-solid fa-caret-down"></i
@@ -2921,12 +2550,12 @@
                 <ul class="sub-menu">
                   <li>
                     <a href="profile_caption_en.html"
-                      ><span class="menu-text">Modifier la légende du profil</span></a
+                      ><span class="menu-text">Edit Profile Caption</span></a
                     >
                   </li>
                   <li>
-                    <a href="profile_client_en.html"
-                      ><span class="menu-text">Modifier le profil du client</span></a
+                    <a href="profile_client_new_en.html"
+                      ><span class="menu-text">Edit Profile Client</span></a
                     >
                   </li>
                 </ul>
