@@ -433,6 +433,7 @@
   color: #4bc7db;
   border-color: #4bc7db;
 }
+.buy_now_gold,
 .table2 .buy_now {
   background: linear-gradient(to bottom right, #44f2b5, #4cbde2);
 }
@@ -453,6 +454,7 @@
   color: #66fd9c;
   border-color: #66fd9c;
 }
+.buy_now_plat,
 .table3 .buy_now {
   background: linear-gradient(to bottom right, #66fd9c, #f6fa60);
 }
