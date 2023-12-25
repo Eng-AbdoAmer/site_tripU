@@ -486,7 +486,9 @@
 
 function menuToggle() {
   const toggleMenu = document.querySelector(".profile_menu");
-  const toggleNotification = document.querySelector(".profile_menu_notification");
+  const toggleNotification = document.querySelector(
+    ".profile_menu_notification"
+  );
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
   // تبديل حالة العنصر الحالي
   // إغلاق النوافذ الأخرى
@@ -497,7 +499,9 @@ function menuToggle() {
 
 function menuToggleNotification() {
   const toggleMenu = document.querySelector(".profile_menu");
-  const toggleNotification = document.querySelector(".profile_menu_notification");
+  const toggleNotification = document.querySelector(
+    ".profile_menu_notification"
+  );
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
 
   // إغلاق النوافذ الأخرى
@@ -510,7 +514,9 @@ function menuToggleNotification() {
 
 function menuToggleLanguage() {
   const toggleMenu = document.querySelector(".profile_menu");
-  const toggleNotification = document.querySelector(".profile_menu_notification");
+  const toggleNotification = document.querySelector(
+    ".profile_menu_notification"
+  );
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
 
   // إغلاق النوافذ الأخرى
@@ -581,18 +587,6 @@ function getPageList(totalPages, page, maxLength) {
 }
 
 $(function () {
-  // var e = document.getElementById("table_size");
-  // var val = e.options[e.selectedIndex].value;
-  // $("#table_size").val();
-  // let selection = document.getElementById("table_size");
-
-  // selection.addEventListener("change", () => {
-  //   var val = selection.options[selection.selectedIndex].text;
-  //   // value.innerText = selection.options[Selection.selectedIndex].text;
-  //   console.log(val);
-  // });
-  // filterIndex = val;
-  // console.log(filterIndex);
   var numberOfItem = $(".accordion .item").length;
   var limitPerPage = 3;
   var totalPages = Math.ceil(numberOfItem / limitPerPage);
@@ -687,6 +681,7 @@ var swiper = new Swiper(".mySwiper", {
     clickable: false,
   },
 });
+
 //to make Search;
 
 const search = () => {
@@ -1065,4 +1060,242 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//code to validations for the email address javascript
+// pagination to friend request
+
+function getPageList(totalPages, page, maxLength) {
+  function range(start, end) {
+    return Array.from(Array(end - start + 1), (_, i) => i + start);
+  }
+
+  var slideWidth = maxLength < 9 ? 1 : 2;
+  var leftWidth = (maxLength - slideWidth * 2 - 3) >> 1;
+  var rightWidth = (maxLength - slideWidth * 2 - 3) >> 1;
+
+  if (totalPages <= maxLength) {
+    return range(1, totalPages);
+  }
+
+  if (page <= maxLength - slideWidth - 1 - rightWidth) {
+    return range(1, maxLength - slideWidth - 1).concat(
+      0,
+      range(totalPages - slideWidth + 1, totalPages)
+    );
+  }
+
+  if (page >= totalPages - slideWidth - 1 - rightWidth) {
+    return range(1, slideWidth).concat(
+      0,
+      range(totalPages - slideWidth - 1 - rightWidth - leftWidth, totalPages)
+    );
+  }
+
+  return range(1, slideWidth).concat(
+    0,
+    range(page - leftWidth, page + rightWidth),
+    0,
+    range(totalPages - slideWidth + 1, totalPages)
+  );
+}
+
+$(function () {
+  var numberOfItem = $(".frind-box .single-friend").length;
+  var limitPerPage = 3;
+  var totalPages = Math.ceil(numberOfItem / limitPerPage);
+  var paginationSize = 5;
+  var currentPage;
+
+  function showPage(whichPage) {
+    if (whichPage < 1 || whichPage > totalPages) return false;
+
+    currentPage = whichPage;
+
+    $(".frind-box .single-friend")
+      .hide()
+      .slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
+      .show();
+
+    $(".pagination li").slice(1, -1).remove();
+
+    getPageList(totalPages, currentPage, paginationSize).forEach((item) => {
+      $("<li>")
+        .addClass("page-item")
+        .addClass(item ? "current-page" : "dots")
+        .toggleClass("active", item === currentPage)
+        .append(
+          $("<a>")
+            .addClass("page-link")
+            .attr({ href: "javascript:void(0)" })
+            .text(item || "...")
+        )
+        .insertBefore(".next-page");
+    });
+
+    $(".previous-page").toggleClass("disable", currentPage === 1);
+    $(".next-page").toggleClass("disable", currentPage === totalPages);
+
+    return true;
+  }
+
+  function getPageList(totalPages, currentPage, paginationSize) {
+    if (totalPages <= paginationSize) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    var delta = Math.floor((paginationSize - 1) / 2);
+    var left = currentPage - delta;
+    var right = currentPage + delta + 1;
+
+    if (left < 1) {
+      left = 1;
+      right = left + paginationSize;
+    }
+
+    if (right > totalPages) {
+      right = totalPages + 1;
+      left = right - paginationSize;
+    }
+
+    return Array.from({ length: paginationSize }, (_, i) => left + i);
+  }
+
+  $(".pagination").append(
+    $("<li>")
+      .addClass("page-item")
+      .addClass("previous-page")
+      .append(
+        $("<a>")
+          .addClass("page-link")
+          .attr({ href: "javascript:void(0)" })
+          .text("Prev")
+      ),
+    $("<li>")
+      .addClass("page-item")
+      .addClass("next-page")
+      .append(
+        $("<a>")
+          .addClass("page-link")
+          .attr({ href: "javascript:void(0)" })
+          .text("Next")
+      )
+  );
+
+  $(".frind-box").show();
+  showPage(1);
+
+  $(document).on(
+    "click",
+    ".pagination li.current-page:not(.active)",
+    function () {
+      return showPage(+$(this).text());
+    }
+  );
+
+  $(".next-page").on("click", function () {
+    return showPage(currentPage + 1);
+  });
+  $(".previous-page").on("click", function () {
+    return showPage(currentPage - 1);
+  });
+});
+
+//validate payment method card number
+var card_number_valid = false;
+var card_name_valid = false;
+var card_Exp_valid = false;
+var card_cvv_valid = false;
+var card_number = document.getElementById("card_number");
+var card_name = document.getElementById("card_name");
+var card_exp = document.getElementById("card_exp");
+var card_cvv = document.getElementById("card_cvv");
+var errorNumber = document.getElementById("card_number_error");
+
+window.onload = function () {
+  card_name.disabled = true;
+  card_exp.disabled = true;
+  card_cvv.disabled = true;
+};
+card_number.oninput = function (event) {
+  let v = document.getElementById("card_number").value;
+
+  console.log(v);
+  if (v.length !== 16) {
+    errorNumber.innerHTML = "Card number must be 16 digits";
+    card_name.disabled = true;
+    card_exp.disabled = true;
+    card_cvv.disabled = true;
+    return "Card number must be 16 digits";
+  }
+
+  if (!/^\d+$/.test(v)) {
+    errorNumber.innerHTML = "Card number must only contain digits";
+    card_name.disabled = true;
+    card_exp.disabled = true;
+    card_cvv.disabled = true;
+    return "Card number must only contain digits";
+  }
+  card_name.disabled = false;
+  card_exp.disabled = true;
+  card_cvv.disabled = true;
+  errorNumber.innerHTML = "Card number is valid";
+  return "Card number is valid";
+};
+// validate to card_name
+card_name.oninput = function (event) {
+  let v = card_name.value;
+
+  console.log(v);
+  if (v.length >= 3) {
+    errorNumber.innerHTML = "Card name must be more than 3 digits";
+    // card_name.disabled = true;
+    card_exp.disabled = false;
+    card_cvv.disabled = true;
+    return "Card name must be more than 3 digits";
+  }
+
+  card_cvv.disabled = true;
+  errorNumber.innerHTML = "Card number is valid";
+  return "Card number is valid";
+};
+
+card_exp.oninput = function (event) {
+  let v = card_exp.value;
+  // var d = now Date();
+  var year = new Date().getFullYear();
+  var month = new Date().getMonth();
+  console.log(year);
+  console.log(month);
+  card_exp.value = `${year} ${month}`;
+  card_exp.innerHTML = `${year} ${month}`;
+  // card_exp.min = currentYears;
+};
+/*----------------------------------------- */
+//var dateInput = document.getElementById("dateInput");
+
+card_exp.addEventListener("input", function () {
+  var dateValue = this.value;
+  var dateRegex = /^\d{4}-\d{2}$/;
+
+  if (dateRegex.test(dateValue)) {
+    var selectedYear = parseInt(dateValue.split("-")[0]);
+    var currentYear = new Date().getFullYear();
+    var currentMonth = new Date().getMonth() + 1;
+
+    if (
+      selectedYear > currentYear ||
+      (selectedYear === currentYear &&
+        parseInt(dateValue.split("-")[1]) >= currentMonth)
+    ) {
+      // The date is valid and displayed in the year-month format
+      var formattedDate = dateValue;
+      this.value = formattedDate;
+    } else {
+      // Invalid date (past year or month)
+      this.value = "";
+      alert("Please select a current or future year and month.");
+    }
+  } else {
+    // Invalid date format
+    this.value = "";
+    alert("Please enter a valid date in the format (YYYY-MM).");
+  }
+});
