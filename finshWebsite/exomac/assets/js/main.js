@@ -498,14 +498,14 @@ function menuToggle() {
 }
 
 function menuToggleNotification() {
-  const toggleMenu = document.querySelector(".profile_menu");
+  //const toggleMenu = document.querySelector(".profile_menu");
   const toggleNotification = document.querySelector(
     ".profile_menu_notification"
   );
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
 
   // إغلاق النوافذ الأخرى
-  toggleMenu.classList.remove("active");
+  // toggleMenu.classList.remove("active");
   toggleMenuLang.classList.remove("active");
 
   // تبديل حالة العنصر الحالي
@@ -513,14 +513,14 @@ function menuToggleNotification() {
 }
 
 function menuToggleLanguage() {
-  const toggleMenu = document.querySelector(".profile_menu");
+  //const toggleMenu = document.querySelector(".profile_menu");
   const toggleNotification = document.querySelector(
     ".profile_menu_notification"
   );
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
 
   // إغلاق النوافذ الأخرى
-  toggleMenu.classList.remove("active");
+  // toggleMenu.classList.remove("active");
   toggleNotification.classList.remove("active");
 
   // تبديل حالة العنصر الحالي
@@ -1271,31 +1271,32 @@ card_exp.oninput = function (event) {
 /*----------------------------------------- */
 //var dateInput = document.getElementById("dateInput");
 
-card_exp.addEventListener("input", function () {
-  var dateValue = this.value;
-  var dateRegex = /^\d{4}-\d{2}$/;
+card_exp.addEventListener("input", function (event) {
+  console.log(event);
+  // var dateValue = this.value;
+  // var dateRegex = /^\d{4}-\d{2}$/;
 
-  if (dateRegex.test(dateValue)) {
-    var selectedYear = parseInt(dateValue.split("-")[0]);
-    var currentYear = new Date().getFullYear();
-    var currentMonth = new Date().getMonth() + 1;
+  // if (dateRegex.test(dateValue)) {
+  //   var selectedYear = parseInt(dateValue.split("-")[0]);
+  //   var currentYear = new Date().getFullYear();
+  //   var currentMonth = new Date().getMonth() + 1;
 
-    if (
-      selectedYear > currentYear ||
-      (selectedYear === currentYear &&
-        parseInt(dateValue.split("-")[1]) >= currentMonth)
-    ) {
-      // The date is valid and displayed in the year-month format
-      var formattedDate = dateValue;
-      this.value = formattedDate;
-    } else {
-      // Invalid date (past year or month)
-      this.value = "";
-      alert("Please select a current or future year and month.");
-    }
-  } else {
-    // Invalid date format
-    this.value = "";
-    alert("Please enter a valid date in the format (YYYY-MM).");
-  }
+  //   if (
+  //     selectedYear > currentYear ||
+  //     (selectedYear === currentYear &&
+  //       parseInt(dateValue.split("-")[1]) >= currentMonth)
+  //   ) {
+  //     // The date is valid and displayed in the year-month format
+  //     var formattedDate = dateValue;
+  //     this.value = formattedDate;
+  //   } else {
+  //     // Invalid date (past year or month)
+  //     this.value = "";
+  //     alert("Please select a current or future year and month.");
+  //   }
+  // } else {
+  //   // Invalid date format
+  //   this.value = "";
+  //   alert("Please enter a valid date in the format (YYYY-MM).");
+  // }
 });
