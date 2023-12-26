@@ -520,7 +520,7 @@ function menuToggleLanguage() {
   const toggleMenuLang = document.querySelector(".profile_menu_Language");
 
   // إغلاق النوافذ الأخرى
-  // toggleMenu.classList.remove("active");
+  //toggleMenu.classList.remove("active");
   toggleNotification.classList.remove("active");
 
   // تبديل حالة العنصر الحالي
