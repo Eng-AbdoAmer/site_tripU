@@ -507,10 +507,28 @@ function menuToggleNotification() {
   // إغلاق النوافذ الأخرى
   // toggleMenu.classList.remove("active");
   toggleMenuLang.classList.remove("active");
-
+  document.body.addEventListener("click", function (e) {
+    if (toggleNotification.className === "active") {
+      console.log("active");
+    } else {
+      console.log("not active");
+    }
+  });
   // تبديل حالة العنصر الحالي
   toggleNotification.classList.toggle("active");
 }
+//const tapNotification = document.querySelector(".profile_menu_notification");
+document.body.addEventListener("click", function (e) {
+  // if (e.target.className === "profile_menu_notification active") {
+  //   tapNotification.classList.remove("active");
+  //   console.log("yes this is a notification");
+  // } else {
+  //   console.log("no this is not a notification");
+  // }
+  // if (!e.target.className === ".profile_menu_notification") {
+  //   tapNotification.classList.toggle("active");
+  // }
+});
 
 function menuToggleLanguage() {
   //const toggleMenu = document.querySelector(".profile_menu");
@@ -1208,6 +1226,9 @@ var card_name = document.getElementById("card_name");
 var card_exp = document.getElementById("card_exp");
 var card_cvv = document.getElementById("card_cvv");
 var errorNumber = document.getElementById("card_number_error");
+var errorName = document.getElementById("card_name_error");
+var errorExp = document.getElementById("card_exp_error");
+var errorCvv = document.getElementById("card_cvv_error");
 
 window.onload = function () {
   card_name.disabled = true;
@@ -1216,8 +1237,7 @@ window.onload = function () {
 };
 card_number.oninput = function (event) {
   let v = document.getElementById("card_number").value;
-
-  console.log(v);
+  card_number.maxLength = 16;
   if (v.length !== 16) {
     errorNumber.innerHTML = "Card number must be 16 digits";
     card_name.disabled = true;
@@ -1236,16 +1256,15 @@ card_number.oninput = function (event) {
   card_name.disabled = false;
   card_exp.disabled = true;
   card_cvv.disabled = true;
-  errorNumber.innerHTML = "Card number is valid";
+  errorNumber.innerHTML = "";
   return "Card number is valid";
 };
 // validate to card_name
 card_name.oninput = function (event) {
   let v = card_name.value;
-
-  console.log(v);
-  if (v.length >= 3) {
-    errorNumber.innerHTML = "Card name must be more than 3 digits";
+  card_name.minlength = 3;
+  if (v.length < 3) {
+    errorName.innerHTML = "Card name must be more than 3 digits";
     // card_name.disabled = true;
     card_exp.disabled = false;
     card_cvv.disabled = true;
@@ -1253,50 +1272,53 @@ card_name.oninput = function (event) {
   }
 
   card_cvv.disabled = true;
-  errorNumber.innerHTML = "Card number is valid";
+  errorName.innerHTML = "";
   return "Card number is valid";
 };
 
-card_exp.oninput = function (event) {
-  let v = card_exp.value;
-  // var d = now Date();
-  var year = new Date().getFullYear();
-  var month = new Date().getMonth();
-  console.log(year);
-  console.log(month);
-  card_exp.value = `${year} ${month}`;
-  card_exp.innerHTML = `${year} ${month}`;
-  // card_exp.min = currentYears;
-};
-/*----------------------------------------- */
-//var dateInput = document.getElementById("dateInput");
-
 card_exp.addEventListener("input", function (event) {
-  console.log(event);
-  // var dateValue = this.value;
-  // var dateRegex = /^\d{4}-\d{2}$/;
+  let v = card_exp.value;
+  var d = new Date();
+  var currentYear = d.getFullYear().toString().slice(-2);
 
-  // if (dateRegex.test(dateValue)) {
-  //   var selectedYear = parseInt(dateValue.split("-")[0]);
-  //   var currentYear = new Date().getFullYear();
-  //   var currentMonth = new Date().getMonth() + 1;
+  const selectedDate = new Date(v + "-01"); // إضافة يوم مناسب
+  const month = selectedDate.getMonth() + 1;
+  const year = selectedDate.getFullYear().toString().slice(-2);
+  // var year = new Date().getFullYear();
+  // var month = new Date().getMonth();
+  // console.log(`date is====== ${parseInt(year)} ${parseInt(month)}`);
+  v = ("0" + month).slice(-2) + "/" + year;
+  // console.log(`value ${v}`);
 
-  //   if (
-  //     selectedYear > currentYear ||
-  //     (selectedYear === currentYear &&
-  //       parseInt(dateValue.split("-")[1]) >= currentMonth)
-  //   ) {
-  //     // The date is valid and displayed in the year-month format
-  //     var formattedDate = dateValue;
-  //     this.value = formattedDate;
-  //   } else {
-  //     // Invalid date (past year or month)
-  //     this.value = "";
-  //     alert("Please select a current or future year and month.");
-  //   }
-  // } else {
-  //   // Invalid date format
+  if (year < currentYear) {
+    card_cvv.disabled = true;
+    errorExp.innerHTML = "Your card has expired";
+    // console.log(
+    //   `Current year is ${currentYear}, but the card expiration year is ${year}`
+    // );
+  }
+  if (year >= currentYear) {
+    card_cvv.disabled = false;
+    errorExp.innerHTML = "";
+  }
   //   this.value = "";
   //   alert("Please enter a valid date in the format (YYYY-MM).");
   // }
 });
+
+card_cvv.addEventListener("input", function (event) {
+  let v = card_cvv.value;
+  card_cvv.maxLength = 3;
+
+  if (v.length < 3) {
+    errorCvv.innerHTML = "Card CVV must 3 digits";
+    return "Please enter a valid card number";
+  }
+
+  if (!/^\d+$/.test(v)) {
+    errorCvv.innerHTML = "Card CVV must only contain digits";
+    return "Card number must only contain digits";
+  }
+  errorCvv.innerHTML = "";
+});
+/*#################################### */
