@@ -39538,16 +39538,18 @@ div#forgot-password {
 }
 
 .content-service a.learn-more {
+  margin-top: 12px;
   width: 12rem;
   height: auto;
 }
 
 .content-service a.learn-more .circle {
+  color: #fff;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
   margin: 0;
-  width: 3rem;
+  width: 88%;
   height: 3rem;
   background: #282936;
   border-radius: 1.625rem;
@@ -39560,7 +39562,9 @@ div#forgot-password {
   -ms-border-radius: 1.625rem;
   -o-border-radius: 1.625rem;
 }
-
+.content-service a.learn-more .circle:hover {
+  color: #007bff;
+}
 .content-service a.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -39576,7 +39580,7 @@ div#forgot-password {
 
 .content-service a.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
+  left: 5.625rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
@@ -39590,9 +39594,12 @@ div#forgot-password {
   position: absolute;
   content: "\276F";
   top: -0.29rem;
-  right: 0.0625rem;
+  right: 3.0625rem;
   width: 0.625rem;
   height: 0.625rem;
+}
+.content-service a.learn-more .circle .icon.arrow:hover::before {
+  color: #007bff;
 }
 
 .content-service a.learn-more .button-text {
@@ -39604,7 +39611,7 @@ div#forgot-password {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #282936;
+  color: #fff;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -39616,15 +39623,16 @@ div#forgot-password {
 }
 
 .content-service a:hover .circle {
-  width: 100%;
+  /* width: 100%; */
+  left: 0;
 }
 
 .content-service a:hover .circle .icon.arrow {
-  transform: translate(1rem, 0);
-  -webkit-transform: translate(1rem, 0);
-  -moz-transform: translate(1rem, 0);
-  -ms-transform: translate(1rem, 0);
-  -o-transform: translate(1rem, 0);
+  transform: translate(-1rem, 0);
+  -webkit-transform: translate(-1rem, 0);
+  -moz-transform: translate(-1rem, 0);
+  -ms-transform: translate(-1rem, 0);
+  -o-transform: translate(-1rem, 0);
 }
 
 .content-service a:hover .button-text {
@@ -39643,3 +39651,25 @@ div#forgot-password {
 #card_cvv_error {
   color: #f44336;
 }
+#img_error {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+/* #div_error {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+} */
