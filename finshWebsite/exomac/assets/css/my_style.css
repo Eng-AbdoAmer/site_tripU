@@ -1276,10 +1276,25 @@ p {
   visibility: visible;
   opacity: 1;
 }
+h2.main_text span:hover {
+  color: #fff;
+  background-color: #1292ee;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 .selected {
-  border-bottom: 5px solid #f00;
-  color: #f00;
-  padding-bottom: 4px;
+  color: #fff;
+  background-color: #030f27;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .regisrt_area h2 {
   cursor: pointer;
