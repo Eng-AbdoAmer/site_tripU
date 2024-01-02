@@ -1132,24 +1132,24 @@ $(function () {
       .slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
       .show();
 
-    $(".pagination li").slice(1, -1).remove();
+    $(".pagination_B li").slice(1, -1).remove();
 
     getPageList(totalPages, currentPage, paginationSize).forEach((item) => {
       $("<li>")
-        .addClass("page-item")
-        .addClass(item ? "current-page" : "dots")
+        .addClass("page-item_B")
+        .addClass(item ? "current-page_B" : "dots")
         .toggleClass("active", item === currentPage)
         .append(
           $("<a>")
-            .addClass("page-link")
+            .addClass("page-link_B")
             .attr({ href: "javascript:void(0)" })
             .text(item || "...")
         )
-        .insertBefore(".next-page");
+        .insertBefore(".next-page_B");
     });
 
-    $(".previous-page").toggleClass("disable", currentPage === 1);
-    $(".next-page").toggleClass("disable", currentPage === totalPages);
+    $(".previous-page_B").toggleClass("disable", currentPage === 1);
+    $(".next-page_B").toggleClass("disable", currentPage === totalPages);
 
     return true;
   }
@@ -1176,22 +1176,22 @@ $(function () {
     return Array.from({ length: paginationSize }, (_, i) => left + i);
   }
 
-  $(".pagination").append(
+  $(".pagination_B").append(
     $("<li>")
-      .addClass("page-item")
-      .addClass("previous-page")
+      .addClass("page-item_B")
+      .addClass("previous-page_B")
       .append(
         $("<a>")
-          .addClass("page-link")
+          .addClass("page-link_B")
           .attr({ href: "javascript:void(0)" })
           .text("Prev")
       ),
     $("<li>")
-      .addClass("page-item")
-      .addClass("next-page")
+      .addClass("page-item_B")
+      .addClass("next-page_B")
       .append(
         $("<a>")
-          .addClass("page-link")
+          .addClass("page-link_B")
           .attr({ href: "javascript:void(0)" })
           .text("Next")
       )
@@ -1202,16 +1202,16 @@ $(function () {
 
   $(document).on(
     "click",
-    ".pagination li.current-page:not(.active)",
+    ".pagination_B li.current-page_B:not(.active)",
     function () {
       return showPage(+$(this).text());
     }
   );
 
-  $(".next-page").on("click", function () {
+  $(".next-page_B").on("click", function () {
     return showPage(currentPage + 1);
   });
-  $(".previous-page").on("click", function () {
+  $(".previous-page_B").on("click", function () {
     return showPage(currentPage - 1);
   });
 });
@@ -1230,11 +1230,10 @@ var errorName = document.getElementById("card_name_error");
 var errorExp = document.getElementById("card_exp_error");
 var errorCvv = document.getElementById("card_cvv_error");
 
-window.onload = function () {
-  card_name.disabled = true;
-  card_exp.disabled = true;
-  card_cvv.disabled = true;
-};
+card_name.disabled = true;
+card_exp.disabled = true;
+card_cvv.disabled = true;
+
 card_number.oninput = function (event) {
   let v = document.getElementById("card_number").value;
   card_number.maxLength = 16;
