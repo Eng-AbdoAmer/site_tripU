@@ -171,6 +171,31 @@
     line-height: 85px !important;
     font-size: 28px !important;
   }
+  #name_box::after {
+    height: 200px;
+    width: 200px;
+    transform: rotate(-220deg);
+    border-radius: 50%;
+    left: auto;
+    top: 165px;
+    right: -23px;
+  }
+  #name_box::before {
+    bottom: -133px;
+    right: auto;
+    left: -51px;
+    height: 196px;
+    width: 210px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  #price_card_box {
+    top: 155px !important;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
+  }
 }
 @media screen and (max-width: 574px) and (min-width: 465px) {
   .name_offer::after {
@@ -202,6 +227,31 @@
     height: 190px !important;
     line-height: 80px !important;
     font-size: 26px !important;
+  }
+  #name_box::after {
+    height: 270px;
+    width: 270px;
+    transform: rotate(-220deg);
+    border-radius: 50%;
+    left: auto;
+    top: 140px;
+    right: -20px;
+  }
+  #name_box::before {
+    bottom: -147px;
+    right: auto;
+    left: -17px;
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  #price_card_box {
+    top: 155px !important;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
   }
 }
 @media screen and (max-width: 465px) and (min-width: 405px) {
@@ -235,6 +285,31 @@
     line-height: 70px !important;
     font-size: 24px !important;
   }
+  #name_box::after {
+    height: 213px;
+    width: 213px;
+    transform: rotate(-220deg);
+    border-radius: 50%;
+    left: auto;
+    top: 165px;
+    right: -23px;
+  }
+  #name_box::before {
+    bottom: -145px;
+    right: auto;
+    left: -18px;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  #price_card_box {
+    top: 155px !important;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
+  }
 }
 @media screen and (max-width: 405px) and (min-width: 321px) {
   .name_offer::after {
@@ -265,6 +340,31 @@
     line-height: 60px !important;
     font-size: 20px !important;
   }
+  #name_box::after {
+    height: 200px;
+    width: 200px;
+    transform: rotate(-220deg);
+    border-radius: 50%;
+    left: auto;
+    top: 165px;
+    right: -23px;
+  }
+  #name_box::before {
+    bottom: -133px;
+    right: auto;
+    left: -51px;
+    height: 196px;
+    width: 210px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  #price_card_box {
+    top: 155px !important;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
+  }
 }
 @media screen and (max-width: 321px) and (min-width: 220px) {
   .name_offer::after {
@@ -290,6 +390,31 @@
   }
   .price_card_offer {
     top: 280px !important;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
+  }
+  #name_box::after {
+    height: 200px;
+    width: 200px;
+    transform: rotate(-220deg);
+    border-radius: 50%;
+    left: auto;
+    top: 165px;
+    right: -23px;
+  }
+  #name_box::before {
+    bottom: -133px;
+    right: auto;
+    left: -51px;
+    height: 196px;
+    width: 210px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  #price_card_box {
+    top: 155px !important;
     width: 100px !important;
     height: 100px !important;
     line-height: 40px !important;
