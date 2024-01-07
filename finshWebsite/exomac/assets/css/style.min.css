@@ -39925,3 +39925,10 @@ div#forgot-password {
     justify-content: space-between;
   }
 }
+.captcha {
+  width: 60%;
+  margin: auto;
+}
+.g-recaptcha-error {
+  color: #f00;
+}

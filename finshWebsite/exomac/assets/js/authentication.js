@@ -413,3 +413,56 @@ const countdown = setInterval(() => {
   // تحديث العداد للعدد التالي
   count--;
 }, 1000); // كل ثانية (1000 مللي ثانية)
+
+// function onSubmit(token) {
+//   document.getElementById("demo-form").submit();
+// }
+// function onClick(e) {
+//   e.preventDefault();
+//   grecaptcha.enterprise.ready(async () => {
+//     const token = await grecaptcha.enterprise.execute(
+//       "6LdTS0UpAAAAAPuGL8thlCyG3OlciF_9YtXy2wga",
+//       { action: "LOGIN" }
+//     );
+//   });
+// }
+
+// function enableSubmit() {
+//   document.getElementById("submitButton").removeAttribute("disabled");
+// }
+//
+const registerClientForm = document.getElementById("RegisterClient");
+const recaptcha_error = document.querySelector(".g-recaptcha-error");
+
+const submitButton = document.getElementById("submitButton");
+submitButton.addEventListener("click", function (e) {
+  var response = grecaptcha.getResponse();
+  if (response.length === 0) {
+    e.preventDefault();
+
+    // If reCAPTCHA is not checked
+    recaptcha_error.innerHTML = "This Failed Required";
+  } else {
+    recaptcha_error.innerHTML = "";
+  }
+});
+
+
+
+
+
+function validateRecaptcha() {
+  var response = grecaptcha.getResponse();
+  if (response.length === 0) {
+    // If reCAPTCHA is not checked
+    recaptcha_error.innerHTML = "This Failed Required";
+    window.location.href = "authentication_en.html";
+    // alert('Please check the reCAPTCHA checkbox');
+    return false; // Prevent form submission
+  } else {
+    recaptcha_error.innerHTML = "";
+    // If reCAPTCHA is checked
+    // Perform additional form validation if needed
+    return true; // Allow form submission
+  }
+}

@@ -827,7 +827,11 @@
                   </div>
                 </div>
               </div>
-              <form id="RegisterClient" class="Client">
+              <form
+                action="http://localhost:5500"
+                id="RegisterClient"
+                class="Client"
+              >
                 <input
                   placeholder="Enter user Name Client"
                   required
@@ -868,6 +872,14 @@
                   autocomplete="off"
                   type="password"
                 />
+                <div class="captcha">
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LfllUUpAAAAAAwPVcritd-cbSbcVEhjqFnuLiGh"
+                    data-callback="verifyCaptcha"
+                  ></div>
+                  <span class="g-recaptcha-error"></span>
+                </div>
                 <div class="check_box_area marginB-20">
                   <input type="checkbox" name="rememberMe" id="" />
                   <strong>
@@ -876,16 +888,14 @@
                     <a href="policy_en.html">Privacy Policy</a>
                   </strong>
                 </div>
-                <div
-                  class="g-recaptcha"
-                  data-sitekey="6LdsqUQpAAAAADcIJLzCgbQoPvwXo2_XljGC4Xkx"
-                ></div>
+
                 <input
                   class="btn btn-primary btn-hover-primary marginB-20"
                   name="register"
                   autocomplete="off"
                   type="submit"
                   value="Register"
+                  id="submitButton"
                 />
               </form>
               <form id="RegisterCaption" class="Caption">
