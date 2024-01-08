@@ -39592,7 +39592,7 @@ div#forgot-password {
 
 .content-service a.learn-more .circle .icon.arrow::before {
   position: absolute;
-  content: "\276F";
+  content: "\276E";
   top: -0.29rem;
   right: 3.0625rem;
   width: 0.625rem;
@@ -39931,4 +39931,52 @@ div#forgot-password {
 }
 .g-recaptcha-error {
   color: #f00;
+}
+/*###################socialMedia########################*/
+.socialMedia{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.socialMedia svg{
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-items: center;
+  background: #e3edf7;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 0px -1px rgba(0,0,0,0.15), -6px -6px 10px -2px rgba(255,255,255,0.3);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.socialMedia svg:hover{
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+  inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+  -0.5px -0.5px 0px rgba(255,255,255,1),
+  0.5px 0.5px 0px rgba(0,0,0,0.15),
+  0px 12px 10px -10px rgba(0,0,0,0.05);
+border: 1px solid rgba(0,0,0,0.1);
+transform: translateY(0.5em);
+}
+.fa-facebook{
+  color: #0084ff;
+}
+.fa-instagram{
+  color: #fff;
+  background: linear-gradient(200deg,#4f5bd5, #962fbf ,#d62976, #fa7e1e, #feda75)!important;
+}
+.fa-tiktok{
+  color:#000;
+}
+.fa-youtube{
+  color: #f00;
+}
+.fa-snapchat{
+  background-color: yellow !important;
+  color: #000;
 }
