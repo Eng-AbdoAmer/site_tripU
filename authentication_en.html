@@ -306,6 +306,11 @@
                   <!-- Header Login End -->
                 </div>
                 <!-- Header Search End -->
+                 <!-- Start logout -->
+                 <div id="logout">
+                  <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </div>
+                <!-- End logout -->
                 <!-- <div
                 class="bell-notificatin"
                 current-count="8"
@@ -715,7 +720,8 @@
               </form>
               <form id="LoginCaption" class="Caption">
                 <input
-                  placeholder="Enter user email Client"
+                  id="emailCaption"
+                  placeholder="Enter user email Caption"
                   required
                   class="form-control marginB-20"
                   name="email"
@@ -723,7 +729,8 @@
                   type="email"
                 />
                 <input
-                  placeholder="Enter user password Client"
+                  id="passwordCaption"
+                  placeholder="Enter user password Caption"
                   required
                   class="form-control marginB-20"
                   name="password"
@@ -741,8 +748,8 @@
                   >
                 </div>
                 <input
+                  id="Login"
                   class="btn btn-primary btn-hover-primary marginB-20"
-                  name="register"
                   autocomplete="off"
                   type="submit"
                   value="Login"
@@ -903,7 +910,7 @@
                   placeholder="Enter user Name Caption"
                   required
                   class="form-control marginB-20"
-                  name="name"
+                  id="name_caption"
                   autocomplete="off"
                   type="text"
                 />
@@ -911,23 +918,42 @@
                   placeholder="Enter user phone Caption"
                   required
                   class="form-control marginB-20"
-                  name="phone"
+                  id="phone_caption"
                   autocomplete="off"
                   type="tel"
                 />
                 <input
-                  placeholder="Enter user Country Caption"
+                  placeholder="Egypt"
                   required
+                  disabled="true"
                   class="form-control marginB-20"
-                  name="country"
+                  id="country_caption"
                   autocomplete="off"
                   type="text"
                 />
+                <!-- <input
+                  placeholder="Select your Gender"
+                  required
+                  class="form-control marginB-20"
+                  id="gender_caption"
+                  autocomplete="off"
+                  type="text"
+                /> -->
+                <select
+                  class="form-control marginB-20"
+                  name="gender"
+                  id="gender"
+                  onchange="getGenderSelected()"
+                >
+                  <option value="">----Select-----</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
                 <input
                   placeholder="Enter user email Caption"
                   required
                   class="form-control marginB-20"
-                  name="email"
+                  id="email_caption"
                   autocomplete="off"
                   type="email"
                 />
@@ -935,7 +961,7 @@
                   placeholder="Enter user password Caption"
                   required
                   class="form-control marginB-20"
-                  name="password"
+                  id="password_caption"
                   autocomplete="off"
                   type="password"
                 />
@@ -949,7 +975,7 @@
                 </div>
                 <input
                   class="btn btn-primary btn-hover-primary marginB-20"
-                  name="register"
+                  id="register"
                   autocomplete="off"
                   type="submit"
                   value="Register"
@@ -988,12 +1014,21 @@
                       Al Haram
                     </p>
                     <div class="socialMedia">
-                      <a href="https://www.facebook.com/profile.php?id=61554724552976"><i class="fa-brands fa-facebook"></i></a>
-                      <a href="https://www.instagram.com/tripu534/"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="https://www.tiktok.com/@tripu935"><i class="fa-brands fa-tiktok"></i></a>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61554724552976"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                      <a href="https://www.instagram.com/tripu534/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                      <a href="https://www.tiktok.com/@tripu935"
+                        ><i class="fa-brands fa-tiktok"></i
+                      ></a>
                       <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                      <a href="https://accounts.snapchat.com/accounts/v2/login?continue=%2Faccounts%2Fsso%3Fclient_id%3Dweb-accounts%26referrer%3Dhttps%253A%252F%252Faccounts.snapchat.com%252Fv2%252Fwelcome"><i class="fa-brands fa-snapchat"></i></a>
-                      
+                      <a
+                        href="https://accounts.snapchat.com/accounts/v2/login?continue=%2Faccounts%2Fsso%3Fclient_id%3Dweb-accounts%26referrer%3Dhttps%253A%252F%252Faccounts.snapchat.com%252Fv2%252Fwelcome"
+                        ><i class="fa-brands fa-snapchat"></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -1260,5 +1295,6 @@
     <script src="finshWebsite/exomac/assets/js/all.min.js"></script>
     <script src="finshWebsite/exomac/assets/js/bootstrap.bundle.min.js"></script>
     <script src="finshWebsite/exomac/assets/js/authentication.js"></script>
+    <script src="finshWebsite/exomac/assets/js/api_helper.js"></script>
   </body>
 </html>

@@ -39980,3 +39980,8 @@ transform: translateY(0.5em);
   background-color: yellow !important;
   color: #000;
 }
+#logout{
+  font-size: 20px;
+  margin: 0px 15px;
+  color: #fff;
+  cursor: pointer;}
