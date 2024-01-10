@@ -1195,14 +1195,26 @@
                 >
               </li>
               <li class="has-children">
-                <a
-                  href=""
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  ><span id="profileName" class="menu-text">Profile</span></a
-                >
-                <span class="menu-toggle">
+                <!-- <a href="" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" ><span id="javascript:<%Session["UserName"] = "' + userName + '"; %>'" class="menu-text">Profile</span></a >
+               -->
+               <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="profileName" class="menu-text">
+                  <% 
+                    var userName = Session["UserName"] as string;
+                    if (!string.IsNullOrEmpty(userName))
+                    {
+                        Response.Write(userName);
+                    }
+                    else
+                    {
+                        Response.Write("Profile");
+                    }
+                  %>
+                </span>
+              </a>
+              
+                  <span class="menu-toggle">
                   <i class="fa-solid fa-caret-down"></i>
                 </span>
                 <ul class="sub-menu">

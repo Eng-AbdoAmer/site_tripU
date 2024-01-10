@@ -15,7 +15,6 @@ const AppData = {
 };
 const IsSignIn = document.getElementById("IsSignIn");
 const profileName = document.getElementById("profileName");
-profileName.style.display = "none";
 /*#################LoginCaption ###########################*/
 document.addEventListener("DOMContentLoaded", () => {
   const loginButton = document.getElementById("Login");
@@ -47,24 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         const responseData = await response.json();
         window.localStorage.setItem("token", responseData.access_token);
-        console.log(responseData.access_token);
+        window.localStorage.setItem("driverName", responseData.user.name);
+        IsSignIn.style.display = "none";
+        profileName.style.display = "block";
         console.log(responseData.user.name);
         console.log(responseData.user.email);
-        IsSignIn.style.display = "none";
-        profileName.textContent = responseData.user.name;
-        profileName.style.display = "block";
-
+        console.log("Successfully logged in");
+        
       } else {
-        IsSignIn.style.display = "block";
-        profileName.textContent = "Profile";
-        profileName.style.display = "none";
-
         console.log("Network response was not OK: " + response.status);
-        // throw new Error("Network response was not OK");
       }
     } catch (error) {
       console.log("Network response was not OK: " + error);
-      // throw new Error("error in response: " + `${error.message}`);
     }
   }
 });
@@ -106,26 +99,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         const responseData = await response.json();
         AppData.token = responseData.access_token;
-
-        console.log(responseData.access_token);
+        window.localStorage.setItem("driverName", responseData.user.name);
         console.log(responseData.user.name);
-        console.log(responseData.user.email);
-        IsSignIn.style.display = "none";
-        profileName.textContent = responseData.user.name;
-        profileName.style.display = "block";
-
         console.log("Successfully registered");
       } else {
-        IsSignIn.style.display = "block";
-        profileName.textContent = "Profile";
-        profileName.style.display = "none";
-
         console.log("Network response was not OK: " + response.status);
-        //throw new Error("Network response was not OK");
       }
     } catch (error) {
       console.log("Network response was not OK: " + error);
-      //throw new Error("Error in response: " + error.message);
     }
   }
 
@@ -137,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*#################Reset Password Caption ###########################*/
 
-document.addEventListener("DOMContentLoaded", () => {});
 document.addEventListener("DOMContentLoaded", () => {
   const upDatePass = document.getElementById("upDatePass");
   const setPass = document.getElementById("setPass");
@@ -210,15 +190,13 @@ document.addEventListener("DOMContentLoaded", () => {
         IsSignIn.style.display = "block";
         profileName.textContent = "Profile";
         profileName.style.display = "none";
-
+        window.document.localStorage.clear();
         console.log("Successfully logged out");
       } else {
         console.log("Network response was not OK: " + response.status);
-        //throw new Error("Network response was not OK");
       }
     } catch (error) {
       console.log("Network response was not OK: " + error);
-      //throw new Error("Error in response: " + error.message);
     }
   }
 });
@@ -331,14 +309,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         const responseData = await response.json();
         ProfileCaptionModel.data = responseData.data;
-        ProfileCaptionModel.data.email = responseData.data.email;
-        ProfileCaptionModel.data.name = responseData.data.name;
-        ProfileCaptionModel.data.phone = responseData.data.phone;
-        ProfileCaptionModel.data.profile.rate = responseData.data.profile.rate;
-        console.log(ProfileCaptionModel.data.email);
-        console.log(ProfileCaptionModel.data.name);
-        console.log(ProfileCaptionModel.data.phone);
-        console.log(ProfileCaptionModel.data.profile.rate);
+        // ProfileCaptionModel.data.email = responseData.data.email;
+        // ProfileCaptionModel.data.name = responseData.data.name;
+        // ProfileCaptionModel.data.phone = responseData.data.phone;
+        // ProfileCaptionModel.data.profile.rate = responseData.data.profile.rate;
+        // console.log(ProfileCaptionModel.data.email);
+        // console.log(ProfileCaptionModel.data.name);
+        // console.log(ProfileCaptionModel.data.phone);
+        // console.log(ProfileCaptionModel.data.profile.rate);
         console.log("Successfully get Profile Caption");
       } else {
         console.log("Network response was not OK: " + response.status);
@@ -350,3 +328,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {});
+
+
+
+profileName.textContent =
+  window.localStorage.getItem("driverName") ?? "Profile";
+
+if (window.localStorage.getItem("driverName") == null) {
+  console.log("nulllllllllllllllllll");
+  IsSignIn.style.display = "block";
+  profileName.style.display = "none";
+} else {
+  IsSignIn.style.display = "none";
+  profileName.style.display = "block";
+  // location.reload();
+}
