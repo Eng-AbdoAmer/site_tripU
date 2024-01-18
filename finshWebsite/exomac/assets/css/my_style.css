@@ -1097,6 +1097,7 @@ p {
 .carLicence-documents img,
 .caption-data img,
 .person-documents img {
+  height: 200px;
   max-width: 50%;
   margin-bottom: 20px;
   background-size: cover;

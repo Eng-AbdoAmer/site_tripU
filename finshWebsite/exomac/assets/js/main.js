@@ -1321,3 +1321,252 @@ card_cvv.addEventListener("input", function (event) {
   errorCvv.innerHTML = "";
 });
 /*#################################### */
+const mainSettingsLink =
+  "https://silver.tripu.net/api/v1/mainSetting?api_secret_key=9BKZASpQqbi5LieDS2NqAgi6CKL9IWIM";
+
+let mainSettingsModel = {
+  status: true,
+  message: "data Return Successfully",
+  data: [
+    {
+      id: 6,
+      facebook:
+        "https://www.facebook.com/people/TripU/61554724552976/?mibextid=vk8aRt",
+      instagram: ".https://www.instagram.com/tripu534/",
+      phone: "01110777579",
+      whatsapp: "01110777579",
+      email: "info@tripu.net",
+      version: 1,
+      open_door: "3.5",
+      waiting_price: "2",
+      country_tax: "10",
+      kilo_price: "5",
+      price_day_premium: null,
+      kilo_price_premium: null,
+      ocean: "2",
+      company_commission: "5",
+      company_tax: "6",
+      price_day: null,
+      peek_time_fees: [],
+      name: {
+        en: {
+          name: "TripU",
+        },
+        ar: {
+          name: "تريب يو",
+        },
+        fr: {
+          name: "TripU",
+        },
+      },
+      author: {
+        en: {
+          author: "Yahya Al-Sharifi",
+        },
+        ar: {
+          author: "يحيى شريفى",
+        },
+        fr: {
+          author: "Yahya Al-Sharifi",
+        },
+      },
+      address: {
+        en: {
+          address: "null",
+        },
+        ar: {
+          address: "",
+        },
+        fr: {
+          address: "null",
+        },
+      },
+      description: {
+        en: {
+          description: "",
+        },
+        ar: {
+          description: "",
+        },
+        fr: {
+          description: "",
+        },
+      },
+      road_toll: {
+        en: {
+          road_toll: null,
+        },
+        ar: {
+          road_toll: null,
+        },
+        fr: {
+          road_toll: null,
+        },
+      },
+    },
+  ],
+};
+
+// console.log(`description===>${description}`);
+
+// document.addEventListener("refreshMetadata", () => {
+
+//   async function getMainSettings() {
+//     //accountToken = window.localStorage.getItem("token");
+//     try {
+//       const response = await fetch(mainSettingsLink, {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//           //Authorization: `Bearer ${accountToken}`,
+//         },
+//         // body: JSON.stringify({}),
+//       });
+
+//       if (response.ok) {
+//         const responseData = await response.json();
+//         mainSettingsModel.data = responseData.data;
+//         console.log("Successfully get Main Settings");
+//       } else {
+//         console.log("Network response was not OK: " + response.status);
+//       }
+//     } catch (error) {
+//       console.log("Network response was not OK: " + error);
+//     }
+//   }
+// });
+// const refreshMetadataEvent = new Event("refreshMetadata");
+// document.dispatchEvent(refreshMetadataEvent);
+
+// #########################Start google map#####################
+document.body.onload = function () {
+  //getMainSettings();
+  initializeMap();
+};
+function initializeMap() {
+  const locations = [
+    {
+      lat_user: "30.002151",
+      long_user: "31.1850012",
+      lat_going: "30.0066944",
+      long_going: "31.4514702",
+      //user_id: "1",
+      //captain_id: "1",
+    },
+  ];
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+  });
+  const bounds = new google.maps.LatLngBounds();
+  const userLocation = new google.maps.LatLng(
+    parseFloat(locations[0].lat_user),
+    parseFloat(locations[0].long_user)
+  );
+  const goingLocation = new google.maps.LatLng(
+    parseFloat(locations[0].lat_going),
+    parseFloat(locations[0].long_going)
+  );
+  const userMarker = new google.maps.Marker({
+    position: userLocation,
+    map: map,
+    label: "U",
+  });
+  bounds.extend(userMarker.position);
+  const goingMarker = new google.maps.Marker({
+    position: goingLocation,
+    map: map,
+    label: "G",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+      scaledSize: new google.maps.Size(30, 40),
+    },
+  });
+  bounds.extend(goingMarker.position);
+  const directionsService = new google.maps.DirectionsService();
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer.setMap(map);
+
+  const request = {
+    origin: userLocation,
+    destination: goingLocation,
+    travelMode: google.maps.TravelMode.DRIVING,
+  };
+  directionsService.route(request, function (result, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsRenderer.setDirections(result);
+    }
+  });
+
+  const geocoder = new google.maps.Geocoder();
+  geocodeLatLng(geocoder, userLocation, "fromAddress");
+  geocodeLatLng(geocoder, goingLocation, "toAddress");
+
+  /*const userInfoWindow = new google.maps.InfoWindow({
+  content: `User ID: ${locations[0].user_id}`,
+});*/
+  userMarker.addListener("click", function () {
+    userInfoWindow.open(map, userMarker);
+  });
+
+  /*const goingInfoWindow = new google.maps.InfoWindow({
+  content: `Captain ID: ${locations[0].captain_id}`,
+});*/
+  goingMarker.addListener("click", function () {
+    goingInfoWindow.open(map, goingMarker);
+  });
+
+  map.fitBounds(bounds);
+}
+
+function geocodeLatLng(geocoder, latLng, elementId) {
+  geocoder.geocode({ location: latLng }, function (results, status) {
+    if (status === "OK") {
+      if (results[1]) {
+        document.getElementById(elementId).textContent =
+          results[1].formatted_address;
+      }
+    }
+  });
+}
+// #########################End google map#####################
+let description = document.querySelector('meta[name="description"]');
+let author = document.querySelector('meta[name="author"]');
+
+// Function to get main settings
+async function getMainSettings() {
+  try {
+    const response = await fetch(mainSettingsLink, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${accountToken}`,
+      },
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      mainSettingsModel.data = responseData.data;
+      let title = mainSettingsModel.data[0].author.en;
+      let des = mainSettingsModel.data[0].description.en;
+      if (author) author.innerText = title;
+      if (description) description.innerText = des;
+      console.log("Successfully get Main Settings");
+    } else {
+      console.log("Network response was not OK: " + response.status);
+    }
+  } catch (error) {
+    console.log("Error in fetching main settings: " + error);
+  }
+}
+
+// Event listener for refreshing metadata
+document.addEventListener("refreshMetadata", () => {
+  getMainSettings(); // Call the function to refresh metadata
+  console.log(`description===>${description.content}`);
+  console.log(`description===>${author.content}`);
+});
+
+// Example: Dispatch the event when you want to refresh metadata
+// This should be triggered based on some user action or a specific event
+const refreshMetadataEvent = new Event("refreshMetadata");
+document.dispatchEvent(refreshMetadataEvent);

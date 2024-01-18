@@ -8,8 +8,6 @@ const AppData = {
   restPassword: `${baseUrl}/restPassword`,
   logout: `${baseUrl}/logout`,
   changePassword: `${baseUrl}/change-password`,
-  driversProfile:
-    "https://silver.tripu.net/api/v1/driver/drivers-profile?api_secret_key=9BKZASpQqbi5LieDS2NqAgi6CKL9IWIM",
   access_token: "9BKZASpQqbi5LieDS2NqAgi6CKL9IWIM",
   token: "",
 };
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(responseData.user.name);
         console.log(responseData.user.email);
         console.log("Successfully logged in");
-        
       } else {
         console.log("Network response was not OK: " + response.status);
       }
@@ -190,7 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
         IsSignIn.style.display = "block";
         profileName.textContent = "Profile";
         profileName.style.display = "none";
-        window.document.localStorage.clear();
+        window.localStorage.clear();
+
         console.log("Successfully logged out");
       } else {
         console.log("Network response was not OK: " + response.status);
@@ -201,143 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/*Profile model  class*/
-let ProfileCaptionModel = {
-  data: {
-    id: 10,
-    name: "Ezz",
-    email: "",
-    phone: "",
-    gender: "male",
-    inviteFriend: "null",
-    captaincar: {
-      id: 10,
-      car_make_id: null,
-      car_model_id: null,
-      car_type_id: null,
-      category_car_id: {
-        id: 4,
-        name: "C",
-        status: "Active",
-        create_dates: {
-          created_at_human: "1 month ago",
-          created_at: "23-11-14 11:54:26",
-        },
-        update_dates: {
-          updated_at_human: "1 month ago",
-          updated_at: "23-11-14 11:54:26",
-        },
-      },
-      number_car: "م ن 3888",
-      color_car: null,
-      create_dates: {
-        created_at_human: "2 months ago",
-        created_at: "23-11-01 10:42:27",
-      },
-      update_dates: {
-        updated_at_human: "2 months ago",
-        updated_at: "23-11-01 10:42:27",
-      },
-    },
-    profile: {
-      id: 10,
-      amountDay: "0.00",
-      wallet: 0,
-      point: "0",
-      bio: null,
-      rate: 0,
-      number_trips: 0,
-      number_personal: null,
-      create_dates: {
-        created_at_human: "2 months ago",
-        created_at: "23-11-01 10:42:27",
-      },
-      update_dates: {
-        updated_at_human: "2 months ago",
-        updated_at: "23-11-01 10:42:27",
-      },
-    },
-    country: {
-      id: 65,
-      name: "Egypt",
-      status: 1,
-      code: "20",
-      logo: "https://silver.tripu.net/assets/images/Eg.png",
-      create_dates: {
-        created_at_human: "1 month ago",
-        created_at: "23-11-14 11:54:21",
-      },
-      update_dates: {
-        updated_at_human: "1 month ago",
-        updated_at: "23-11-14 11:54:21",
-      },
-    },
-    fcm_token: null,
-    status: "active",
-    avatar: null,
-    create_dates: {
-      created_at_human: "2 months ago",
-      created_at: "23-11-01 10:42:27",
-    },
-    update_dates: {
-      updated_at_human: "19 hours ago",
-      updated_at: "24-01-08 04:36:58",
-    },
-  },
-};
-/*Profile Api  fetch*/
-document.addEventListener("DOMContentLoaded", () => {
-  const profileBtn = document.getElementById("profile");
-
-  profileBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    getProfileCaption();
-  });
-
-  async function getProfileCaption() {
-    accountToken = window.localStorage.getItem("token");
-    try {
-      const response = await fetch(AppData.driversProfile, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accountToken}`,
-        },
-        // body: JSON.stringify({}),
-      });
-
-      if (response.ok) {
-        const responseData = await response.json();
-        ProfileCaptionModel.data = responseData.data;
-        // ProfileCaptionModel.data.email = responseData.data.email;
-        // ProfileCaptionModel.data.name = responseData.data.name;
-        // ProfileCaptionModel.data.phone = responseData.data.phone;
-        // ProfileCaptionModel.data.profile.rate = responseData.data.profile.rate;
-        // console.log(ProfileCaptionModel.data.email);
-        // console.log(ProfileCaptionModel.data.name);
-        // console.log(ProfileCaptionModel.data.phone);
-        // console.log(ProfileCaptionModel.data.profile.rate);
-        console.log("Successfully get Profile Caption");
-      } else {
-        console.log("Network response was not OK: " + response.status);
-        //throw new Error("Network response was not OK");
-      }
-    } catch (error) {
-      console.log("Network response was not OK: " + error);
-      //throw new Error("Error in response: " + error.message);
-    }
-  }
-});
 
 document.addEventListener("DOMContentLoaded", () => {});
-
-
 
 profileName.textContent =
   window.localStorage.getItem("driverName") ?? "Profile";
 
 if (window.localStorage.getItem("driverName") == null) {
-  console.log("nulllllllllllllllllll");
   IsSignIn.style.display = "block";
   profileName.style.display = "none";
 } else {
