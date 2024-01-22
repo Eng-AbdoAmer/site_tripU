@@ -6,8 +6,8 @@
     <title>Trip || CAPTION-PO-EN</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Favicon -->
@@ -857,6 +857,7 @@
                 Details
               </button>
               <button
+                id="carFils"
                 class="tablink designcolortab tablinkse"
                 onclick="openTaps(event, 'documents')"
               >
@@ -880,71 +881,42 @@
                     <p>Car information</p>
                     <form>
                       <div class="row">
-                        <div class="col-lg-6 col-md-4 col-sm-12">
-                          <div class="input_box mt-3">
-                            <label for="">plate number</label>
-                            <input id="plateNumber" type="text" placeholder="Enter your plate number" required
-                              class="form-control-caption" />
-                          </div>
-                          <div class="input_box mt-3">
-                            <label for="">Id Number</label>
-                            <input id="idNumber" type="text" placeholder="Enter your Id Number" required
-                              class="form-control-caption" />
-                              <span id="valid_IdNumber"></span>
-                          </div>
-                          <div class="input_box mt-3">
-                            <label for="">Car Color</label>
-                            <input id="carColor" type="text" placeholder="Enter your Car Color" required class="form-control-caption" />
-                          </div>
-                          <div class="Car-brand mt-3">
-                            <span>Car brand</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" style="width: 60%" id="carbrand" name="state">
-                                <option value="" disabled selected>
-                                  -- Chooses --
-                                </option>
-                              </select>
+                          <div class="carLicence-documents">
+                            <div class="row">
+                              <div class="col-lg-6 col-sm-12">
+                                <div class="id-card">
+                                  <h2 class="title">Car license Front</h2>
+                                  <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
+                                  <span id="upload_complete_LicenseCarA"></span>
+                                  <label for="carLicenseFront" id="label_carLicenseF">
+                                    <span class="Btn">
+                                      <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                                    <div class="text">UpLoad</div>
+                                    </span>
+                                  </label>
+                                  <input type="file" id="carLicenseFront"  accept=".jpg,.jpeg,.png">
+                                  </input>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12">
+                                <div class="id-card">
+                                  <h2 class="title">Car license Back</h2>
+                                  <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
+                                  <span id="upload_complete_LicenseCarB"></span>
+                                  <label for="carLicenseBack" id="label_carLicenseB">
+                                    <span class="Btn">
+                                      <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                                    <div class="text">UpLoad</div>
+                                    </span>
+                                  </label>
+                                  <input type="file" id="carLicenseBack"  accept=".jpg,.jpeg,.png">
+                                  </input>
+                                </div>
+                              </div>
                             </div>
+          
                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-12">
-                          <div class="Car-Model mt-3">
-                            <span>Car Model</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="carModel" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Chooses --
-                                </option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="Type-of-Car mt-3">
-                            <span>Type of Car</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="typeOfCar" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Chooses --
-                                </option>
-                           
-                              </select>
-                            </div>
-                          </div>
-                          <div class="theYearOfTheCar mt-3">
-                            <span>The Year of the Car</span>
-                            <div class="custom-select w-200">
-                              <select class="select-style widthmyom" id="theYearOfTheCar" style="width: 60%" name="state">
-                                <option value="" disabled selected>
-                                  -- Chooses --
-                                </option>
-                              
-                              </select>
-                            </div>
-                          </div>
-                        
-                        </div>
                       </div>
-                 
-                  
                     </form>
                   </div>
                   <div class="car-images">
@@ -956,7 +928,7 @@
                           <h2 class="">Front Car</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/car_shap/front_car.jpg" alt="" />
                           <span id="upload_complete_front"></span>
-                          <label for="frontCar">
+                          <label for="frontCar" id="label_front">
                             <!-- <i class="fa-solid fa-upload"></i> -->
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
@@ -973,7 +945,7 @@
                           <img src="finshWebsite/exomac/assets/images/document-images/car_shap/back_car.jpg" alt="" />
                           <span id="upload_complete_back"></span>
 
-                          <label for="backCar">
+                          <label for="backCar" id="label_back">
                             <!-- <i class="fa-solid fa-upload"></i> -->
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
@@ -989,7 +961,7 @@
                           <h2>Right Car</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/car_shap/right_car.jpg" alt="" />
                           <span id="upload_complete_right"></span>
-                          <label for="rightCar">
+                          <label for="rightCar" id="label_right">
                             <!-- <i class="fa-solid fa-upload"></i> -->
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
@@ -1005,7 +977,7 @@
                           <h2>Left car</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/car_shap/left_car.jpg" alt="" />
                           <span id="upload_complete_left"></span>
-                          <label for="leftCar">
+                          <label for="leftCar" id="label_left">
                             <!-- <i class="fa-solid fa-upload"></i> -->
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
@@ -1021,7 +993,7 @@
                           <h2>InSide Car</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
                           <span id="upload_complete_inSide"></span>
-                          <label for="insideCar">
+                          <label for="insideCar" id="label_inside">
                             <!-- <i class="fa-solid fa-upload"></i> -->
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
@@ -1087,12 +1059,48 @@
                 <div class="container">
                   <div class="person-documents">
                     <div class="row">
+                      <div class="caption-data">
+                        <div class="row">
+                          <div class="col-lg-6 col-sm-12">
+                            <div class="id-card">
+                              <h2 class="title">Personal Image</h2>
+                              <img src="finshWebsite/exomac/assets/images/document-images/user-profile-person.png" alt="" />
+                              <span id="upload_complete_Avatar"></span>
+                              <label for="personalAvatar" id="label_avatar">
+                                <span class="Btn">
+                                  <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                                <div class="text">UpLoad</div>
+                                </span>
+                              </label>
+                              <input type="file" id="personalAvatar"  accept=".jpg,.jpeg,.png">
+                              </input>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-12">
+                            <div class="id-card">
+                              <h2 class="title">Criminal newspaper</h2>
+                              <img 
+                                src="finshWebsite/exomac/assets/images/project/9.png" alt="" />
+                                <span id="upload_complete_Criminal"></span>
+                                <label for="criminal" id="label_criminal">
+                                <span class="Btn">
+                                  <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                                <div class="text">UpLoad</div>
+                                </span>
+                              </label>
+                              <input type="file" id="criminal"  accept=".jpg,.jpeg,.png">
+                              </input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
                           <h2 class="title"> ID card front</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (3).png" alt="" />
                           <span id="upload_complete_IdA"></span>
-                          <label  for="id_card_fornt">
+                          <label  for="id_card_fornt" id="label_id_front">
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
                             <div class="text">UpLoad</div>
@@ -1111,85 +1119,13 @@
                           <h2 class="title">ID card back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/Group 56267892 (2).png" alt="" />
                           <span id="upload_complete_IdB"></span>
-                          <label for="id_card_back">
+                          <label for="id_card_back" id="label_id_back">
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
                             <div class="text">UpLoad</div>
                             </span>
                           </label>
                           <input type="file" id="id_card_back"  accept=".jpg,.jpeg,.png">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-  
-                  </div>
-                  <hr>
-                  <div class="caption-data">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Personal Image</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/user-profile-person.png" alt="" />
-                          <span id="upload_complete_Avatar"></span>
-                          <label for="personalAvatar">
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">UpLoad</div>
-                            </span>
-                          </label>
-                          <input type="file" id="personalAvatar"  accept=".jpg,.jpeg,.png">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Criminal newspaper</h2>
-                          <img 
-                            src="finshWebsite/exomac/assets/images/project/9.png" alt="" />
-                            <span id="upload_complete_Criminal"></span>
-                            <label for="criminal">
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">UpLoad</div>
-                            </span>
-                          </label>
-                          <input type="file" id="criminal"  accept=".jpg,.jpeg,.png">
-                          </input>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="carLicence-documents">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Car license Front</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (6).png" alt="" />
-                          <span id="upload_complete_LicenseCarA"></span>
-                          <label for="carLicenseFront">
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">UpLoad</div>
-                            </span>
-                          </label>
-                          <input type="file" id="carLicenseFront"  accept=".jpg,.jpeg,.png">
-                          </input>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="id-card">
-                          <h2 class="title">Car license Back</h2>
-                          <img src="finshWebsite/exomac/assets/images/document-images/Group 56267894 (4).png" alt="" />
-                          <span id="upload_complete_LicenseCarB"></span>
-                          <label for="carLicenseBack">
-                            <span class="Btn">
-                              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-                            <div class="text">UpLoad</div>
-                            </span>
-                          </label>
-                          <input type="file" id="carLicenseBack"  accept=".jpg,.jpeg,.png">
                           </input>
                         </div>
                       </div>
@@ -1204,7 +1140,7 @@
                           <h2 class="title">License card front</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(2).png" alt="" />
                           <span id="upload_complete_LicenseA"></span>
-                          <label for="LicenseCardFront">
+                          <label for="LicenseCardFront" id="label_licenseCardF">
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
                             <div class="text">UpLoad</div>
@@ -1219,7 +1155,7 @@
                           <h2 class="title">License card back</h2>
                           <img src="finshWebsite/exomac/assets/images/document-images/caption_license(1).png" alt="" />
                           <span id="upload_complete_LicenseB"></span>
-                          <label for="LicenseCardBack">
+                          <label for="LicenseCardBack" id="label_licenseCardB">
                             <span class="Btn">
                               <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
                             <div class="text">UpLoad</div>
@@ -1232,6 +1168,75 @@
                     </div>
   
                   </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                      <div class="input_box mt-3">
+                        <label for="">plate number</label>
+                        <input id="plateNumber" type="text" placeholder="Enter your plate number" required
+                          class="form-control-caption" />
+                      </div>
+                      <div class="input_box mt-3">
+                        <label for="">Id Number</label>
+                        <input id="idNumber" type="text" placeholder="Enter your Id Number" required
+                          class="form-control-caption" />
+                          <span id="valid_IdNumber"></span>
+                      </div>
+                      <div class="input_box mt-3">
+                        <label for="">Car Color</label>
+                        <input id="carColor" type="text" placeholder="Enter your Car Color" required class="form-control-caption" />
+                      </div>
+                      <div class="Car-brand mt-3">
+                        <span>Car brand</span>
+                        <div class="custom-select w-200">
+                          <select class="select-style widthmyom" style="width: 60%" id="carbrand" name="state">
+                            <option value="" disabled selected>
+                              -- Chooses --
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                      <div class="Car-Model mt-3">
+                        <span>Car Model</span>
+                        <div class="custom-select w-200">
+                          <select class="select-style widthmyom" id="carModel" style="width: 60%" name="state">
+                            <option value="" disabled selected>
+                              -- Chooses --
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="Type-of-Car mt-3">
+                        <span>Type of Car</span>
+                        <div class="custom-select w-200">
+                          <select class="select-style widthmyom" id="typeOfCar" style="width: 60%" name="state">
+                            <option value="" disabled selected>
+                              -- Chooses --
+                            </option>
+                       
+                          </select>
+                        </div>
+                      </div>
+                      <div class="theYearOfTheCar mt-3">
+                        <span>The Year of the Car</span>
+                        <div class="custom-select w-200">
+                          <select class="select-style widthmyom" id="theYearOfTheCar" style="width: 60%" name="state">
+                            <option value="" disabled selected>
+                              -- Chooses --
+                            </option>
+                          
+                          </select>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                  <hr>
+                  <button id="saveMediaPersonal" type="submit" class="site-button save" name="save">
+                    Save
+                  </button>
                 </div>
               </div>
               <!-- content car information -->
@@ -2781,7 +2786,22 @@
                           <span id="reject_reason_car"></span>
                         </div>
                       </div>
-                     
+                      <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="id-card">
+                          <h2 id="media_type"></h2>
+                          <img id="media_img_car" src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
+                          <h4>photo Status: <span id="photo_status_car"></span></h4>
+                          <span id="reject_reason_car"></span>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="id-card">
+                          <!-- <h2 id="media_type"></h2> -->
+                          <img id="media_img_car" src="finshWebsite/exomac/assets/images/document-images/car_shap/inside_car-transformed.png" alt="" />
+                          <h4>photo Status: <span id="photo_status_car"></span></h4>
+                          <span id="reject_reason_car"></span>
+                        </div>
+                      </div>
   
                     </div>
                   
@@ -2859,7 +2879,7 @@
   
                   </div>
                   <hr>
-                  <div class="CaptionLicence-documents">
+                  <!-- <div class="CaptionLicence-documents">
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="id-card">
@@ -2879,7 +2899,7 @@
                       </div>
                     </div>
   
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- content car information -->
@@ -3238,9 +3258,9 @@
                       <a href="https://www.facebook.com/profile.php?id=61554724552976"><i class="fa-brands fa-facebook"></i></a>
                       <a href="https://www.instagram.com/tripu534/"><i class="fa-brands fa-instagram"></i></a>
                       <a href="https://www.tiktok.com/@tripu935"><i class="fa-brands fa-tiktok"></i></a>
-                      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
                       <a href="https://accounts.snapchat.com/accounts/v2/login?continue=%2Faccounts%2Fsso%3Fclient_id%3Dweb-accounts%26referrer%3Dhttps%253A%252F%252Faccounts.snapchat.com%252Fv2%252Fwelcome"><i class="fa-brands fa-snapchat"></i></a>
-                      
+                      <a href="https://wa.me/201110777579"><i class="fa-brands fa-whatsapp" style="color: #0c9069;"></i></a>
                     </div>
                   </div>
                 </div>

@@ -1529,8 +1529,49 @@ function geocodeLatLng(geocoder, latLng, elementId) {
   });
 }
 // #########################End google map#####################
-let description = document.querySelector('meta[name="description"]');
-let author = document.querySelector('meta[name="author"]');
+// let description = document.querySelector('meta[name="description"]');
+// let author = document.querySelector('meta[name="author"]');
+
+// // Function to get main settings
+// async function getMainSettings() {
+//   try {
+//     const response = await fetch(mainSettingsLink, {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//         // Authorization: `Bearer ${accountToken}`,
+//       },
+//     });
+
+//     if (response.ok) {
+//       const responseData = await response.json();
+//       mainSettingsModel.data = responseData.data;
+//       let title = mainSettingsModel.data[0].author.en;
+//       let des = mainSettingsModel.data[0].description.en;
+//       if (author) author.innerText = title;
+//       if (description) description.innerText = des;
+//       console.log("Successfully get Main Settings");
+//     } else {
+//       console.log("Network response was not OK: " + response.status);
+//     }
+//   } catch (error) {
+//     console.log("Error in fetching main settings: " + error);
+//   }
+// }
+
+// // Event listener for refreshing metadata
+// document.addEventListener("refreshMetadata", () => {
+//   getMainSettings(); // Call the function to refresh metadata
+//   console.log(`description===>${description.content}`);
+//   console.log(`description===>${author.content}`);
+// });
+
+// // Example: Dispatch the event when you want to refresh metadata
+// // This should be triggered based on some user action or a specific event
+// const refreshMetadataEvent = new Event("refreshMetadata");
+// document.dispatchEvent(refreshMetadataEvent);
+let descriptionMeta = document.querySelector('meta[name="description"]');
+let authorMeta = document.querySelector('meta[name="author"]');
 
 // Function to get main settings
 async function getMainSettings() {
@@ -1546,10 +1587,16 @@ async function getMainSettings() {
     if (response.ok) {
       const responseData = await response.json();
       mainSettingsModel.data = responseData.data;
-      let title = mainSettingsModel.data[0].author.en;
-      let des = mainSettingsModel.data[0].description.en;
-      if (author) author.innerText = title;
-      if (description) description.innerText = des;
+
+      // تحديث قيم العناصر meta
+      if (descriptionMeta) {
+        descriptionMeta.setAttribute('content', mainSettingsModel.data[0].description.en);
+      }
+
+      if (authorMeta) {
+        authorMeta.setAttribute('content', mainSettingsModel.data[0].author.en);
+      }
+
       console.log("Successfully get Main Settings");
     } else {
       console.log("Network response was not OK: " + response.status);
@@ -1561,12 +1608,12 @@ async function getMainSettings() {
 
 // Event listener for refreshing metadata
 document.addEventListener("refreshMetadata", () => {
-  getMainSettings(); // Call the function to refresh metadata
-  console.log(`description===>${description.content}`);
-  console.log(`description===>${author.content}`);
+  getMainSettings(); // استدعاء الوظيفة لتحديث البيانات الوصفية
+  console.log(`description===>${descriptionMeta.getAttribute('content')}`);
+  console.log(`author===>${authorMeta.getAttribute('content')}`);
 });
 
-// Example: Dispatch the event when you want to refresh metadata
-// This should be triggered based on some user action or a specific event
+// مثال: إرسال الحدث عندما تريد تحديث البيانات الوصفية
+// يجب تنشيط ذلك بناءً على بعض فعل المستخدم أو حدث معين
 const refreshMetadataEvent = new Event("refreshMetadata");
 document.dispatchEvent(refreshMetadataEvent);

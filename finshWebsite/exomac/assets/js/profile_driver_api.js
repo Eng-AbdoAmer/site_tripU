@@ -1,6 +1,12 @@
 //import { carMakerModel } from "./car_maker_model";
 
 /*Profile model  class*/
+var carBrandId = "";
+var carModelId = "";
+var typeOfCarId = "";
+var yearSelectId = "";
+const updateProfilePhotoLink =
+  "https://silver.tripu.net/api/v1/driver/profile/media/updateUploadProfile";
 const uploadAllMediaLink =
   "https://silver.tripu.net/api/v1/driver/profile/media/uploadProfile";
 const driversProfileLink =
@@ -99,17 +105,154 @@ let ProfileCaptionModel = {
     },
   },
 };
+const profileBtn = document.getElementById("profile");
+const caption_name = document.getElementById("caption_name");
+const caption_country = document.getElementById("caption_country");
+const caption_rating = document.getElementById("caption_rating");
+const captain_email = document.getElementById("captain_email");
+const captain_phone = document.getElementById("captain_phone");
+const captain_gender = document.getElementById("captain_gender");
+const captain_img = document.getElementById("captain_img");
+const allPhotos_status = document.querySelectorAll("#photo_status");
+const reject_reason = document.querySelectorAll("#reject_reason");
+const media_images = document.querySelectorAll("#media_images");
+const media_title = document.querySelectorAll("#title_media");
+const media_img_car = document.querySelectorAll("#media_img_car");
+const photo_status = document.getElementById("photo_status");
+const photo_type = document.getElementById("photo_type");
+const image_path = document.getElementById("image_path");
+const media_type = document.querySelectorAll("#media_type");
+const photo_status_car = document.querySelectorAll("#photo_status_car");
+const reject_reason_car = document.querySelectorAll("#reject_reason_car");
+const captionRating = document.getElementById("caption_rating");
+const stars = document.querySelectorAll(".rating .fa-star");
+const label_avatar = document.getElementById("label_avatar");
+const label_criminal = document.getElementById("label_criminal");
+const label_id_front = document.getElementById("label_id_front");
+const label_id_back = document.getElementById("label_id_back");
+const label_licenseCardF = document.getElementById("label_licenseCardF");
+const label_licenseCardB = document.getElementById("label_licenseCardB");
+const label_carLicenseF = document.getElementById("label_carLicenseF");
+const label_carLicenseB = document.getElementById("label_carLicenseB");
+const label_inside = document.getElementById("label_inside");
+const label_front = document.getElementById("label_front");
+const label_back = document.getElementById("label_back");
+const label_left = document.getElementById("label_left");
+const label_right = document.getElementById("label_right");
+const saveMediaPersonal = document.getElementById("saveMediaPersonal");
+const uploadCompleteFront = document.getElementById("upload_complete_front");
+const uploadCompleteBack = document.getElementById("upload_complete_back");
+const uploadCompleteRight = document.getElementById("upload_complete_right");
+const uploadCompleteLeft = document.getElementById("upload_complete_left");
+const uploadCompleteInSide = document.getElementById("upload_complete_inSide");
+const upload_complete_IdA = document.getElementById("upload_complete_IdA");
+const upload_complete_IdB = document.getElementById("upload_complete_IdB");
+const upload_complete_LicenseCarA = document.getElementById(
+  "upload_complete_LicenseCarA"
+);
+const upload_complete_LicenseCarB = document.getElementById(
+  "upload_complete_LicenseCarB"
+);
+const upload_complete_LicenseA = document.getElementById(
+  "upload_complete_LicenseA"
+);
+const upload_complete_LicenseB = document.getElementById(
+  "upload_complete_LicenseB"
+);
+const upload_complete_Criminal = document.getElementById(
+  "upload_complete_Criminal"
+);
+const upload_complete_Avatar = document.getElementById(
+  "upload_complete_Avatar"
+);
+let allMedia = {
+  message: "",
+  data: [
+    {
+      photo_status: "accept",
+      photo_type: "id_photo_back",
+      reject_reason: null,
+      image_path:
+        "https://silver.tripu.net/dashboard/img/Abdo__Amer_dcd1ddf3-e93e-4d87-9bf2-8382fbfc2aa7/personal/id_photo_back.jpeg",
+    },
+  ],
+};
+const id_card_fornt = document.getElementById("id_card_fornt");
+const id_card_back = document.getElementById("id_card_back");
+const personalAvatar = document.getElementById("personalAvatar");
+const criminal = document.getElementById("criminal");
+const carLicenseFront = document.getElementById("carLicenseFront");
+const carLicenseBack = document.getElementById("carLicenseBack");
+const LicenseCardFront = document.getElementById("LicenseCardFront");
+const LicenseCardBack = document.getElementById("LicenseCardBack");
+const plateNumber = document.getElementById("plateNumber");
+const carColor = document.getElementById("carColor");
+const frontCar = document.getElementById("frontCar");
+const backCar = document.getElementById("backCar");
+const rightCar = document.getElementById("rightCar");
+const leftCar = document.getElementById("leftCar");
+const insideCar = document.getElementById("insideCar");
+const carBrand = document.getElementById("carbrand");
+const carModel = document.getElementById("carModel");
+const saveMedia = document.getElementById("saveMedia");
+const typeOfCar = document.getElementById("typeOfCar");
+const idNumber = document.getElementById("idNumber");
+const valid_IdNumber = document.getElementById("valid_IdNumber");
+const yearSelect = document.getElementById("theYearOfTheCar");
+const carBtn = document.getElementById("carBtn");
+const carFils = document.getElementById("carFils");
+/*############# Car maker Model #######################*/
+let carMakerModel = {
+  status: true,
+  message: "data Return Successfully",
+  data: [
+    {
+      id: 1,
+      name: "Acura",
+      status: "Active",
+      cars_model: [
+        {
+          id: 1,
+          name: "CL",
+          status: "Active",
+          create_dates: {
+            created_at_human: "2 months ago",
+            created_at: "23-11-14 11:54:26",
+          },
+          update_dates: {
+            updated_at_human: "2 months ago",
+            updated_at: "23-11-14 11:54:26",
+          },
+        },
+      ],
+      create_dates: {
+        created_at_human: "2 months ago",
+        created_at: "23-11-14 11:54:26",
+      },
+      update_dates: {
+        updated_at_human: "2 months ago",
+        updated_at: "23-11-14 11:54:26",
+      },
+    },
+  ],
+};
+let carTypesModel = {
+  data: [
+    {
+      id: 1,
+      name: "سيدان",
+      status: "Active",
+      price_normal: "50",
+      price_premium: "75",
+      before_price_normal: "150",
+      discount_price_normal: "50",
+      discount_price_premium: "250",
+      before_price_premium: "50",
+    },
+  ],
+};
 /* Profile Api  fetch */
 document.addEventListener("DOMContentLoaded", () => {
-  const profileBtn = document.getElementById("profile");
-  const caption_name = document.getElementById("caption_name");
-  const caption_country = document.getElementById("caption_country");
-  const caption_rating = document.getElementById("caption_rating");
-  const captain_email = document.getElementById("captain_email");
-  const captain_phone = document.getElementById("captain_phone");
-  const captain_gender = document.getElementById("captain_gender");
-  const captain_img = document.getElementById("captain_img");
-
   profileBtn.addEventListener("click", (event) => {
     event.preventDefault();
     getProfileCaption();
@@ -160,27 +303,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 /*#################################Get All Media ############################################# */
-let allMedia = {
-  message: "All media retrieved successfully",
-  data: [
-    {
-      photo_status: "accept",
-      photo_type: "id_photo_back",
-      reject_reason: null,
-      image_path:
-        "https://silver.tripu.net/dashboard/img/Abdo__Amer_dcd1ddf3-e93e-4d87-9bf2-8382fbfc2aa7/personal/id_photo_back.jpeg",
-    },
-  ],
-};
-const allPhotos_status = document.querySelectorAll("#photo_status");
-const reject_reason = document.querySelectorAll("#reject_reason");
-const media_images = document.querySelectorAll("#media_images");
-const media_title = document.querySelectorAll("#title_media");
-const media_img_car = document.querySelectorAll("#media_img_car");
-const photo_status = document.getElementById("photo_status");
-
-const photo_type = document.getElementById("photo_type");
-const image_path = document.getElementById("image_path");
 //////////////////////////
 
 async function getAllMedia() {
@@ -205,28 +327,55 @@ async function getAllMedia() {
       const responseData = await response.json();
       allMedia = responseData;
       allMedia.data.forEach((media, index) => {
-        media_title[index].textContent = media.photo_type;
+        if (media.photo_type == "personal_avatar") {
+          media_title[index].textContent = "Personal Image";
+        } else if (media.photo_type == "id_photo_front") {
+          media_title[index].textContent = "ID front Image";
+        } else if (media.photo_type == "id_photo_back") {
+          media_title[index].textContent = "ID Back Image";
+        } else if (media.photo_type == "criminal_record") {
+          media_title[index].textContent = "Criminal Image";
+        } else if (media.photo_type == "captain_license_front") {
+          media_title[index].textContent = "Caption License front";
+        } else if (media.photo_type == "captain_license_back") {
+          media_title[index].textContent = "Caption License Back";
+        } else {
+          media_title[index].textContent = media.photo_type.toUpperCase();
+        }
         media_images[index].src =
           media.image_path ??
           "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freeiconspng.com%2Fimages%2Fload-icon-png&psig=AOvVaw2Eeqnc_7UBmqRIhAdqjToA&ust=1705322875229000&source=images&cd=vfe&ved=0CBMQjRxqFwoTCPjaxvP03IMDFQAAAAAdAAAAABAE";
         if (media.photo_status == "not_active") {
-          allPhotos_status[index].style.color = "gray";
-          return (allPhotos_status[index].textContent = "Not active");
+          allPhotos_status[index].style.color = "orange";
+          // return (allPhotos_status[index].textContent = "Not active");
+          return (allPhotos_status[
+            index
+          ].innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`);
         }
         if (media.photo_status == "rejected") {
           allPhotos_status[index].style.color = "red";
-          reject_reason[index].textContent = media.reject_reason;
+          // reject_reason[index].textContent = media.reject_reason;
+
           reject_reason[index].style.color = "red";
-          return (allPhotos_status[index].textContent = "rejected");
+          reject_reason[index].style.fontSize = "25px";
+          reject_reason[index].textContent = media.reject_reason;
+          // return (allPhotos_status[index].textContent = "rejected");
+          return (allPhotos_status[
+            index
+          ].innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i>`);
         }
         if (media.photo_status == "accept") {
           allPhotos_status[index].style.color = "green";
-          return (allPhotos_status[index].textContent = "Accepted");
+          allPhotos_status[index].textContent = "Accepted";
+
+          return (allPhotos_status[
+            index
+          ].innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>`);
         }
       });
       /*2 */
       console.log(allMedia.message);
-      console.log("Successfully get All Media");
+      console.log("Successfully get All Media to Personal");
     } else {
       console.log("Network response was not OK: " + response.status);
     }
@@ -235,9 +384,6 @@ async function getAllMedia() {
   }
 }
 /*####################################*/
-const media_type = document.querySelectorAll("#media_type");
-const photo_status_car = document.querySelectorAll("#photo_status_car");
-const reject_reason_car = document.querySelectorAll("#reject_reason_car");
 
 async function getAllMediaToCar() {
   accountToken = window.localStorage.getItem("token");
@@ -271,7 +417,10 @@ async function getAllMediaToCar() {
         }
         if (media.photo_status == "rejected") {
           photo_status_car[index].style.color = "red";
-          reject_reason_car[index].textContent = media.reject_reason;
+          // reject_reason_car[index].textContent = media.reject_reason;
+          reject_reason_car[
+            index
+          ].innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i>`;
           reject_reason_car[index].style.color = "red";
           return (photo_status_car[index].textContent = "rejected");
         }
@@ -291,8 +440,6 @@ async function getAllMediaToCar() {
   }
 }
 /*########################################### */
-const captionRating = document.getElementById("caption_rating");
-const stars = document.querySelectorAll(".rating .fa-star");
 
 // Function to update the star rating
 function updateRating(rating) {
@@ -307,68 +454,9 @@ function updateRating(rating) {
     stars[i].classList.add("checked");
   }
 }
-
 /*######################Upload Caption All Media ###########################*/
-const id_card_fornt = document.getElementById("id_card_fornt");
-const id_card_back = document.getElementById("id_card_back");
-const personalAvatar = document.getElementById("personalAvatar");
-const criminal = document.getElementById("criminal");
-const carLicenseFront = document.getElementById("carLicenseFront");
-const carLicenseBack = document.getElementById("carLicenseBack");
-const LicenseCardFront = document.getElementById("LicenseCardFront");
-const LicenseCardBack = document.getElementById("LicenseCardBack");
-const plateNumber = document.getElementById("plateNumber");
-const carColor = document.getElementById("carColor");
-const frontCar = document.getElementById("frontCar");
-const backCar = document.getElementById("backCar");
-const rightCar = document.getElementById("rightCar");
-const leftCar = document.getElementById("leftCar");
-const insideCar = document.getElementById("insideCar");
-const carBrand = document.getElementById("carbrand");
-const carModel = document.getElementById("carModel");
-const saveMedia = document.getElementById("saveMedia");
-const typeOfCar = document.getElementById("typeOfCar");
-const idNumber = document.getElementById("idNumber");
-const valid_IdNumber = document.getElementById("valid_IdNumber");
-const yearSelect = document.getElementById("theYearOfTheCar");
-/*############# Car maker Model #######################*/
-let carMakerModel = {
-  status: true,
-  message: "data Return Successfully",
-  data: [
-    {
-      id: 1,
-      name: "Acura",
-      status: "Active",
-      cars_model: [
-        {
-          id: 1,
-          name: "CL",
-          status: "Active",
-          create_dates: {
-            created_at_human: "2 months ago",
-            created_at: "23-11-14 11:54:26",
-          },
-          update_dates: {
-            updated_at_human: "2 months ago",
-            updated_at: "23-11-14 11:54:26",
-          },
-        },
-      ],
-      create_dates: {
-        created_at_human: "2 months ago",
-        created_at: "23-11-14 11:54:26",
-      },
-      update_dates: {
-        updated_at_human: "2 months ago",
-        updated_at: "23-11-14 11:54:26",
-      },
-    },
-  ],
-};
-const carBtn = document.getElementById("carBtn");
 
-carBtn.addEventListener("click", (event) => {
+carFils.addEventListener("click", (event) => {
   event.preventDefault();
 
   getCarMaker();
@@ -478,22 +566,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-let carTypesModel = {
-  data: [
-    {
-      id: 1,
-      name: "سيدان",
-      status: "Active",
-      price_normal: "50",
-      price_premium: "75",
-      before_price_normal: "150",
-      discount_price_normal: "50",
-      discount_price_premium: "250",
-      before_price_premium: "50",
-    },
-  ],
-};
-
 async function getCarType() {
   //accountToken = window.localStorage.getItem("token");
   try {
@@ -534,50 +606,11 @@ async function getCarType() {
     //throw new Error("Error in response: " + error.message);
   }
 }
-
-// const notification = document.getElementById("notification_upload_complete");
-// function showImageNotification(input) {
-//   if (input.files && input.files[0]) {
-//     const reader = new FileReader();
-
-//     reader.onload = function (e) {
-//       // Update the UI or display a notification message
-//       notification.innerHTML = `<p>Image selected: <img src="${e.target.result}" alt="Selected Image"></p>`;
-//     };
-
-//     reader.readAsDataURL(input.files[0]);
-//   }
-// }
-const uploadCompleteFront = document.getElementById("upload_complete_front");
-const uploadCompleteBack = document.getElementById("upload_complete_back");
-const uploadCompleteRight = document.getElementById("upload_complete_right");
-const uploadCompleteLeft = document.getElementById("upload_complete_left");
-const uploadCompleteInSide = document.getElementById("upload_complete_inSide");
-const upload_complete_IdA = document.getElementById("upload_complete_IdA");
-const upload_complete_IdB = document.getElementById("upload_complete_IdB");
-const upload_complete_LicenseCarA = document.getElementById(
-  "upload_complete_LicenseCarA"
-);
-const upload_complete_LicenseCarB = document.getElementById(
-  "upload_complete_LicenseCarB"
-);
-const upload_complete_LicenseA = document.getElementById(
-  "upload_complete_LicenseA"
-);
-const upload_complete_LicenseB = document.getElementById(
-  "upload_complete_LicenseB"
-);
-const upload_complete_Criminal = document.getElementById(
-  "upload_complete_Criminal"
-);
-const upload_complete_Avatar = document.getElementById(
-  "upload_complete_Avatar"
-);
-
 function validateFileFrontCar() {
   if (frontCar.value == null) {
     uploadCompleteFront.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_front.style.display = "none";
     uploadCompleteFront.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -585,6 +618,7 @@ function validateFileBackCar() {
   if (backCar.value == null) {
     uploadCompleteBack.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_back.style.display = "none";
     uploadCompleteBack.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -592,6 +626,7 @@ function validateFileRightCar() {
   if (rightCar.value == null) {
     uploadCompleteRight.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_right.style.display = "none";
     uploadCompleteRight.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -599,6 +634,7 @@ function validateFileLeftCar() {
   if (leftCar.value == null) {
     uploadCompleteLeft.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_left.style.display = "none";
     uploadCompleteLeft.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -606,15 +642,16 @@ function validateFileInSideCar() {
   if (insideCar.value == null) {
     uploadCompleteInSide.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_inside.style.display = "none";
     uploadCompleteInSide.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
-
 ////////////////////////////////////
 function validateFileIdA() {
   if (id_card_fornt.value == null) {
     upload_complete_IdA.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_id_front.style.display = "none";
     upload_complete_IdA.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -622,6 +659,7 @@ function validateFileIdB() {
   if (id_card_back.value == null) {
     upload_complete_IdB.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_id_back.style.display = "none";
     upload_complete_IdB.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -629,6 +667,7 @@ function validateFileLicenseCarA() {
   if (carLicenseFront.value == null) {
     upload_complete_LicenseCarA.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_carLicenseF.style.display = "none";
     upload_complete_LicenseCarA.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -636,6 +675,7 @@ function validateFileLicenseCarB() {
   if (carLicenseBack.value == null) {
     upload_complete_LicenseCarB.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_carLicenseB.style.display = "none";
     upload_complete_LicenseCarB.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -643,6 +683,7 @@ function validateFileLicenseA() {
   if (LicenseCardFront.value == null) {
     upload_complete_LicenseA.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_licenseCardF.style.display = "none";
     upload_complete_LicenseA.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -650,6 +691,7 @@ function validateFileLicenseB() {
   if (LicenseCardBack.value == null) {
     upload_complete_LicenseB.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_licenseCardB.style.display = "none";
     upload_complete_LicenseB.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -657,6 +699,7 @@ function validateFileCriminal() {
   if (criminal.value == null) {
     upload_complete_Criminal.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_criminal.style.display = "none";
     upload_complete_Criminal.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
@@ -664,10 +707,10 @@ function validateFileAvatar() {
   if (personalAvatar.value == null) {
     upload_complete_Avatar.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #f40606;"></i> Please select image`;
   } else {
+    label_avatar.style.display = "none";
     upload_complete_Avatar.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Image Selected Completed`;
   }
 }
-
 frontCar.addEventListener("change", validateFileFrontCar);
 backCar.addEventListener("change", validateFileBackCar);
 rightCar.addEventListener("change", validateFileRightCar);
@@ -695,10 +738,7 @@ function validateEgyptianNationalID() {
 }
 /////////////////////////////////////////////////////////////////////
 /**Get id to all media */
-var carBrandId = "";
-var carModelId = "";
-var typeOfCarId = "";
-var yearSelectId = "";
+
 carBrand.addEventListener("change", async (e) => {
   const selectedOption = e.target.options[e.target.selectedIndex].value;
   console.log(selectedOption);
@@ -724,14 +764,50 @@ yearSelect.addEventListener("change", async (e) => {
 async function uploadMediaToCar() {
   const accountToken = window.localStorage.getItem("token");
 
-  const idNumberValue = idNumber.value.trim();
-  const plateNumberValue = plateNumber.value.trim();
-  const carColorValue = carColor.value.trim();
+  const data = {
+    personal_avatar: personalAvatar.file,
+    id_photo_front: id_card_fornt.file,
+    id_photo_back: id_card_back.file,
+    criminal_record: criminal.file,
+    captain_license_front: LicenseCardFront.file,
+    captain_license_back: LicenseCardBack.file,
+    car_license_front: carLicenseFront.file,
+    car_license_back: carLicenseBack.file,
+    car_front: frontCar.file,
+    car_back: backCar.file,
+    car_right: rightCar.file,
+    car_left: leftCar.file,
+    car_inside: insideCar.file,
+    type: "car",
+    api_secret_key: api_secret_key,
+  };
 
-  if (!idNumberValue || !plateNumberValue || !carColorValue) {
-    console.log("Please fill in all required fields.");
-    return;
+  console.log(data.toString());
+
+  try {
+    const response = await fetch(updateProfilePhotoLink, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accountToken}`,
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log(responseData);
+      console.log(responseData.data.toString());
+      console.log("Profile images updated successfully");
+    } else {
+      console.log("Network response was not OK: " + response.status);
+    }
+  } catch (error) {
+    console.log("Error in network response: " + error);
   }
+}
+async function uploadMediaToPersonal() {
+  const accountToken = window.localStorage.getItem("token");
 
   const data = {
     personal_avatar: personalAvatar.file,
@@ -747,19 +823,12 @@ async function uploadMediaToCar() {
     car_right: rightCar.file,
     car_left: leftCar.file,
     car_inside: insideCar.file,
-    number_personal: idNumberValue,
-    car_make_id: carBrandId,
-    car_model_id: carModelId,
-    car_type_id: typeOfCarId,
-    number_car: plateNumberValue,
-    color_car: carColorValue,
-    year_car: yearSelectId,
-    type: "car",
+    type: "personal",
     api_secret_key: api_secret_key,
   };
-
+  console.log(data.toString());
   try {
-    const response = await fetch(uploadAllMediaLink, {
+    const response = await fetch(updateProfilePhotoLink, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -771,7 +840,141 @@ async function uploadMediaToCar() {
     if (response.ok) {
       const responseData = await response.json();
       console.log(responseData);
-      console.log("Successfully Upload All Media To Car");
+      console.log(responseData.data.toString());
+      console.log("Profile images updated successfully");
+    } else {
+      console.log("Network response was not OK: " + response.status);
+    }
+  } catch (error) {
+    console.log("Error in network response: " + error);
+  }
+}
+
+// async function newProfilePhotoToCar() {
+//   const accountToken = window.localStorage.getItem("token");
+
+//   const formData = new FormData();
+//   formData.append("car_license_front", carLicenseFront.files[0]);
+//   formData.append("car_license_back", carLicenseBack.files[0]);
+//   formData.append("car_front", frontCar.files[0]);
+//   formData.append("car_back", backCar.files[0]);
+//   formData.append("car_right", rightCar.files[0]);
+//   formData.append("car_left", leftCar.files[0]);
+//   formData.append("car_inside", insideCar.files[0]);
+//   formData.append("type", "car");
+//   formData.append("api_secret_key", api_secret_key);
+
+//   try {
+//     const response = await fetch(newProfilePhoto, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: `Bearer ${accountToken}`,
+//       },
+//       body: formData,
+//     });
+
+//     if (response.ok) {
+//       const responseData = await response.json();
+//       console.log(responseData);
+//       console.log(responseData.data);
+//       console.log("Upload Profile Media Successfully");
+//     } else {
+//       console.log("Network response was not OK: " + response.status);
+//     }
+//   } catch (error) {
+//     console.log("Error in network response: " + error);
+//   }
+// }
+
+// saveMedia.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   newProfilePhotoToCar();
+// });
+/*@@@@@@@@@@@@@@@@ */
+async function newProfilePhotoToPerson() {
+  const accountToken = window.localStorage.getItem("token");
+
+  const formData = new FormData();
+  formData.append("personal_avatar", personalAvatar.files[0]);
+  formData.append("id_photo_front", id_card_fornt.files[0]);
+  formData.append("id_photo_back", id_card_back.files[0]);
+  formData.append("criminal_record", criminal.files[0]);
+  formData.append("captain_license_front", LicenseCardFront.files[0]);
+  formData.append("captain_license_back", LicenseCardBack.files[0]);
+  formData.append("car_license_front", carLicenseFront.files[0]);
+  formData.append("car_license_back", carLicenseBack.files[0]);
+  formData.append("car_front", frontCar.files[0]);
+  formData.append("car_back", backCar.files[0]);
+  formData.append("car_right", rightCar.files[0]);
+  formData.append("car_left", leftCar.files[0]);
+  formData.append("car_inside", insideCar.files[0]);
+  formData.append("number_personal", idNumber.value);
+  formData.append("car_make_id", carBrand.value);
+  formData.append("car_model_id", carModel.value);
+  formData.append("car_type_id", typeOfCar.value);
+  formData.append("number_car", plateNumber.value);
+  formData.append("color_car", carColor.value);
+  formData.append("year_car", yearSelect.value);
+  formData.append("type", "personal");
+  formData.append("api_secret_key", api_secret_key);
+
+  try {
+    const response = await fetch(newProfilePhoto, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accountToken}`,
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log(responseData);
+      console.log(responseData.data);
+      console.log("Upload Profile Media Successfully");
+    } else {
+      console.log("Network response was not OK: " + response.status);
+    }
+  } catch (error) {
+    console.log("Error in network response: " + error);
+  }
+}
+
+saveMediaPersonal.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  newProfilePhotoToPerson();
+});
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+async function newProfilePhotoToCar() {
+  const accountToken = window.localStorage.getItem("token");
+
+  const formData = new FormData();
+  formData.append("car_license_front", carLicenseFront.files[0]);
+  formData.append("car_license_back", carLicenseBack.files[0]);
+  formData.append("car_front", frontCar.files[0]);
+  formData.append("car_back", backCar.files[0]);
+  formData.append("car_right", rightCar.files[0]);
+  formData.append("car_left", leftCar.files[0]);
+  formData.append("car_inside", insideCar.files[0]);
+  formData.append("type", "car");
+  formData.append("api_secret_key", api_secret_key);
+
+  try {
+    const response = await fetch(newProfilePhoto, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accountToken}`,
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log(responseData);
+      console.log(responseData.data);
+      console.log("Upload Profile Media Successfully");
     } else {
       console.log("Network response was not OK: " + response.status);
     }
@@ -782,6 +985,5 @@ async function uploadMediaToCar() {
 
 saveMedia.addEventListener("click", (event) => {
   event.preventDefault();
-
-  uploadMediaToCar();
+  newProfilePhotoToCar();
 });
